@@ -21,7 +21,8 @@ if (!function_exists('url')) {
     function url() {
         $path = implode('/', func_get_args());
         $url = app('request')->basepath() . '/' . $path;
-        return $url;
+        
+        return '/' . trim($url, '/');
     }
 }
 
