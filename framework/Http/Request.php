@@ -34,9 +34,9 @@ class Request
     public function fullpath(): string
     {
         $path = explode('?', $_SERVER['REQUEST_URI'])[0];
-        $path = rtrim($path, '/');
+        $path = trim($path, '/');
 
-        return $path !== '' ? $path : '/';
+        return '/' . $path;
     }
 
     public function path(): string
@@ -46,7 +46,7 @@ class Request
             strlen($this->basepath)
         );
 
-        return $path !== '' ? $path : '/';
+        return '/' . trim($path, '/');
     }
 
     public function segments(int $index = null)
