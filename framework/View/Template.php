@@ -15,7 +15,7 @@ class Template
 
     public function render(string $file): string
     {
-        $file = DIR_VIEWS . '/' . $file . '.php';
+        $file = $this->getFilename($file);
         $this->throwExceptionIfTemplateNotFound($file);
         
         // Queue up the content in buffer.
@@ -33,5 +33,14 @@ class Template
                 sprintf("Error: Could not load template %s", $template)
             );
         }
+    }
+
+    private function getFilename(string $file)
+    {
+        if(app('module')->isDiscovered()) {
+            return app('module')->getModulePath() . '/views/' . $file . '.php';
+        }
+
+        return DIR_VIEWS . '/' . $file . '.php';
     }
 }
