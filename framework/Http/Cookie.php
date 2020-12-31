@@ -34,11 +34,13 @@ class Cookie
 
         return setcookie($key, $value, $expire, $path, $domain, $secure, $httpOnly);
     }
+
     public function forever(string $key, string $value, array $options = [])
     {
         $expire = time() * 60 * 60 * 24 * 365 * 30;
         $this->set($key, $value, $expire, $options);
     }
+
     public function get($key = null)
     {
         if(! $key) {
@@ -51,10 +53,12 @@ class Cookie
 
         return null;
     }
+
     public function has($key)
     {
         return $_COOKIE[$key] ?? null;
     }
+
     public function delete($key)
     {
         if($_COOKIE[$key] ?? null) {
@@ -64,10 +68,12 @@ class Cookie
 
         return false;
     }
+
     protected function hash($value)
     {
         return hash_hmac('sha1', $value, $this->secret);
     }
+    
     protected function parse($value)
     {
         list($hash, $value) = explode(':', $value);
