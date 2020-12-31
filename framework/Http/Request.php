@@ -34,9 +34,8 @@ class Request
     public function fullpath(): string
     {
         $path = explode('?', $_SERVER['REQUEST_URI'])[0];
-        $path = trim($path, '/');
 
-        return '/' . $path;
+        return '/' . trim($path, '/');
     }
 
     public function path(): string
