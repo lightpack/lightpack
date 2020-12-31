@@ -2,3 +2,4 @@ vendor/
 .DS_Store
 .vscode
 composer.phar
+composer.lock
