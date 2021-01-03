@@ -186,7 +186,7 @@ class Query
         return $this->components[$key] ?? null;
     }
 
-    public function fetchAll($assoc = false)
+    public function fetchAll(bool $assoc = false)
     {
         $query = $this->getCompiledSelect();
         $result = $this->connection->query($query, $this->bindings)->fetchAll($assoc ? \PDO::FETCH_ASSOC : \PDO::FETCH_OBJ);
@@ -194,7 +194,7 @@ class Query
         return $result;
     }
 
-    public function fetchOne($assoc = false)
+    public function fetchOne(bool $assoc = false)
     {
         $compiler = new Compiler($this);
         $query = $compiler->compileSelect();
