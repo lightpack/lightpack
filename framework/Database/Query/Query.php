@@ -186,19 +186,19 @@ class Query
         return $this->components[$key] ?? null;
     }
 
-    public function fetchAll()
+    public function fetchAll($assoc = false)
     {
         $query = $this->getCompiledSelect();
-        $result = $this->connection->query($query, $this->bindings)->fetchAll(\PDO::FETCH_OBJ);
+        $result = $this->connection->query($query, $this->bindings)->fetchAll($assoc ? \PDO::FETCH_ASSOC : \PDO::FETCH_OBJ);
         $this->resetQuery();
         return $result;
     }
 
-    public function fetchOne()
+    public function fetchOne($assoc = false)
     {
         $compiler = new Compiler($this);
         $query = $compiler->compileSelect();
-        $result = $this->connection->query($query, $this->bindings)->fetch(\PDO::FETCH_OBJ);
+        $result = $this->connection->query($query, $this->bindings)->fetch($assoc ? \PDO::FETCH_ASSOC : \PDO::FETCH_OBJ);
         $this->resetQuery();
         return $result;
     }
