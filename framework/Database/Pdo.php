@@ -28,7 +28,7 @@ class Pdo
 
     public function table(string $table)
     {
-        return new Query($table, $this->connection);
+        return new Query($table, $this);
     }
 
     public function query(string $sql, array $params = null)
