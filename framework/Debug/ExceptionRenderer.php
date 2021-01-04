@@ -104,7 +104,6 @@ class ExceptionRenderer
                 continue;
             }
 
-            // $text = trim($file[$i]);
             $text = $file[$i];
 
             if ($i == $line - 1) {
