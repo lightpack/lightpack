@@ -12,6 +12,7 @@ class Container
     {
         return array_key_exists($id, $this->services);
     }
+
     public function get(string $id): ?object
     {   
         $this->throwExceptionIfServiceNotFound($id);
@@ -23,10 +24,12 @@ class Container
 
         return $service;
     }
+
     public function factory(string $id, callable $cb): void
     {
         $this->services[$id] = $cb;
     }
+
     public function register(string $id, callable $cb): void
     {
         $this->services[$id] = function() use($cb) {
@@ -39,6 +42,7 @@ class Container
             return $instance;
         };
     }
+    
     private function throwExceptionIfServiceNotFound(string $id): void
     {
         if (!$this->has($id)) {

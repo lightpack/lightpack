@@ -91,7 +91,6 @@ class Route
 
     public function matches(string $path, array &$meta = []): bool
     {
-        
         $routes = $this->getRoutesForCurrentRequest();
 
         foreach ($routes as $route) {

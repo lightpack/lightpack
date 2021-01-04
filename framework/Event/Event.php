@@ -11,6 +11,7 @@ class Event
     {
         $this->subscribers[$eventName][] = $eventSubscriber;
     }
+
     public function unsubscribe(string $eventSubscriber): void
     {
         $eventNames = array_keys($this->subscribers);
@@ -23,6 +24,7 @@ class Event
             }
         }
     }
+
     public function notify(string $eventName)
     {
         $this->throwExceptionIfEventNotFound($eventName);
@@ -33,19 +35,23 @@ class Event
             $subscriberInstance->handle();
         }
     }
+
     public function getSubscribers()
     {
         return $this->subscribers;
     }
+
     public function setData($data = null)
     {
         $this->data = $data;
         return $this;
     }
+
     public function getData()
     {
         return $this->data;
     }
+
     private function throwExceptionIfEventNotFound(string $eventName): void
     {
         if (!isset($this->subscribers[$eventName])) {
@@ -57,6 +63,7 @@ class Event
             );
         }
     }
+    
     private function throwExceptionIfHandlerMethodNotFound(string $subscriber, object $instance): void
     {
         if(!method_exists($instance, 'handle')) {

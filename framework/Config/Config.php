@@ -23,6 +23,7 @@ class Config
             }
         }
     }
+    
     private function loadConfig($file) {
         $filePath = DIR_CONFIG . '/' . $file . '.php';
         
