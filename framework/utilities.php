@@ -8,7 +8,7 @@ if (!function_exists('app')) {
     */
     function app(string $key) {
         global $container;
-        return $container->get($key);
+        return $container ? $container->get($key) : null;
     }
 }
 

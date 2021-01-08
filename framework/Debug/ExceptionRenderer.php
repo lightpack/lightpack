@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\Debug;
+namespace Lightpack\Debug;
 
 use Error;
 use Exception;

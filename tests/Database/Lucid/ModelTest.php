@@ -3,7 +3,7 @@
 require_once 'Product.php';
 
 use PHPUnit\Framework\TestCase;
-use \Framework\Database\Lucid\Model;
+use \Lightpack\Database\Lucid\Model;
 
 final class ModelTest extends TestCase
 {
@@ -14,7 +14,7 @@ final class ModelTest extends TestCase
     {
         $config = require __DIR__ . '/../tmp/mysql.config.php';
 
-        $this->db = new \Framework\Database\Adapters\Mysql($config); 
+        $this->db = new \Lightpack\Database\Adapters\Mysql($config); 
         $this->product = $this->db->model(Product::class);
     }
 

@@ -2,10 +2,10 @@
 
 namespace App\Filters;
 
-use Framework\Http\Request;
-use Framework\Http\Response;
-use Framework\Filters\IFilter;
-use Framework\Exceptions\InvalidCsrfTokenException;
+use Lightpack\Http\Request;
+use Lightpack\Http\Response;
+use Lightpack\Filters\IFilter;
+use Lightpack\Exceptions\InvalidCsrfTokenException;
 
 class CsrfFilter implements IFilter
 {

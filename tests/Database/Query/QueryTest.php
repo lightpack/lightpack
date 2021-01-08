@@ -9,9 +9,9 @@ final class QueryTest extends TestCase
     public function setUp(): void
     {
         $config = require __DIR__ . '/../tmp/mysql.config.php';
-        $db = new \Framework\Database\Adapters\Mysql($config);   
+        $db = new \Lightpack\Database\Adapters\Mysql($config);   
 
-        $this->query = new \Framework\Database\Query\Query('products', $db);
+        $this->query = new \Lightpack\Database\Query\Query('products', $db);
     }
 
     public function testSelectFetchAll()

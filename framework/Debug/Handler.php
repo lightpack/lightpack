@@ -1,13 +1,13 @@
 <?php
 
-namespace Framework\Debug;
+namespace Lightpack\Debug;
 
 use Error;
 use Throwable;
 use TypeError;
 use ParseError;
 use ErrorException;
-use Framework\Debug\ExceptionRenderer;
+use Lightpack\Debug\ExceptionRenderer;
 
 class Handler
 {

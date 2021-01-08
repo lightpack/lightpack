@@ -1,5 +1,5 @@
 <?php
 
-namespace Framework\Exceptions;
+namespace Lightpack\Exceptions;
 
 class TemplateNotFoundException extends \Exception {}

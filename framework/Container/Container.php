@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\Container;
+namespace Lightpack\Container;
 
 use Closure;
 
@@ -46,7 +46,7 @@ class Container
     private function throwExceptionIfServiceNotFound(string $id): void
     {
         if (!$this->has($id)) {
-            throw new \Framework\Exceptions\ServiceNotFoundException(
+            throw new \Lightpack\Exceptions\ServiceNotFoundException(
                 sprintf(
                     'Service `%s` is not registered',
                     $id

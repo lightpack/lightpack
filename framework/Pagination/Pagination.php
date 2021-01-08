@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\Pagination;
+namespace Lightpack\Pagination;
 
 class Pagination
 {

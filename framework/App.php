@@ -1,11 +1,11 @@
 <?php
 
-namespace Framework;
+namespace Lightpack;
 
-use Framework\Http\Response;
-use Framework\Filters\Filter;
-use Framework\Routing\Dispatcher;
-use Framework\Container\Container;
+use Lightpack\Http\Response;
+use Lightpack\Filters\Filter;
+use Lightpack\Routing\Dispatcher;
+use Lightpack\Container\Container;
 
 final class App
 {

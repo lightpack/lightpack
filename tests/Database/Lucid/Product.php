@@ -3,7 +3,7 @@
 require_once 'Owner.php';
 require_once 'Option.php';
 
-use \Framework\Database\Lucid\Model;
+use \Lightpack\Database\Lucid\Model;
 
 class Product extends Model
 {   

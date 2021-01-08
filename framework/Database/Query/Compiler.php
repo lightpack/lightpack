@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\Database\Query;
+namespace Lightpack\Database\Query;
 
 class Compiler
 {

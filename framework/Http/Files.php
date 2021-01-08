@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\Http;
+namespace Lightpack\Http;
 
 class Files
 {

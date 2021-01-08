@@ -1,8 +1,8 @@
 <?php
 
-namespace Framework\Database\Adapters;
+namespace Lightpack\Database\Adapters;
 
-use Framework\Database\Pdo;
+use Lightpack\Database\Pdo;
 
 class MySql extends Pdo
 {

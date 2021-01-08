@@ -1,9 +1,9 @@
 <?php
 
-namespace Framework\Filters;
+namespace Lightpack\Filters;
 
-use Framework\Http\Request;
-use Framework\Http\Response;
+use Lightpack\Http\Request;
+use Lightpack\Http\Response;
 
 interface IFilter
 {

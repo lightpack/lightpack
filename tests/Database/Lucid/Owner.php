@@ -2,7 +2,7 @@
 
 require_once 'Product.php';
 
-use \Framework\Database\Lucid\Model;
+use \Lightpack\Database\Lucid\Model;
 
 class Owner extends Model
 {   

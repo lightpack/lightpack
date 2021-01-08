@@ -54,4 +54,4 @@ require_once DIR_BOOTSTRAP . '/modules.php';
  * ------------------------------------------------------------
  */
 
-\Framework\App::run($container);
+\Lightpack\App::run($container);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\Event;
+namespace Lightpack\Event;
 
 class Event
 {
@@ -55,7 +55,7 @@ class Event
     private function throwExceptionIfEventNotFound(string $eventName): void
     {
         if (!isset($this->subscribers[$eventName])) {
-            throw new \Framework\Exceptions\EventNotFoundException(
+            throw new \Lightpack\Exceptions\EventNotFoundException(
                 sprintf(
                     'Event `%s` is not registered',
                     $eventName
@@ -67,7 +67,7 @@ class Event
     private function throwExceptionIfHandlerMethodNotFound(string $subscriber, object $instance): void
     {
         if(!method_exists($instance, 'handle')) {
-            throw new \Framework\Exceptions\EventHandlerMethodNotFoundException(
+            throw new \Lightpack\Exceptions\EventHandlerMethodNotFoundException(
                 sprintf(
                     'Event subscriber `%s` has not implemented handle() method.',
                     $subscriber
