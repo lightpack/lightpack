@@ -8,7 +8,7 @@ ini_set('display_errors', 'off');
 /**
  * Turn on/off PHP startup errors.
  */
-ini_set('display_startup_errors', 0); 
+ini_set('display_startup_errors', 1); 
 
 /**
  * Let us report all possible PHP errors.
