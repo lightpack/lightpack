@@ -1,8 +1,8 @@
 <?php
 
-namespace Framework\Database\Query;
+namespace Lightpack\Database\Query;
 
-use Framework\Database\Pdo;
+use Lightpack\Database\Pdo;
 
 class Query
 {

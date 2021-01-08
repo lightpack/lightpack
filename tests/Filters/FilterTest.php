@@ -10,9 +10,9 @@ final class FilterTest extends TestCase
 
     public function setUp(): void
     {
-        $this->request = new \Framework\Http\Request();
-        $this->response = new \Framework\Http\Response();
-        $this->filter = new \Framework\Filters\Filter($this->request, $this->response);
+        $this->request = new \Lightpack\Http\Request();
+        $this->response = new \Lightpack\Http\Response();
+        $this->filter = new \Lightpack\Filters\Filter($this->request, $this->response);
         $this->mockFilter = new MockFilter();
     }
 
@@ -29,7 +29,7 @@ final class FilterTest extends TestCase
         $_SERVER['REQUEST_METHOD'] = 'get';
         $this->filter->register('/users', $this->mockFilter);
         $result = $this->filter->processBeforeFilters('/users');
-        $this->assertInstanceOf(\Framework\Http\Response::class, $result);
+        $this->assertInstanceOf(\Lightpack\Http\Response::class, $result);
     }
 
     public function testFilterAfterMethod()
@@ -37,14 +37,14 @@ final class FilterTest extends TestCase
         $_SERVER['REQUEST_METHOD'] = 'get';
         $this->filter->register('/users', $this->mockFilter);
         $result = $this->filter->processAfterFilters('/users');
-        $this->assertInstanceOf(\Framework\Http\Response::class, $result);
+        $this->assertInstanceOf(\Lightpack\Http\Response::class, $result);
         $this->assertTrue($result->getBody() == 'hello');
     }
     
     public function __testFilterBeforeMethod()
     {
         $_SERVER['REQUEST_METHOD'] = 'post';
-        $request = new \Framework\Http\Request();
+        $request = new \Lightpack\Http\Request();
         $this->mockFilter->before($request);
         $this->assertTrue($request->post('framework') == 'Lightpack');
     }

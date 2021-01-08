@@ -1,9 +1,9 @@
 <?php
 
-namespace Framework\Module;
+namespace Lightpack\Module;
 
-use Framework\Http\Request;
-use Framework\Config\Config;
+use Lightpack\Http\Request;
+use Lightpack\Config\Config;
 
 class Module
 {

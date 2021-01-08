@@ -1,8 +1,8 @@
 <?php
 
-namespace Framework\Http;
+namespace Lightpack\Http;
 
-use Framework\Exceptions\FileUploadException;
+use Lightpack\Exceptions\FileUploadException;
 
 class UploadedFile
 {

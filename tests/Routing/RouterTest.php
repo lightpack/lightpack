@@ -13,9 +13,9 @@ final class RouterTest extends TestCase
         $basepath = '/lightpack';
         $_SERVER['REQUEST_URI'] = $basepath . '/users/23';
 
-        $request = new \Framework\Http\Request($basepath);
-        $this->route = new \Framework\Routing\Route($request);
-        $this->router = new \Framework\Routing\Router($request, $this->route);
+        $request = new \Lightpack\Http\Request($basepath);
+        $this->route = new \Lightpack\Routing\Route($request);
+        $this->router = new \Lightpack\Routing\Router($request, $this->route);
     }
 
     public function testRouterCanParseUrl()

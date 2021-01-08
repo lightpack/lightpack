@@ -17,12 +17,12 @@ final class MysqlTest extends TestCase
     {
         $this->expectException(\Exception::class);
         $this->config['username'] = 'unknown';
-        $connection = new \Framework\Database\Adapters\Mysql($this->config);
+        $connection = new \Lightpack\Database\Adapters\Mysql($this->config);
     }
     
     public function testCanCreateConnectionInstance()
     {
-        $connection = new \Framework\Database\Adapters\Mysql($this->config);
-        $this->assertInstanceOf(\Framework\Database\Pdo::class, $connection);
+        $connection = new \Lightpack\Database\Adapters\Mysql($this->config);
+        $this->assertInstanceOf(\Lightpack\Database\Pdo::class, $connection);
     }
 }

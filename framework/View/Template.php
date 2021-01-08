@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\View;
+namespace Lightpack\View;
 
 class Template
 {
@@ -29,7 +29,7 @@ class Template
     private function throwExceptionIfTemplateNotFound(string $template)
     {
         if (!file_exists($template)) {
-            throw new \Framework\Exceptions\TemplateNotFoundException(
+            throw new \Lightpack\Exceptions\TemplateNotFoundException(
                 sprintf("Error: Could not load template %s", $template)
             );
         }

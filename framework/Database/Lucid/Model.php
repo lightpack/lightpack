@@ -1,10 +1,10 @@
 <?php
 
-namespace Framework\Database\Lucid;
+namespace Lightpack\Database\Lucid;
 
-use Framework\Database\Pdo;
-use Framework\Database\Query\Query;
-use Framework\Exceptions\RecordNotFoundException;
+use Lightpack\Database\Pdo;
+use Lightpack\Database\Query\Query;
+use Lightpack\Exceptions\RecordNotFoundException;
 
 class Model
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Framework\Routing;
+namespace Lightpack\Routing;
 
-use Framework\Http\Request;
-use Framework\Routing\Route;
+use Lightpack\Http\Request;
+use Lightpack\Routing\Route;
 
 /**
  * Responsible to determine the correct controller/action to execute.

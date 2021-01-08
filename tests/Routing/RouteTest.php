@@ -16,8 +16,8 @@ final class RouteTest extends TestCase
 
     public function setUp(): void
     {
-        $request = new \Framework\Http\Request();
-        $this->route = new \Framework\Routing\Route($request);
+        $request = new \Lightpack\Http\Request();
+        $this->route = new \Lightpack\Routing\Route($request);
     }
 
     public function testRoutePathException()

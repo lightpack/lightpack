@@ -10,8 +10,8 @@ final class EventTest extends TestCase
 
     public function setUp(): void
     {
-        $this->container = new \Framework\Container\Container();
-        $this->event = new \Framework\Event\Event();
+        $this->container = new \Lightpack\Container\Container();
+        $this->event = new \Lightpack\Event\Event();
     }
     public function testSubscribeMethod()
     {
@@ -57,14 +57,14 @@ final class EventTest extends TestCase
     }
     public function testEventNotFoundException()
     {
-        $this->expectException(\Framework\Exceptions\EventNotFoundException::class);
+        $this->expectException(\Lightpack\Exceptions\EventNotFoundException::class);
         $this->event->notify('event');
     }
     public function testEventHandlerMethodNotFoundException()
     {
         $mockEvent = $this->getMockBuilder(\stdClass::class)->getMock();
         $this->event->subscribe('event', get_class($mockEvent));
-        $this->expectException(\Framework\Exceptions\EventHandlerMethodNotFoundException::class);
+        $this->expectException(\Lightpack\Exceptions\EventHandlerMethodNotFoundException::class);
         $this->event->notify('event');
     }
     public function testEventSubscribersMethod()

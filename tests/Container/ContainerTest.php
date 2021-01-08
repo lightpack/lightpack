@@ -8,7 +8,7 @@ final class ContainerTest extends TestCase
 {
     public function setUp(): void
     {
-        $this->container = new Framework\Container\Container();
+        $this->container = new Lightpack\Container\Container();
     }
     public function testContainerHasMethod()
     {
@@ -21,7 +21,7 @@ final class ContainerTest extends TestCase
         $this->container->register('service', function() { return new stdClass(); });
         $this->assertInstanceOf(stdClass::class, $this->container->get('service'));
         $this->assertSame($this->container->get('service'), $this->container->get('service'));
-        $this->expectException(\Framework\Exceptions\ServiceNotFoundException::class);
+        $this->expectException(\Lightpack\Exceptions\ServiceNotFoundException::class);
         $this->container->get('mailer');
     }
     public function testContainerFactoryMethod()

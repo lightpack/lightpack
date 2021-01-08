@@ -23,7 +23,7 @@ final class RequestTest extends TestCase
         $this->fullpath = explode('?', $this->uri)[0];
         $this->path = substr($this->fullpath, strlen($this->basepath));
         $this->query = explode('?', $this->uri)[1] ?? '';
-        $this->request = new \Framework\Http\Request($this->basepath);
+        $this->request = new \Lightpack\Http\Request($this->basepath);
     }
 
     public function testRequestPath()

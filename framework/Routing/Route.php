@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Framework\Routing;
+namespace Lightpack\Routing;
 
 class Route
 {
@@ -28,7 +28,7 @@ class Route
     ];
     private $request;
 
-    public function __construct(\Framework\Http\Request $request)
+    public function __construct(\Lightpack\Http\Request $request)
     {
         $this->request = $request;
     }

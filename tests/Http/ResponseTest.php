@@ -10,7 +10,7 @@ final class ResponseTest extends TestCase
 
     public function setUp(): void
     {
-        $this->response = new \Framework\Http\Response();
+        $this->response = new \Lightpack\Http\Response();
     }
     
     public function testResponseSetCodeMethod()

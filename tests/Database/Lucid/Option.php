@@ -1,6 +1,6 @@
 <?php
 
-use \Framework\Database\Lucid\Model;
+use \Lightpack\Database\Lucid\Model;
 
 class Option extends Model
 {   

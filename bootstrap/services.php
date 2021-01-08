@@ -6,7 +6,7 @@
  * ------------------------------------------------------------
  */
 
-$container = new Framework\Container\Container(); 
+$container = new Lightpack\Container\Container(); 
 
 /**
  * ------------------------------------------------------------
@@ -15,7 +15,7 @@ $container = new Framework\Container\Container();
  */
 
 $container->register('config', function($container) {
-    return new Framework\Config\Config(['default', 'events', 'filters']);
+    return new Lightpack\Config\Config(['default', 'events', 'filters']);
 });
 
 /**
@@ -25,7 +25,7 @@ $container->register('config', function($container) {
  */
 
 $container->register('event', function($container) {
-    return new Framework\Event\Event();
+    return new Lightpack\Event\Event();
 });
 
 /**
@@ -35,7 +35,7 @@ $container->register('event', function($container) {
  */
 
 $container->register('filter', function($container) {
-    return new Framework\Filters\Filter(
+    return new Lightpack\Filters\Filter(
         $container->get('request'), 
         $container->get('response')
     );
@@ -48,7 +48,7 @@ $container->register('filter', function($container) {
  */
 
 $container->register('request', function($container) {
-    return new Framework\Http\Request();
+    return new Lightpack\Http\Request();
 });
 
 /**
@@ -58,7 +58,7 @@ $container->register('request', function($container) {
  */
 
 $container->register('response', function($container) {
-    return new Framework\Http\Response();
+    return new Lightpack\Http\Response();
 });
 
 /**
@@ -68,7 +68,7 @@ $container->register('response', function($container) {
  */
 
 $container->register('cookie', function($container) {
-    return new Framework\Http\Cookie(
+    return new Lightpack\Http\Cookie(
         $container->get('config')->cookie_secret
     );
 });
@@ -80,7 +80,7 @@ $container->register('cookie', function($container) {
  */
 
 $container->register('session', function($container) {
-    return new Framework\Http\Session(SESSION_NAME);
+    return new Lightpack\Http\Session(SESSION_NAME);
 });
 
 /**
@@ -90,7 +90,7 @@ $container->register('session', function($container) {
  */
 
 $container->register('template', function($container) {
-    return new Framework\View\Template();
+    return new Lightpack\View\Template();
 });
 
 /**
@@ -100,7 +100,7 @@ $container->register('template', function($container) {
  */
 
 $container->register('module', function($container) {
-    return new Framework\Module\Module(
+    return new Lightpack\Module\Module(
         $container->get('request'),
         $container->get('config')
     );
@@ -113,7 +113,7 @@ $container->register('module', function($container) {
  */
 
 $container->register('route', function($container) {
-    return new Framework\Routing\Route(
+    return new Lightpack\Routing\Route(
         $container->get('request')
     );
 });
@@ -125,7 +125,7 @@ $container->register('route', function($container) {
  */
 
 $container->register('router', function($container) {
-    return new Framework\Routing\Router(
+    return new Lightpack\Routing\Router(
         $container->get('request'),
         $container->get('route')
     );
@@ -138,7 +138,7 @@ $container->register('router', function($container) {
  */
 
 $container->register('db', function($container) {
-    return new Framework\Database\Adapters\MySql(
+    return new Lightpack\Database\Adapters\MySql(
         $container->get('config')->default['connection']['mysql']
     );
 });

@@ -18,8 +18,8 @@ error_reporting(E_ALL);
 /**
  * Instantiate framework debug handler.
  */
-$handler = new Framework\Debug\Handler(
-    new Framework\Debug\ExceptionRenderer(APP_ENV)
+$handler = new Lightpack\Debug\Handler(
+    new Lightpack\Debug\ExceptionRenderer(APP_ENV)
 );
 
 /**

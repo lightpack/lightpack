@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Framework\Routing;
+namespace Lightpack\Routing;
 
-use Framework\Http\Request ;
-use Framework\Routing\Router;
+use Lightpack\Http\Request ;
+use Lightpack\Routing\Router;
 
 class Dispatcher
 {
@@ -28,13 +28,13 @@ class Dispatcher
     public function dispatch() 
     {
         if(! \class_exists($this->controller)) {
-            throw new \Framework\Exceptions\ControllerNotFoundException(
+            throw new \Lightpack\Exceptions\ControllerNotFoundException(
                 sprintf("Controller Not Found Exception: %s", $this->controller)
             );
         }
 
         if(! \method_exists($this->controller, $this->action)) {
-            throw new \Framework\Exceptions\ActionNotFoundException(
+            throw new \Lightpack\Exceptions\ActionNotFoundException(
                 sprintf("Action Not Found Exception: %s@%s", $this->controller, $this->action)
             );
         }
@@ -45,7 +45,7 @@ class Dispatcher
     private function throwExceptionIfRouteNotFound()
     {
         if(!$this->router->meta()) {
-            throw new \Framework\Exceptions\RouteNotFoundException(
+            throw new \Lightpack\Exceptions\RouteNotFoundException(
                 sprintf(
                     "No route registered for request: %s %s", 
                     $this->request->method(), 

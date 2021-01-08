@@ -1,8 +1,8 @@
 <?php
 
-namespace Framework\Config;
+namespace Lightpack\Config;
 
-use Framework\Exceptions\ConfigFileNotFoundException;
+use Lightpack\Exceptions\ConfigFileNotFoundException;
 
 class Config
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Framework\Database;
+namespace Lightpack\Database;
 
-use Framework\Database\Lucid\Model;
-use Framework\Database\Query\Query;
+use Lightpack\Database\Lucid\Model;
+use Lightpack\Database\Query\Query;
 
 class Pdo 
 {

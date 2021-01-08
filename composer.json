@@ -21,7 +21,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Framework\\": "framework/",
+            "Lightpack\\": "framework/",
             "Modules\\": "modules/",
             "App\\": "app/"
         },

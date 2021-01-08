@@ -12,17 +12,17 @@ final class DispatcherTest extends TestCase
     public function setUp(): void
     {
         $_SERVER['REQUEST_METHOD'] = 'GET';
-        $this->request = new \Framework\Http\Request('/lightpack');
-        $this->route = new \Framework\Routing\Route($this->request);
-        $this->router = new \Framework\Routing\Router($this->request, $this->route);
+        $this->request = new \Lightpack\Http\Request('/lightpack');
+        $this->route = new \Lightpack\Routing\Route($this->request);
+        $this->router = new \Lightpack\Routing\Router($this->request, $this->route);
     }
 
     public function testRouteNotFoundException() {
         $_SERVER['REQUEST_METHOD'] = 'GET';
 
         // assertions
-        $this->expectException('\\Framework\\Exceptions\\RouteNotFoundException');
-        new \Framework\Routing\Dispatcher($this->request, $this->router);
+        $this->expectException('\\Lightpack\\Exceptions\\RouteNotFoundException');
+        new \Lightpack\Routing\Dispatcher($this->request, $this->router);
         $this->fail('404: Route not found exception');
     }
 
@@ -30,10 +30,10 @@ final class DispatcherTest extends TestCase
         $_SERVER['REQUEST_METHOD'] = 'GET';
         $this->route->get('/users/:num', 'UserController@index');
         $this->router->parse('/users/23');
-        $dispatcher = new \Framework\Routing\Dispatcher($this->request, $this->router);
+        $dispatcher = new \Lightpack\Routing\Dispatcher($this->request, $this->router);
 
         // assertions
-        $this->expectException('\\Framework\\Exceptions\\ControllerNotFoundException');
+        $this->expectException('\\Lightpack\\Exceptions\\ControllerNotFoundException');
         $dispatcher->dispatch();
         $this->fail('404: Controller not found exception');
     }
@@ -43,10 +43,10 @@ final class DispatcherTest extends TestCase
         $controller = $this->getMockBuilder('UserController')->getMock();
         $this->route->get('/users/:num', get_class($controller) . '@index');
         $this->router->parse('/users/23');
-        $dispatcher = new \Framework\Routing\Dispatcher($this->request, $this->router);
+        $dispatcher = new \Lightpack\Routing\Dispatcher($this->request, $this->router);
 
         // assertions
-        $this->expectException('\\Framework\\Exceptions\\ActionNotFoundException');
+        $this->expectException('\\Lightpack\\Exceptions\\ActionNotFoundException');
         $dispatcher->dispatch();
         $this->fail('404: Action not found exception');
     }
@@ -57,7 +57,7 @@ final class DispatcherTest extends TestCase
 
         $this->route->get('/hello', 'MockController@greet');
         $this->router->parse('/hello');
-        $dispatcher = new \Framework\Routing\Dispatcher($this->request, $this->router);
+        $dispatcher = new \Lightpack\Routing\Dispatcher($this->request, $this->router);
         $this->assertEquals('hello', $dispatcher->dispatch());
     }
 }
