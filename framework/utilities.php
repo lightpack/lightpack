@@ -16,10 +16,13 @@ if (!function_exists('url')) {
     /*
     * ------------------------------------------------------------
     * Creates a relative URL.
+    * 
+    * It takes any number of string texts to generate relative
+    * URL to application basepath.
     * ------------------------------------------------------------
     */
-    function url() {
-        $path = implode('/', func_get_args());
+    function url(string ...$fragments) {
+        $path = implode('/', $fragments);
         $url = app('request')->basepath() . '/' . $path;
         
         return '/' . trim($url, '/');
