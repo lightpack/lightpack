@@ -49,3 +49,13 @@ if (!function_exists('csrf_input')) {
         return '<input type="hidden" name="csrf_token" value="' . app('session')->token() . '">';
     }
 }
+
+if(!function_exists('_e')) {
+    /**
+     * HTML characters to entities converter. Often used to
+     * escape output.
+     */
+    function _e(string $str) {
+        return htmlentities($str, ENT_QUOTES, 'UTF-8');
+    }
+}
