@@ -84,3 +84,20 @@ if(!function_exists('slugify')) {
         return strtolower(trim($text, ' -'));
     }
 }
+
+if (!function_exists('asset_url')) {
+    /**
+     * ------------------------------------------------------------
+     * Generates relaive URL to /public/assets folder.
+     * 
+     * Usage: 
+     * 
+     * asset_url('css', 'styles.css');
+     * asset_url('img', 'favicon.png');
+     * asset_url('js', 'scripts.js');
+     * ------------------------------------------------------------
+     */
+    function asset_url(string $type, string $file): ?string {
+        return url('public/assets', $type, $file);
+    }
+}
