@@ -59,3 +59,25 @@ if(!function_exists('_e')) {
         return htmlentities($str, ENT_QUOTES, 'UTF-8');
     }
 }
+
+if(!function_exists('slugify')) {
+    /**
+     * ------------------------------------------------------------     
+     * Converts a UTF-8 text to URL friendly slug.
+     * 
+     * It will replace any non-word character, non-digit 
+     * character, or a non-dash '-' character with empty. 
+     * Also it will replace any number of space character 
+     * with a single dash '-'.
+     * ------------------------------------------------------------      
+     */
+    function slugify(string $text) {
+        $text = preg_replace(
+            ['#[^\w\d\s-]+#', '#(\s)+#'], 
+            ['', '-'], 
+            $text
+        );
+
+        return strtolower(trim($text, ' -'));
+    }
+}
