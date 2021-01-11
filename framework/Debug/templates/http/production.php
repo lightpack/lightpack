@@ -2,22 +2,26 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Error</title>
+        <title>Oops!!</title>
         <style>
-            body
-            {
+            body {
                 font-family: arial, sans-serif;
                 font-size: 14px;
             }
-
-            h1, h2, h3, h4, h5, h6
-            {
-                text-decoration: none;
+            .container {
+                margin: 30px auto;
+                border: 2px solid #795548;
+                border-radius: 5px;
+                max-width: 380px;
+                padding: 0 30px 15px;
+                background: #f1f1f1;
             }
         </style>
     </head>
     <body>
-        <h2>Something went wrong</h2>
-        Sorry about that. We will look into what happened.
+        <div class="container">
+            <h2>Oops!!</h2>
+            We are facing some technical issues. We will be back soon.
+        </div>
     </body>
 </html>
