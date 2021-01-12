@@ -2,4 +2,4 @@
 
 namespace Lightpack\Exceptions;
 
-class ServiceNotFoundException extends \Exception {}
+class ServiceNotFoundException extends \Exception {}    
