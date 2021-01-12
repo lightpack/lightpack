@@ -20,8 +20,8 @@
     </head>
     <body>
         <div class="container">
-            <h2>Oops!!</h2>
-            We are facing some technical issues. We will be back soon.
+            <h2>Technical Error.</h2>
+            <p>We are facing some technical issues. We will be back soon.</p>
         </div>
     </body>
 </html>
