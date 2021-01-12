@@ -35,22 +35,16 @@ class ExceptionRenderer
 
     public function render(Throwable $exc, string $errorType = 'Exception'): void
     {
-        $this->data['type'] = $errorType;
-        $this->data['code'] = $exc->getCode();
-        $this->data['message'] = $exc->getMessage();
-        $this->data['file'] = $exc->getFile();
-        $this->data['line'] = $exc->getLine();
-        $this->data['trace'] = $this->getTrace($exc);
-        $this->data['format'] = $this->getRequestFormat();
-        $this->data['environment'] = $this->environment;
-        $this->data['code_preview'] = $this->getCodePreview();
-        $this->data['ex'] = $exc;
-        
-        if($errorType === 'Error') {
-            $this->data['type'] = $this->getErrorType($exc->getCode());
+        // Clean the output buffer first.
+        while(\ob_get_level() !== 0) {
+            \ob_end_clean();
         }
 
-        $this->renderException($this->data);
+        if(APP_ENV !== 'development') {
+            $this->renderProductionTemplate($exc->getCode());
+        } else {
+            $this->renderDevelopmentTemplate($exc, $errorType);
+        }
     }
 
     private function getErrorType(int $code): string
@@ -90,11 +84,11 @@ class ExceptionRenderer
         return 'http'; 
     }
 
-    private function getCodePreview(): string
+    private function getCodePreview(string $file, int $line): string
     {
         $preview = '';
-        $file = file($this->data['file']);
-        $line = $this->data['line'];
+        $file = file($file);
+        $line = $line;
 
         $start = ($line - 5 >= 0) ? $line - 5 : $line - 1;
         $end = ($line - 5 >= 0) ? $line + 4 : $line + 8;
@@ -121,12 +115,77 @@ class ExceptionRenderer
         return $preview;
     }
 
-    private function renderException(array $data): void 
+    private function getErrorTemplate()
+    {
+        if (APP_ENV === 'development') {
+            return __DIR__ . '/templates/' . $this->getRequestFormat() . '/development.php';
+        } 
+
+        $errorTemplate = DIR_VIEWS . '/errors/layout.php';
+        
+        if(!file_exists($errorTemplate)) {
+            $errorTemplate = __DIR__ . '/templates/' . $this->getRequestFormat() . '/production.php';
+        }
+
+        return $errorTemplate;
+    }
+
+    private function sendHeaders(int $statusCode)
+    {
+        if (!headers_sent()) {
+            header("HTTP/1.1 $statusCode", true, $statusCode);
+
+            if($this->getRequestFormat() === 'json') {
+                header('Content-Type', 'application/json');
+            } else {
+                header('Content-Type', 'text/html');
+            }
+        }
+    }
+
+    private function renderTemplate(string $errorTemplate, array $data = [])
     {
         extract($data);
         ob_start();
-        require __DIR__ . "/templates/{$format}/{$environment}.php";
+        require $errorTemplate;
         echo ob_get_clean();
+        \flush();
         exit();
+    }
+
+    private function renderProductionTemplate(int $statusCode)
+    {
+        if(!file_exists(DIR_VIEWS . '/errors/' . $statusCode . '.php')) {
+            $statusCode = 500;
+            $errorTemplate = __DIR__ . '/templates/' . $this->getRequestFormat() . '/production.php';
+        } else {
+            $errorTemplate = DIR_VIEWS . '/errors/layout.php';
+        }
+
+        $this->sendHeaders($statusCode);
+        $this->renderTemplate($errorTemplate, ['template' => $statusCode]);
+    }
+
+    private function renderDevelopmentTemplate(Throwable $exc, string $errorType = 'Exception')
+    {
+        $errorTemplate = __DIR__ . '/templates/' . $this->getRequestFormat() . '/development.php';
+        
+        if($errorType === 'Error') {
+            $errorType = $this->getErrorType($exc->getCode());
+        }
+
+        $data['type'] = $errorType;
+        $data['code'] = $exc->getCode();
+        $data['message'] = $exc->getMessage();
+        $data['file'] = $exc->getFile();
+        $data['line'] = $exc->getLine();
+        $data['trace'] = $this->getTrace($exc);
+        $data['format'] = $this->getRequestFormat();
+        $data['environment'] = $this->environment;
+        $data['code_preview'] = $this->getCodePreview($data['file'], $data['line']);
+        $data['ex'] = $exc;
+
+        $this->sendHeaders($data['code']);
+        $this->renderTemplate($errorTemplate, $data);
     }
 }
