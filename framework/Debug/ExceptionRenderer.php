@@ -40,7 +40,7 @@ class ExceptionRenderer
             \ob_end_clean();
         }
 
-        if(APP_ENV !== 'development') {
+        if($this->environment !== 'development') {
             $this->renderProductionTemplate($exc->getCode());
         } else {
             $this->renderDevelopmentTemplate($exc, $errorType);
@@ -115,21 +115,6 @@ class ExceptionRenderer
         return $preview;
     }
 
-    private function getErrorTemplate()
-    {
-        if (APP_ENV === 'development') {
-            return __DIR__ . '/templates/' . $this->getRequestFormat() . '/development.php';
-        } 
-
-        $errorTemplate = DIR_VIEWS . '/errors/layout.php';
-        
-        if(!file_exists($errorTemplate)) {
-            $errorTemplate = __DIR__ . '/templates/' . $this->getRequestFormat() . '/production.php';
-        }
-
-        return $errorTemplate;
-    }
-
     private function sendHeaders(int $statusCode)
     {
         if (!headers_sent()) {
@@ -185,7 +170,7 @@ class ExceptionRenderer
         $data['code_preview'] = $this->getCodePreview($data['file'], $data['line']);
         $data['ex'] = $exc;
 
-        $this->sendHeaders($data['code']);
+        $this->sendHeaders(500);
         $this->renderTemplate($errorTemplate, $data);
     }
 }
