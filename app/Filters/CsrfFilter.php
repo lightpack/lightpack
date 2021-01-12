@@ -20,6 +20,6 @@ class CsrfFilter implements IFilter
 
     public function after(Request $request, Response $response): Response
     {
-
+        return $response;
     } 
 }
