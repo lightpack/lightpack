@@ -122,3 +122,31 @@ if(!function_exists('humanize')) {
         return ucfirst($text);
     }
 }
+
+if (!function_exists('query_url')) {
+    /**
+     * ------------------------------------------------------------
+     * Generates relaive URL with support for query params.
+     * ------------------------------------------------------------
+     * 
+     * For example:
+     * 
+     * query_url('edit',, ['sort' => 'asc', 'status' => 'active']);
+     * 
+     * That  will produce: /users?sort=asc&status=active 
+     */
+    function query_url(...$fragments): string {
+        if(!$fragments) {
+            return url();
+        }
+
+        $params = end($fragments);
+
+        if(is_array($params)) {
+            $query = '?' . http_build_query($params);
+            array_pop($fragments);
+        }
+
+        return url(...$fragments) . $query;
+    }
+}
