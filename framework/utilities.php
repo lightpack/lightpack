@@ -131,7 +131,7 @@ if (!function_exists('query_url')) {
      * 
      * For example:
      * 
-     * query_url('edit',, ['sort' => 'asc', 'status' => 'active']);
+     * query_url('users', ['sort' => 'asc', 'status' => 'active']);
      * 
      * That  will produce: /users?sort=asc&status=active 
      */
