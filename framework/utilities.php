@@ -105,3 +105,20 @@ if (!function_exists('asset_url')) {
         return url('public/assets', $type, $file);
     }
 }
+
+if(!function_exists('humanize')) {
+    /**
+     * ------------------------------------------------------------     
+     * Converts a slug URL to friendly text.
+     * ------------------------------------------------------------      
+     * 
+     * It replaces dashes and underscores with whitespace 
+     * character. Then capitalizes the first character.
+     */
+    function humanize(string $slug) {
+        $text = str_replace(['_', '-'], ' ', $slug);
+        $text = trim($text);
+
+        return ucfirst($text);
+    }
+}
