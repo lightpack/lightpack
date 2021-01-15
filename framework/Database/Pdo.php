@@ -50,4 +50,9 @@ class Pdo
 
         return $modelInstance;
     }
+
+    public function lastInsertId()
+    {
+        return $this->connection->lastInsertId();
+    }
 }

@@ -106,6 +106,11 @@ class Model
         return new Query($this->table, $this->connection);
     }
 
+    public function lastInsertId()
+    {
+        return $this->connection->lastInsertId();
+    }
+
     private function insert()
     {
         $data = \get_object_vars($this->data);
