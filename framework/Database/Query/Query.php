@@ -67,7 +67,10 @@ class Query
     public function where(string $column, string $operator, string $value, string $joiner = 'AND'): self
     {
         $this->components['where'][] = compact('column', 'operator', 'value', 'joiner');
-        $this->bindings[] = $value;
+        
+        if($operator) {
+            $this->bindings[] = $value;
+        }
         return $this;
     }
 
@@ -106,6 +109,42 @@ class Query
     public function orWhereNotIn(string $column, array $values): self
     {
         $this->whereIn($column, $values, 'OR', true);
+        return $this;
+    }
+
+    public function whereNull(string $column): self
+    {
+        $this->andWhere($column, '', 'IS NULL');
+        return $this;
+    }
+
+    public function whereNotNull(string $column): self
+    {
+        $this->andWhere($column, '', 'IS NOT NULL');
+        return $this;
+    }
+    
+    public function andWhereNull(string $column): self
+    {
+        $this->andWhere($column, '', 'IS NULL');
+        return $this;
+    }
+
+    public function andWhereNotNull(string $column): self
+    {
+        $this->andWhere($column, '', 'IS NOT NULL');
+        return $this;
+    }
+
+    public function orWhereNull(string $column): self
+    {
+        $this->orWhere($column, '', 'IS NULL');
+        return $this;
+    }
+
+    public function orWhereNotNull(string $column): self
+    {
+        $this->orWhere($column, '', 'IS NOT NULL');
         return $this;
     }
 
