@@ -98,8 +98,14 @@ class Compiler
 
         $wheres[] = 'WHERE 1=1';
         $parameters = $this->parameterize(1);
-
+        
         foreach($this->query->where as $where) {
+
+            // Workaround for IS NULL and IS NOT NULL conditions.
+            if(!$where['operator'] && isset($where['value'])) {
+                $parameters = $where['value'];
+            }
+
             if(isset($where['values'])) {
                 $parameters = $this->parameterize(count($where['values']));
             }
