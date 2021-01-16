@@ -59,7 +59,7 @@ class Request
         return $segments[$index] ?? null;
     }
 
-    public function get(?string $key = null, ?string $default = null)
+    public function get(?string $key = null, $default = null)
     {
         if(null === $key) {
             return $_GET;
@@ -68,7 +68,7 @@ class Request
         return $_GET[$key] ?? $default;
     }
 
-    public function post(?string $key = null, ?string $default = null)
+    public function post(?string $key = null, $default = null)
     {
         if(null === $key) {
             return $_POST;
