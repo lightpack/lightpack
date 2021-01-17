@@ -14,10 +14,8 @@ foreach($routeFilters as $filterAlias) {
         );
     }
 
-    if($filtersConfig[$filterAlias] ?? null) {
-        $filter->register(
-            $container->get('router')->route(), 
-            new $filtersConfig[$filterAlias]
-        );
-    }
+    $filter->register(
+        $container->get('router')->route(), 
+        new $filtersConfig[$filterAlias]
+    );
 }
