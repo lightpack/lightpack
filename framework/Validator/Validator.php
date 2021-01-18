@@ -61,21 +61,6 @@ class Validator extends AbstractValidator
     }
 
     /**
-     * This method sets custom error message for a field.
-     * 
-     * @param  string  $key
-     * @param  string  $message
-     */
-    public function setError($key, $message)
-    {
-        if (array_key_exists($key, $this->dataSource)) {
-            $this->customErrors[$key] = $message;
-        }  
-
-        return $this;
-    }
-
-    /**
      * This method provides a way to bunch a number of rules
      * together.
      * 
@@ -101,19 +86,6 @@ class Validator extends AbstractValidator
     {
         foreach($config as $key => $rules) {
             $this->setRule($key, $rules);
-        }
-
-        return $this;
-    }
-
-    /**
-     * This method provides a shortcut to bunch together
-     * a number of custom errors.
-     */
-    public function setErrors(array $config)
-    {
-        foreach($config as $key => $message) {
-            $this->setError($key, $message);
         }
 
         return $this;
