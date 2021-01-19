@@ -343,4 +343,19 @@ final class ValidatorTest extends TestCase
 
         $this->assertFalse($validator->hasErrors());
     }
+
+    public function testValidationRuleRegex()
+    {
+        // Assertion 1
+        $validator = new Validator(['phone' => '123-321-445']);
+        $validator->setRule('phone', 'regex:/^\d{3}-\d{3}-\d{4}$/')->run();
+
+        $this->assertTrue($validator->hasErrors());
+
+        // Assertion 2
+        $validator = new Validator(['phone' => '123-321-4455']);
+        $validator->setRule('phone', 'regex:/^\d{3}-\d{3}-\d{4}$/')->run();
+
+        $this->assertFalse($validator->hasErrors());
+    }
 }
