@@ -241,4 +241,19 @@ final class ValidatorTest extends TestCase
 
         $this->assertFalse($validator->hasErrors());
     }
+
+    public function testValidationRuleMax()
+    {
+        // Assertion 1
+        $validator = new Validator(['name' => 'Bruce']);
+        $validator->setRule('name', 'max:4')->run();
+
+        $this->assertTrue($validator->hasErrors());
+
+        // Assertion 2
+        $validator = new Validator(['name' => 'Bob']);
+        $validator->setRule('name', 'max:3')->run();
+
+        $this->assertFalse($validator->hasErrors());
+    }
 }
