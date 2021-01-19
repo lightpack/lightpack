@@ -92,4 +92,12 @@ final class ValidatorTest extends TestCase
 
         $this->assertTrue($validator->hasErrors());
     }
+
+    public function testValidationRuleAlpha()
+    {
+        $validator = new Validator(['name' => 'Bob123']);
+        $validator->setRule('name', 'alpha')->run();
+
+        $this->assertTrue($validator->hasErrors());
+    }
 }
