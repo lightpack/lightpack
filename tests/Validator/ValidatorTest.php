@@ -61,6 +61,7 @@ final class ValidatorTest extends TestCase
         $validator = new Validator([
             'phone' => '091234521',
             'fname' => 'Bob123',
+            'lname' => 'Williams'
         ]);
 
         $validator
@@ -69,12 +70,18 @@ final class ValidatorTest extends TestCase
                 'rules' => 'required|alpha',
                 'label' => 'First name',
             ])
+            ->setRule('lname', [
+                'rules' => 'required|alpha',
+                'error' => 'Last name should be your title.'
+            ])
             ->run();
 
         $errors = $validator->getErrors();
 
         $this->assertTrue($validator->hasErrors());
+        $this->assertCount(2, $errors);
+        $this->assertTrue(isset($errors['phone']));
         $this->assertTrue(isset($errors['fname']));
-        $this->assertTrue(isset($errors['fname']));
+        $this->assertFalse(isset($errors['lname']));
     }
 }
