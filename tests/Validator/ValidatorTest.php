@@ -226,4 +226,19 @@ final class ValidatorTest extends TestCase
 
         $this->assertFalse($validator->hasErrors());
     }
+
+    public function testValidationRuleMin()
+    {
+        // Assertion 1
+        $validator = new Validator(['name' => 'Bruce']);
+        $validator->setRule('name', 'min:6')->run();
+
+        $this->assertTrue($validator->hasErrors());
+
+        // Assertion 2
+        $validator = new Validator(['name' => 'Bruce']);
+        $validator->setRule('name', 'min:5')->run();
+
+        $this->assertFalse($validator->hasErrors());
+    }
 }
