@@ -108,7 +108,7 @@ final class ValidatorTest extends TestCase
 
         $this->assertTrue($validator->hasErrors());
 
-        // Asseertion 2
+        // Assertion 2
         $validator = new Validator(['name' => 'Bob']);
         $validator->setRule('name', 'alpha')->run();
 
@@ -123,7 +123,7 @@ final class ValidatorTest extends TestCase
 
         $this->assertTrue($validator->hasErrors());
 
-        // Asseertion 2
+        // Assertion 2
         $validator = new Validator(['name' => 'Bob123']);
         $validator->setRule('name', 'alnum')->run();
 
@@ -138,7 +138,7 @@ final class ValidatorTest extends TestCase
 
         $this->assertTrue($validator->hasErrors());
 
-        // Asseertion 2
+        // Assertion 2
         $validator = new Validator(['email' => 'hello@example.co.in']);
         $validator->setRule('email', 'email')->run();
 
