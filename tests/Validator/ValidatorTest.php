@@ -159,4 +159,35 @@ final class ValidatorTest extends TestCase
 
         $this->assertFalse($validator->hasErrors());
     }
+
+    public function testValidationRuleUrl()
+    {
+        // Assertion 1
+        $validator = new Validator(['url' => 'http://example:8080']);
+        $validator->setRule('url', 'url')->run();
+
+        // Assertion 2
+        $validator = new Validator(['url' => 'http://example']);
+        $validator->setRule('url', 'url')->run();
+
+        $this->assertFalse($validator->hasErrors());
+
+        // Assertion 3
+        $validator = new Validator(['url' => 'http://example.com']);
+        $validator->setRule('url', 'url')->run();
+
+        $this->assertFalse($validator->hasErrors());
+
+        // Assertion 4
+        $validator = new Validator(['url' => 'http://123.example.com']);
+        $validator->setRule('url', 'url')->run();
+
+        $this->assertFalse($validator->hasErrors());
+
+        // Assertion 5
+        $validator = new Validator(['url' => 'http//example.com']);
+        $validator->setRule('url', 'url')->run();
+
+        $this->assertTrue($validator->hasErrors());
+    }
 }
