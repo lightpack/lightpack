@@ -20,9 +20,9 @@ final class ValidatorTest extends TestCase
         ];
 
         $validator = new Validator($data);
-        $validator->setrules($rules);
+        $validator->setrules($rules)->run();
 
-        $this->assertTrue($validator->hasErrors() === false);
+        $this->assertTrue($validator->hasErrors());
     }
 
     public function testHasNoValidationErrors()
@@ -51,7 +51,7 @@ final class ValidatorTest extends TestCase
         $validator = new Validator($data);
         $validator->setRules($rules)->run();
 
-        $this->assertTrue(count($validator->getErrors()) === 1);
+        $this->assertCount(1, $validator->getErrors());
         $this->assertTrue($validator->getError('email') === '');
         $this->assertTrue($validator->getError('password') !== '');
     }
