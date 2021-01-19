@@ -286,4 +286,25 @@ final class ValidatorTest extends TestCase
 
         $this->assertFalse($validator->hasErrors());
     }
+
+    public function testValidationRuleBefore()
+    {
+        // Assertion 1
+        $validator = new Validator(['date_before' => '19-01-2021']);
+        $validator->setRule('date_before', 'before:/d-m-y,12-01-2021/')->run();
+
+        $this->assertTrue($validator->hasErrors());
+
+        // Assertion 2
+        $validator = new Validator(['date_before' => '19-01-2021']);
+        $validator->setRule('date_before', 'before:/d-m-Y,12-01-2021/')->run();
+
+        $this->assertTrue($validator->hasErrors());
+
+        // Assertion 3
+        $validator = new Validator(['date_before' => '19-01-2021']);
+        $validator->setRule('date_before', 'before:d-m-Y,12-09-2021')->run();
+
+        $this->assertFalse($validator->hasErrors());
+    }
 }
