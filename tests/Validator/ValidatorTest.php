@@ -55,4 +55,26 @@ final class ValidatorTest extends TestCase
         $this->assertTrue($validator->getError('email') === '');
         $this->assertTrue($validator->getError('password') !== '');
     }
+
+    public function testCanSetRulesIndividually()
+    {
+        $validator = new Validator([
+            'phone' => '091234521',
+            'fname' => 'Bob123',
+        ]);
+
+        $validator
+            ->setRule('phone', 'required|length:10')
+            ->setRule('fname', [
+                'rules' => 'required|alpha',
+                'label' => 'First name',
+            ])
+            ->run();
+
+        $errors = $validator->getErrors();
+
+        $this->assertTrue($validator->hasErrors());
+        $this->assertTrue(isset($errors['fname']));
+        $this->assertTrue(isset($errors['fname']));
+    }
 }
