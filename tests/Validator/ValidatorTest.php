@@ -84,4 +84,12 @@ final class ValidatorTest extends TestCase
         $this->assertTrue(isset($errors['fname']));
         $this->assertFalse(isset($errors['lname']));
     }
+
+    public function testValidationRuleRequired()
+    {
+        $validator = new Validator(['password' => null]);
+        $validator->setRule('password', 'required')->run();
+
+        $this->assertTrue($validator->hasErrors());
+    }
 }
