@@ -87,17 +87,31 @@ final class ValidatorTest extends TestCase
 
     public function testValidationRuleRequired()
     {
+        // Assertion 1
         $validator = new Validator(['password' => null]);
         $validator->setRule('password', 'required')->run();
 
         $this->assertTrue($validator->hasErrors());
+
+        // Assertion 2
+        $validator = new Validator(['password' => 'hello']);
+        $validator->setRule('password', 'required')->run();
+
+        $this->assertFalse($validator->hasErrors());
     }
 
     public function testValidationRuleAlpha()
     {
+        // Assertion 1
         $validator = new Validator(['name' => 'Bob123']);
         $validator->setRule('name', 'alpha')->run();
 
         $this->assertTrue($validator->hasErrors());
+
+        // Asseertion 2
+        $validator = new Validator(['name' => 'Bob']);
+        $validator->setRule('name', 'alpha')->run();
+
+        $this->assertFalse($validator->hasErrors());
     }
 }
