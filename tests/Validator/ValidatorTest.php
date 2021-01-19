@@ -211,4 +211,19 @@ final class ValidatorTest extends TestCase
 
         $this->assertTrue($validator->hasErrors());
     }
+
+    public function testValidationRuleLength()
+    {
+        // Assertion 1
+        $validator = new Validator(['name' => 'Bruce']);
+        $validator->setRule('name', 'length:6')->run();
+
+        $this->assertTrue($validator->hasErrors());
+
+        // Assertion 2
+        $validator = new Validator(['name' => 'Bruce']);
+        $validator->setRule('name', 'length:5')->run();
+
+        $this->assertFalse($validator->hasErrors());
+    }
 }
