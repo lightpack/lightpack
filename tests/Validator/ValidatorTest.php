@@ -129,4 +129,19 @@ final class ValidatorTest extends TestCase
 
         $this->assertFalse($validator->hasErrors());
     }
+
+    public function testValidationRuleEmail()
+    {
+        // Assertion 1
+        $validator = new Validator(['email' => 'hello@example']);
+        $validator->setRule('email', 'email')->run();
+
+        $this->assertTrue($validator->hasErrors());
+
+        // Asseertion 2
+        $validator = new Validator(['email' => 'hello@example.co.in']);
+        $validator->setRule('email', 'email')->run();
+
+        $this->assertFalse($validator->hasErrors());
+    }
 }
