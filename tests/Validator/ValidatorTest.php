@@ -256,4 +256,19 @@ final class ValidatorTest extends TestCase
 
         $this->assertFalse($validator->hasErrors());
     }
+
+    public function testValidationRuleBetween()
+    {
+        // Assertion 1
+        $validator = new Validator(['age' => 23]);
+        $validator->setRule('age', 'between:4,8')->run();
+
+        $this->assertTrue($validator->hasErrors());
+
+        // Assertion 2
+        $validator = new Validator(['age' => 23]);
+        $validator->setRule('age', 'between:18,30')->run();
+
+        $this->assertFalse($validator->hasErrors());
+    }
 }
