@@ -144,4 +144,19 @@ final class ValidatorTest extends TestCase
 
         $this->assertFalse($validator->hasErrors());
     }
+
+    public function testValidationRuleSlug()
+    {
+        // Assertion 1
+        $validator = new Validator(['slug' => 'hello%world']);
+        $validator->setRule('slug', 'slug')->run();
+
+        $this->assertTrue($validator->hasErrors());
+
+        // Assertion 2
+        $validator = new Validator(['slug' => 'hello-world']);
+        $validator->setRule('slug', 'slug')->run();
+
+        $this->assertFalse($validator->hasErrors());
+    }
 }
