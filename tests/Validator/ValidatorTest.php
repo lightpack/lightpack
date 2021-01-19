@@ -190,4 +190,25 @@ final class ValidatorTest extends TestCase
 
         $this->assertTrue($validator->hasErrors());
     }
+
+    public function testValidationRuleIpAdress()
+    {
+        // Assertion 1
+        $validator = new Validator(['ip' => '0.0.0.0']);
+        $validator->setRule('ip', 'ip')->run();
+
+        $this->assertFalse($validator->hasErrors());
+
+        // Assertion 2
+        $validator = new Validator(['ip' => '2001:0db8:85a3:0000:0000:8a2e:0370:7334']);
+        $validator->setRule('ip', 'ip')->run();
+
+        $this->assertFalse($validator->hasErrors());
+
+        // Assertion 2
+        $validator = new Validator(['ip' => '192.254.254.XX']);
+        $validator->setRule('ip', 'ip')->run();
+
+        $this->assertTrue($validator->hasErrors());
+    }
 }
