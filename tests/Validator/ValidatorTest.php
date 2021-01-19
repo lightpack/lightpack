@@ -114,4 +114,19 @@ final class ValidatorTest extends TestCase
 
         $this->assertFalse($validator->hasErrors());
     }
+
+    public function testValidationRuleAlnum()
+    {
+        // Assertion 1
+        $validator = new Validator(['name' => '@Bob123']);
+        $validator->setRule('name', 'alnum')->run();
+
+        $this->assertTrue($validator->hasErrors());
+
+        // Asseertion 2
+        $validator = new Validator(['name' => 'Bob123']);
+        $validator->setRule('name', 'alnum')->run();
+
+        $this->assertFalse($validator->hasErrors());
+    }
 }
