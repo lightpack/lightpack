@@ -26,11 +26,6 @@ class File implements DriverInterface
 
     }
 
-    public function forever(string $key, string $value)
-    {
-
-    }
-
     public function flush()
     {
 

@@ -12,7 +12,5 @@ interface DriverInterface
 
     public function forget($key);
 
-    public function forever(string $key, string $value);
-
     public function flush();
 }
