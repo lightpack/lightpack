@@ -33,7 +33,7 @@ class Cache
 
     public function forever(string $key, string $value)
     {
-        $duration = time() * 60 * 60 * 24 * 365 * 30;
+        $duration = time() + (60 * 60 * 24 * 365 * 5);
         return $this->driver->set($key, $value, $duration);
     }
 
