@@ -37,7 +37,7 @@ class Cookie
 
     public function forever(string $key, string $value, array $options = [])
     {
-        $expire = time() * 60 * 60 * 24 * 365 * 30;
+        $expire = time() + (60 * 60 * 24 * 365 * 5);
         $this->set($key, $value, $expire, $options);
     }
 
