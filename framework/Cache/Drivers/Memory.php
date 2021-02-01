@@ -13,9 +13,9 @@ class Memory implements DriverInterface
         return isset($this->store[$key]);
     }
 
-    public function get(string $key, $default = null)
+    public function get(string $key)
     {
-        return $this->store[$key] ?? $default;
+        return $this->store[$key] ?? null;
     }
 
     public function set(string $key, string $value, int $duration)

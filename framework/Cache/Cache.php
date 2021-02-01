@@ -16,7 +16,7 @@ class Cache
         return $this->driver->has($key);
     }
 
-    public function get(string $key, $default = null)
+    public function get(string $key)
     {
         return $this->driver->get($key);
     }
