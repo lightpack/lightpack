@@ -37,11 +37,11 @@ class File implements DriverInterface
         return null;
     }
 
-    public function set(string $key, string $value, int $lifetime)
+    public function set(string $key, string $value, int $ttl)
     {
         $file = $this->fileId($key);
         $value = serialize([
-            'ttl' => $lifetime,
+            'ttl' => $ttl,
             'value' => $value,
         ]);
 
@@ -69,21 +69,11 @@ class File implements DriverInterface
 
     private function setPath(string $path)
     {
-        if(!is_dir($path) && !mkdir($path, 0775, true)) {
-            throw new RuntimeException(
-                sprintf("Unable to create file cache storage directory: %s", $path)
-            );
-        }
+        $this->path = rtrim($path, '/');
 
-        if(!is_readable($path) || !is_writable($path)) {
-            if(!chmod($path, 0755)) {
-                throw new RuntimeException(
-                    sprintf("File cache storage directory lacks read/write permission: %s", $path)
-                );
-            }
+        if (!file_exists($this->path)) {
+            mkdir($this->path, 0777, true);
         }
-
-        $this->path = $path;
     }
 
     private function fileId($key)
