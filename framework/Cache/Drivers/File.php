@@ -37,7 +37,7 @@ class File implements DriverInterface
         return null;
     }
 
-    public function set(string $key, string $value, int $ttl)
+    public function set(string $key, $value, int $ttl)
     {
         $file = $this->getFilename($key);
         $value = serialize([

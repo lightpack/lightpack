@@ -21,7 +21,7 @@ class Cache
         return $this->driver->get($key);
     }
 
-    public function set(string $key, string $value, int $minutes)
+    public function set(string $key, $value, int $minutes)
     {
         $ttl = time() + ($minutes * 60);
         return $this->driver->set($key, $value, $ttl);
@@ -32,7 +32,7 @@ class Cache
         return $this->driver->delete($key);
     }
 
-    public function forever(string $key, string $value)
+    public function forever(string $key, $value)
     {
         $lifetime = time() + (60 * 60 * 24 * 365 * 5);
         return $this->driver->set($key, $value, $lifetime);
