@@ -26,9 +26,9 @@ class Cache
         return $this->driver->set($key, $value, $duration);
     }
 
-    public function forget($key)
+    public function delete($key)
     {
-        return $this->driver->forget($key);
+        return $this->driver->delete($key);
     }
 
     public function forever(string $key, string $value)

@@ -3,6 +3,7 @@
 namespace Lightpack\Cache\Drivers;
 
 use Lightpack\Cache\DriverInterface;
+use RuntimeException;
 
 class File implements DriverInterface
 {
@@ -10,7 +11,7 @@ class File implements DriverInterface
 
     public function __construct(string $path)
     {
-        $this->path = $path;
+        $this->setPath($path);
     }
 
     public function has(string $key): bool
@@ -20,41 +21,67 @@ class File implements DriverInterface
 
     public function get(string $key)
     {
-        $filepath = $this->path . $key;
+        $file = $this->fileId($key);
 
-		if(!file_exists($filepath)) {
+		if(!file_exists($file)) {
             return null;
         }
 
-        $contents = file_get_contents($filepath);
-        $expiry = substr($contents, 0, 10);
+        $contents = unserialize(file_get_contents($file));
 
-        if($expiry > time()) {
-            return unserialize(substr($contents, 10));
+        if($contents['expiry'] > time()) {
+            return $contents['value'];
         }
 
-        $this->forget($key); 
+        $this->delete($key); 
         return null;
     }
 
     public function set(string $key, string $value, int $duration)
     {
-        $value = $duration . serialize($value);
-		file_put_contents($this->path . $key, $value, LOCK_EX);
+        $file = $this->fileId($key);
+        $value = serialize([
+            'expire' => time() + $duration,
+            'value' => $value,
+        ]);
+
+		file_put_contents($file, $value, LOCK_EX);
     }
 
-    public function forget($key)
+    public function delete($key)
     {
-        @unlink($this->path . $key);
+        @unlink($this->fileId($key));
     }
 
     public function flush()
     {
 		array_map(
-            function(string $filepath) {
-                @unlink($filepath);
+            function(string $file) {
+                @unlink($file);
             }, 
             glob($this->path . '*')
         );
+    }
+
+    private function setPath(string $path)
+    {
+        if(!file_exists($path)) {
+            throw new RuntimeException(
+                sprintf("File cache storage path does not exist: %s", $path)
+            );
+        }
+
+        if(!is_writable($path)) {
+            throw new RuntimeException(
+                sprintf("File cache storage path lacks write permission: %s", $path)
+            );
+        }
+
+        $this->path = realpath($path);
+    }
+
+    private function fileId($key)
+    {
+        return $this->path . DIRECTORY_SEPARATOR . sha1($key);
     }
 }

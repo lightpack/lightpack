@@ -23,7 +23,7 @@ class Memory implements DriverInterface
         $this->store[$key] = $value;
     }
 
-    public function forget($key)
+    public function delete($key)
     {
         unset($this->store[$key]);
     }

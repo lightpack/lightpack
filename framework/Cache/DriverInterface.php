@@ -10,7 +10,7 @@ interface DriverInterface
 
     public function set(string $key, string $value, int $duration);
 
-    public function forget($key);
+    public function delete($key);
 
     public function flush();
 }
