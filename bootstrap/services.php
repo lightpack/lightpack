@@ -142,3 +142,16 @@ $container->register('db', function($container) {
         $container->get('config')->default['connection']['mysql']
     );
 });
+
+/**
+ * ------------------------------------------------------------
+ * Register Cache Service Provider.
+ * ------------------------------------------------------------
+ */
+
+$container->register('cache', function($container) {
+    $cacheDir = $container->get('config')->default['cache']['storage'];
+    $fileStorage = new Lightpack\Cache\Drivers\File($cacheDir);
+
+    return new Lightpack\Cache\Cache($fileStorage);
+});
