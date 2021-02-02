@@ -63,7 +63,7 @@ class File implements DriverInterface
             function($filename) {
                 unlink($filename);
             }, 
-            glob($this->path . '*')
+            glob($this->path . '/*')
         );
     }
 

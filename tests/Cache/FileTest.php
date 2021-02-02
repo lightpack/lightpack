@@ -46,4 +46,19 @@ final class FileTest extends TestCase
         $cache->delete('name');
         $this->assertFalse($cache->has('name'));
     }
+
+    public function testCanFlushItems()
+    {
+        $cache = new File($this->cacheDir);
+        $cache->set('key1', 'value1', time() + (5 * 60));
+        $cache->set('key2', 'value2', time() + (5 * 60));
+
+        $this->assertTrue($cache->has('key1'));
+        $this->assertTrue($cache->has('key2'));
+
+        $cache->flush();
+        
+        $this->assertFalse($cache->has('key1'));
+        $this->assertFalse($cache->has('key2'));
+    }
 }
