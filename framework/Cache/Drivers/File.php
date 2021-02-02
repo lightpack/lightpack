@@ -21,7 +21,7 @@ class File implements DriverInterface
 
     public function get(string $key)
     {
-        $file = $this->fileId($key);
+        $file = $this->getFilename($key);
 
 		if(!file_exists($file)) {
             return null;
@@ -39,7 +39,7 @@ class File implements DriverInterface
 
     public function set(string $key, string $value, int $ttl)
     {
-        $file = $this->fileId($key);
+        $file = $this->getFilename($key);
         $value = serialize([
             'ttl' => $ttl,
             'value' => $value,
@@ -50,7 +50,7 @@ class File implements DriverInterface
 
     public function delete($key)
     {
-        $file = $this->fileId($key);
+        $file = $this->getFilename($key);
 
         if(file_exists($file)) {
             unlink($file);
@@ -59,12 +59,7 @@ class File implements DriverInterface
 
     public function flush()
     {
-		array_map(
-            function($filename) {
-                unlink($filename);
-            }, 
-            glob($this->path . '/*')
-        );
+		array_map('unlink', glob($this->path . '/*'));
     }
 
     private function setPath(string $path)
@@ -76,7 +71,7 @@ class File implements DriverInterface
         }
     }
 
-    private function fileId($key)
+    private function getFilename($key)
     {
         return $this->path . DIRECTORY_SEPARATOR . sha1($key);
     }
