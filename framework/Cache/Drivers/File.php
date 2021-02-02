@@ -72,7 +72,7 @@ class File implements DriverInterface
         $this->path = rtrim($path, '/');
 
         if (!file_exists($this->path)) {
-            mkdir($this->path, 0777, true);
+            mkdir($this->path, 0775, true);
         }
     }
 
