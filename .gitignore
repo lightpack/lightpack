@@ -1,4 +1,5 @@
 vendor/
+storage/*
 .DS_Store
 .vscode
 composer.phar
