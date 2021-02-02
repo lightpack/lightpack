@@ -26,10 +26,10 @@ class File implements DriverInterface
 		if(!file_exists($file)) {
             return null;
         }
-
+        
         $contents = unserialize(file_get_contents($file));
 
-        if($contents['expiry'] > time()) {
+        if($contents['ttl'] > time()) {
             return $contents['value'];
         }
 
@@ -37,11 +37,11 @@ class File implements DriverInterface
         return null;
     }
 
-    public function set(string $key, string $value, int $ttl)
+    public function set(string $key, string $value, int $lifetime)
     {
         $file = $this->fileId($key);
         $value = serialize([
-            'expire' => $ttl,
+            'ttl' => $lifetime,
             'value' => $value,
         ]);
 
@@ -59,7 +59,12 @@ class File implements DriverInterface
 
     public function flush()
     {
-		array_map('unlink', glob($this->path . '*'));
+		array_map(
+            function($filename) {
+                unlink($filename);
+            }, 
+            glob($this->path . '*')
+        );
     }
 
     private function setPath(string $path)
@@ -78,7 +83,7 @@ class File implements DriverInterface
             }
         }
 
-        $this->path = realpath($path);
+        $this->path = $path;
     }
 
     private function fileId($key)

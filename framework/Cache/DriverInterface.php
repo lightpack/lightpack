@@ -8,7 +8,7 @@ interface DriverInterface
 
     public function get(string $key);
 
-    public function set(string $key, string $value, int $ttl);
+    public function set(string $key, string $value, int $lifetime);
 
     public function delete($key);
 
