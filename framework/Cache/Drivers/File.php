@@ -64,16 +64,18 @@ class File implements DriverInterface
 
     private function setPath(string $path)
     {
-        if(!file_exists($path)) {
+        if(!is_dir($path) && !mkdir($path, 0775, true)) {
             throw new RuntimeException(
-                sprintf("File cache storage path does not exist: %s", $path)
+                sprintf("Unable to create file cache storage directory: %s", $path)
             );
         }
 
-        if(!is_writable($path)) {
-            throw new RuntimeException(
-                sprintf("File cache storage path lacks write permission: %s", $path)
-            );
+        if(!is_readable($path) || !is_writable($path)) {
+            if(!chmod($path, 0755)) {
+                throw new RuntimeException(
+                    sprintf("File cache storage directory lacks read/write permission: %s", $path)
+                );
+            }
         }
 
         $this->path = realpath($path);
