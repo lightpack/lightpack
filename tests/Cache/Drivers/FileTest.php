@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-use Lightpack\Cache\Cache;
-use Lightpack\Cache\Drivers\File;
 use PHPUnit\Framework\TestCase;
+use Lightpack\Cache\Drivers\File;
 
 final class FileTest extends TestCase
 {
