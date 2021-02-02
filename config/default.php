@@ -32,4 +32,7 @@ return [
             'options' => null,
         ]
     ],
+    'cache' => [
+        'storage' => DIR_STORAGE . '/cache',
+    ]
 ];
