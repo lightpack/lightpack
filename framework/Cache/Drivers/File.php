@@ -37,11 +37,11 @@ class File implements DriverInterface
         return null;
     }
 
-    public function set(string $key, string $value, int $duration)
+    public function set(string $key, string $value, int $ttl)
     {
         $file = $this->fileId($key);
         $value = serialize([
-            'expire' => time() + $duration,
+            'expire' => $ttl,
             'value' => $value,
         ]);
 
@@ -50,17 +50,16 @@ class File implements DriverInterface
 
     public function delete($key)
     {
-        @unlink($this->fileId($key));
+        $file = $this->fileId($key);
+
+        if(file_exists($file)) {
+            unlink($file);
+        }
     }
 
     public function flush()
     {
-		array_map(
-            function(string $file) {
-                @unlink($file);
-            }, 
-            glob($this->path . '*')
-        );
+		array_map('unlink', glob($this->path . '*'));
     }
 
     private function setPath(string $path)
