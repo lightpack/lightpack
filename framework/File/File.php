@@ -169,26 +169,24 @@ class File
         $this->makeDir($destination);
 
         foreach($this->getIterator($source) as $file) {
-            $destination = $destination . DIRECTORY_SEPARATOR . $file->getBasename();
+            $copyFrom = $file->getRealPath();
+            $copyTo = $destination . DIRECTORY_SEPARATOR . $file->getBasename();
 
             if($file->isDir()) {
-                $success = $this->copyDir($file->getRealPath(), $destination, $delete);
-                
-                if(!$success) {
-                    return false;
-                }
-
-                if($success && $delete) {
-                    $this->removeDir($file->getRealPath());
-                    continue;
-                }
-            } else {
-                if(!copy($file->getRealPath(), $destination)) {
+                if(!$this->copyDir($copyFrom, $copyTo, $delete)) {
                     return false;
                 }
 
                 if($delete) {
-                    @unlink($file->getRealPath());
+                    $this->removeDir($copyFrom);
+                }
+            } else {
+                if(!copy($copyFrom, $copyTo)) {
+                    return false;
+                }
+
+                if($delete) {
+                    @unlink($copyFrom);
                 }
             }
         }
