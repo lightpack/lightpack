@@ -80,9 +80,8 @@ class File
         if(!is_dir($path)) {
             return;
         }
-        $iterator = new FilesystemIterator($path);
 
-        foreach($iterator as $file) {
+        foreach($this->getIterator($path) as $file) {
             if($file->isDir()) {
                 $this->removeDir($file->getRealPath());
             } else {
@@ -102,9 +101,8 @@ class File
         }
 
         $this->makeDir($destination);
-        $iterator = new FilesystemIterator($source);
 
-        foreach($iterator as $file) {
+        foreach($this->getIterator($source) as $file) {
             $destination = $destination . DIRECTORY_SEPARATOR . $file->getBasename();
 
             if($file->isDir()) {
@@ -134,5 +132,29 @@ class File
         }
 
         return true;
+    }
+
+    public function recent(string $path): ?SplFileInfo
+    {
+        $found = null;
+        $timestamp = 0;
+        
+        foreach($this->getIterator($path) as $file) {
+            if($timestamp < $file->getMTime()) {
+                $found = $file;
+                $timestamp = $file->getMTime();
+            }
+        }
+
+        return $found;
+    }
+
+    private function getIterator(string $path): ?FilesystemIterator
+    {
+        if(!is_dir($path)) {
+            return null;
+        }
+
+        return new FilesystemIterator($path);
     }
 }
