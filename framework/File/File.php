@@ -215,13 +215,19 @@ class File
         return $found;
     }
 
-    public function traverse(string $path): ?FilesystemIterator
+    public function traverse(string $path): ?array
     {
         if(!$this->isDir($path)) {
             return null;
         }
 
-        return $this->getIterator($path);
+        $files = [];
+
+        foreach($this->getIterator($path) as $file) {
+            $files[$file->getFilename()] = $file;
+        }
+
+        return $files;
     }
 
     private function getIterator(string $path): ?FilesystemIterator
