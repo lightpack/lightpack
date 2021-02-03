@@ -23,6 +23,11 @@ class File
         return file_exists($path);
     }
 
+    public function isDir(string $path): bool
+    {
+        return is_dir($path);
+    }
+
     public function get(string $path): ?string
     {
         if(!$this->exists($path)) {
@@ -56,7 +61,7 @@ class File
     {
         return $this->put($path, $contents, LOCK_EX | FILE_APPEND);
     }
-    
+
     public function copy(string $source, string $destination): bool
     {
         if($this->exists($source)) {
@@ -208,6 +213,15 @@ class File
         }
 
         return $found;
+    }
+
+    public function traverse(string $path): ?FilesystemIterator
+    {
+        if(!$this->isDir($path)) {
+            return null;
+        }
+
+        return $this->getIterator($path);
     }
 
     private function getIterator(string $path): ?FilesystemIterator
