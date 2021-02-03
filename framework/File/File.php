@@ -2,14 +2,19 @@
 
 namespace Lightpack\File;
 
+use DateTime;
 use SplFileInfo;
 use RuntimeException;
 use FilesystemIterator;
 
 class File
 {
-    public function info($path)
+    public function info($path): ?SplFileInfo
     {
+        if(!is_file($path)) {
+            return null;
+        }
+        
         return new SplFileInfo($path);
     }
 
@@ -38,11 +43,6 @@ class File
         return file_put_contents($path, $contents, $flags);
     }
 
-    public function append(string $path, string $contents)
-    {
-        return $this->put($path, $contents, LOCK_EX | FILE_APPEND);
-    }
-
     public function delete(string $path): bool
     {
         if($this->exists($path)) {
@@ -50,6 +50,67 @@ class File
         }
 
         return false;
+    }
+
+    public function append(string $path, string $contents)
+    {
+        return $this->put($path, $contents, LOCK_EX | FILE_APPEND);
+    }
+    
+    public function copy(string $source, string $destination): bool
+    {
+        if($this->exists($source)) {
+            return copy($source, $destination);
+        }
+
+        return false;
+    }
+
+    public function rename(string $old, string $new): bool
+    {
+        if($this->copy($old, $new)) {
+            @unlink($old);
+        }
+
+        return false;
+    }
+
+    public function move(string $source, string $destination): bool
+    {
+        return $this->rename($source, $destination);
+    }
+
+    public function extension(string $path): string
+    {
+        return pathinfo($path, PATHINFO_EXTENSION);
+    }
+
+    public function size(string $path, string $unit = null)
+    {
+        $bytes = filesize($path);
+        $units = ['B', 'KB', 'MB', 'GB', 'TB'];
+
+        if($unit = null || !array_key_exists($unit, $units)) {
+            return $bytes;
+        }   
+        
+        $bytes = max($bytes, 0); 
+        $pow = floor(($bytes ? log($bytes) : 0) / log(1024)); 
+        $pow = min($pow, count($units) - 1); 
+        $bytes /= pow(1024, $pow);
+
+        return round($bytes, 2) . ' ' . $units[$pow]; 
+    }
+
+    public function lastModified(string $path, string $dateFormat = null) {
+        $modified = filemtime($path);
+
+        if($dateFormat) {
+            $date = new DateTime($modified);
+            $modified = $date->format($dateFormat);
+        }
+
+        return $modified;
     }
 
     public function makeDir(string $path, int $mode = 0777): bool 
