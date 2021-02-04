@@ -90,27 +90,27 @@ class File
         return pathinfo($path, PATHINFO_EXTENSION);
     }
 
-    public function size(string $path, string $unit = null)
+    public function size(string $path, bool $format = false)
     {
         $bytes = filesize($path);
-        $units = ['B', 'KB', 'MB', 'GB', 'TB'];
-
-        if($unit = null || !array_key_exists($unit, $units)) {
+        
+        if($format === false) {
             return $bytes;
         }   
+    
+        $units = ['B', 'KB', 'MB', 'GB', 'TB'];
         
-        $bytes = max($bytes, 0); 
-        $pow = floor(($bytes ? log($bytes) : 0) / log(1024)); 
-        $pow = min($pow, count($units) - 1); 
-        $bytes /= pow(1024, $pow);
-
-        return round($bytes, 2) . ' ' . $units[$pow]; 
+        for ($i = 0; $bytes >= 1024 && $i < 4; $i++) {
+            $bytes /= 1024;
+        }
+			
+		return round($bytes, 2) . $units[$i];
     }
 
-    public function lastModified(string $path, string $dateFormat = null) {
+    public function modified(string $path, bool $format = false, string $dateFormat = 'M d, Y') {
         $timestamp = filemtime($path);
 
-        if($dateFormat) {
+        if($format) {
             $date = DateTime::createFromFormat('U', $timestamp);
             $timestamp = $date->format($dateFormat);
         }
