@@ -14,7 +14,7 @@
     <body>
         <div class="container">
             <img class="logo" src="<?= url('public/assets/img/logo.png') ?>">
-            <h1><?= $title ?> <?= $filex->modified(DIR_ROOT . '/vendor/composer/autoload_files.php', true) ?></h1>
+            <h1><?= $title ?></h1>
             <p><?= $message ?></p>
         </div>
     </body>
