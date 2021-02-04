@@ -108,14 +108,14 @@ class File
     }
 
     public function lastModified(string $path, string $dateFormat = null) {
-        $modified = filemtime($path);
+        $timestamp = filemtime($path);
 
         if($dateFormat) {
-            $date = new DateTime($modified);
-            $modified = $date->format($dateFormat);
+            $date = DateTime::createFromFormat('U', $timestamp);
+            $timestamp = $date->format($dateFormat);
         }
 
-        return $modified;
+        return $timestamp;
     }
 
     public function makeDir(string $path, int $mode = 0777): bool 
