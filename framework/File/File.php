@@ -28,7 +28,7 @@ class File
         return is_dir($path);
     }
 
-    public function get(string $path): ?string
+    public function read(string $path): ?string
     {
         if(!$this->exists($path)) {
             return null;
@@ -43,7 +43,7 @@ class File
         return file_get_contents($path);
     }
 
-    public function put(string $path, string $contents, $flags = LOCK_EX)
+    public function write(string $path, string $contents, $flags = LOCK_EX)
     {
         return file_put_contents($path, $contents, $flags);
     }
@@ -59,7 +59,7 @@ class File
 
     public function append(string $path, string $contents)
     {
-        return $this->put($path, $contents, LOCK_EX | FILE_APPEND);
+        return $this->write($path, $contents, LOCK_EX | FILE_APPEND);
     }
 
     public function copy(string $source, string $destination): bool
