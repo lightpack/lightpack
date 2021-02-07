@@ -21,20 +21,14 @@
     ],
     "autoload": {
         "psr-4": {
-            "Lightpack\\": "framework/",
             "Modules\\": "modules/",
             "App\\": "app/"
-        },
-        "files": [
-            "framework/utilities.php"
-        ],
-        "exclude-from-classmap": [
-            "/tests/"
-        ]
+        }
     },
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.1"
+        "php": "^7.1",
+        "lightpack/framework": "^v0.1-alpha"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5"

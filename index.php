@@ -8,4 +8,4 @@
  * ------------------------------------------------------------
  */
 
-require 'framework/bootstrap.php';
+require 'bootstrap/init.php';
