@@ -14,7 +14,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
  * ------------------------------------------------------------
  */
 
-require_once __DIR__ . '/../bootstrap/constants.php';
+require_once __DIR__ . '/constants.php';
 
 /**
  * ------------------------------------------------------------
@@ -54,4 +54,4 @@ require_once DIR_BOOTSTRAP . '/modules.php';
  * ------------------------------------------------------------
  */
 
-\Lightpack\App::run($container);
+Lightpack\App::run($container);
