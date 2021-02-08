@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "7acfbc1842bc18dd1fda098e07e562a2637a75b9"
+                "reference": "373919ca5149feede9dcf1fe65bfd0cac49e27d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/7acfbc1842bc18dd1fda098e07e562a2637a75b9",
-                "reference": "7acfbc1842bc18dd1fda098e07e562a2637a75b9",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/373919ca5149feede9dcf1fe65bfd0cac49e27d2",
+                "reference": "373919ca5149feede9dcf1fe65bfd0cac49e27d2",
                 "shasum": ""
             },
             "require": {
@@ -63,7 +63,7 @@
                 "issues": "https://github.com/lightpack/framework/issues",
                 "source": "https://github.com/lightpack/framework/tree/v0.1-alpha"
             },
-            "time": "2021-02-07T18:52:40+00:00"
+            "time": "2021-02-08T11:15:09+00:00"
         }
     ],
     "packages-dev": [
