@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2-alpha",
+            "version": "v0.2.1-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "a92e331cda911c74d8ea31f06bdebc6e83dc91f6"
+                "reference": "0f5615b76b16bbdbb9b9523240cf3185ca7009ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/a92e331cda911c74d8ea31f06bdebc6e83dc91f6",
-                "reference": "a92e331cda911c74d8ea31f06bdebc6e83dc91f6",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/0f5615b76b16bbdbb9b9523240cf3185ca7009ef",
+                "reference": "0f5615b76b16bbdbb9b9523240cf3185ca7009ef",
                 "shasum": ""
             },
             "require": {
@@ -61,9 +61,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.1-alpha"
             },
-            "time": "2021-02-16T07:29:45+00:00"
+            "time": "2021-02-22T19:30:59+00:00"
         }
     ],
     "packages-dev": [
