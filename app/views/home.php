@@ -2,7 +2,7 @@
 <html>
     <head>
         <title><?= $title ?></title>
-        <link rel="icon" type="image/png" href="<?= url('assets/img/favicon-32x32.png') ?>" sizes="32x32" />
+        <link rel="icon" type="image/png" href="<?= asset_url('img', 'favicon-32x32.png') ?>" sizes="32x32" />
         <style>
             body {font-family: Verdana, Arial, 'sans-serif'; color: #214e7b}
             .container {display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;}
@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="container">
-            <img class="logo" src="<?= url('assets/img/logo.png') ?>">
+            <img class="logo" src="<?= asset_url('img', 'logo.png') ?>">
             <h1><?= $title ?></h1>
             <p><?= $message ?></p>
         </div>
