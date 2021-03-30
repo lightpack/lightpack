@@ -7,7 +7,6 @@ return [
         'timezone' => 'UTC',
         'locale' => 'en',
         'default_locale' => 'en',
-        'log_errors' => true,
     ],
     'cookie' => [
         'secret' => '!@Secret4Cookie@!',
@@ -34,5 +33,8 @@ return [
     ],
     'cache' => [
         'storage' => DIR_STORAGE . '/cache',
-    ]
+    ],
+    'logger' => [
+        'filename' => DIR_STORAGE . '/logs.txt',
+    ],
 ];

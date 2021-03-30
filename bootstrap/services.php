@@ -155,3 +155,15 @@ $container->register('cache', function($container) {
 
     return new Lightpack\Cache\Cache($fileStorage);
 });
+
+/**
+ * ------------------------------------------------------------
+ * Register exception/error logger.
+ * ------------------------------------------------------------
+ */
+
+$container->register('logger', function($container) {
+    $filename = $container->get('config')->default['logger']['filename'];
+
+    return new Lightpack\Logger\Logger($filename);
+});
