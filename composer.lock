@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.5-alpha",
+            "version": "v0.2.6-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "7de9618fd6be2322c6fca99e9ed9f6f3ec6f097c"
+                "reference": "0ddfe51a05f8640a276ed55d706a7e989a74ac23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/7de9618fd6be2322c6fca99e9ed9f6f3ec6f097c",
-                "reference": "7de9618fd6be2322c6fca99e9ed9f6f3ec6f097c",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/0ddfe51a05f8640a276ed55d706a7e989a74ac23",
+                "reference": "0ddfe51a05f8640a276ed55d706a7e989a74ac23",
                 "shasum": ""
             },
             "require": {
@@ -62,9 +62,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.5-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.6-alpha"
             },
-            "time": "2021-03-31T01:57:38+00:00"
+            "time": "2021-03-31T02:40:02+00:00"
         },
         {
             "name": "psr/log",
