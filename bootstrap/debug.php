@@ -19,6 +19,7 @@ error_reporting(E_ALL);
  * Instantiate framework debug handler.
  */
 $handler = new Lightpack\Debug\Handler(
+    new Lightpack\Logger\Logger(DIR_STORAGE . '/logs.txt'),
     new Lightpack\Debug\ExceptionRenderer(APP_ENV)
 );
 
