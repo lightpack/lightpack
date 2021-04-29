@@ -15,7 +15,7 @@ $container = new Lightpack\Container\Container();
  */
 
 $container->register('config', function($container) {
-    return new Lightpack\Config\Config(['default', 'events', 'filters']);
+    return new Lightpack\Config\Config(['default', 'events', 'filters', 'cors']);
 });
 
 /**
