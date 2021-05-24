@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'environment' => 'development',
+    'environment' => get_env('APP_ENV', 'development'),
     'site' => [
         'url' => 'http://localhost',
         'timezone' => 'UTC',
