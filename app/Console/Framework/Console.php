@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Console\Framework;
+
 class Console
 {
     private $args = [];
@@ -19,6 +21,12 @@ class Console
             'help' => $help,
             'callback' => $callback,
         ];
+    }
+
+    public function runCommand()
+    {
+        $handler = Commands::getCommandHandler('create:controller');
+        echo get_class($handler), "\n";
     }
 
     public function run()
@@ -60,25 +68,31 @@ class Console
         }
     }
 
-    private function getOptions()
+    public function getOptions()
     {
         $parsedOptions = ['long' => [], 'short' => []];
 
         global $argv;
-        $this->script = $argv[0];
-        array_shift($argv);
+        $options = $argv;
+        $this->script = $options[0];
+        array_shift($options);
 
-        foreach ($argv as $option) {
+        foreach ($options as $option) {
             $option = explode('=', $option);
+            $key = 'command';
 
             if (strpos($option[0], '--') === 0) {
                 $key = 'long';
             } else if (strpos($option[0], '-') === 0) {
                 $key = 'short';
-            }
+            } 
 
-            $data = trim($option[1] ?? null);
-            $parsedOptions[$key][ltrim($option[0], '\s-')] = $data ? $data : null;
+            if($key === 'command') {
+                $parsedOptions['commands'][] = trim($option[0]);
+            } else {
+                $data = trim($option[1] ?? null);
+                $parsedOptions[$key][ltrim($option[0], '\s-')] = $data ? $data : null;
+            }
         }
 
         return $parsedOptions;

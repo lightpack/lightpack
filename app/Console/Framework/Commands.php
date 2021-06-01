@@ -10,4 +10,13 @@ class Commands
     {
         self::$options[$command] = $handler;
     }
+
+    public static function getCommandHandler(string $command)
+    {
+        if(!isset(self::$options[$command])) {
+            throw new \Exception('Console command not found: ' . $command); 
+        }
+
+        return self::$options[$command];
+    }
 }

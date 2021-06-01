@@ -3,4 +3,4 @@
 
 require_once __DIR__ . "/bootstrap/console.php";
 
-echo "Lucy CLI\n";
+App\Console\Framework\Runner::run();
