@@ -1,6 +1,10 @@
 #!/usr/bin/env php
 <?php
 
+if (strpos(PHP_SAPI, 'cgi') === 0) {
+    die("Abort: Running CLI is not supported in php-cgi environment!\n\n");
+}
+
 require_once __DIR__ . "/bootstrap/console.php";
 
 App\Console\Framework\Runner::run();
