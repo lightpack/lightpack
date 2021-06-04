@@ -3,13 +3,13 @@
 return [
     'environment' => get_env('APP_ENV', 'development'),
     'site' => [
-        'url' => 'http://localhost',
+        'url' => get_env('APP_URL', 'http://localhost'),
         'timezone' => 'UTC',
         'locale' => 'en',
         'default_locale' => 'en',
     ],
     'cookie' => [
-        'secret' => '!@Secret4Cookie@!',
+        'secret' => get_env('COOKIE_SECRET'),
     ],
     'url' => [
         'api_route_prefix' => 'api',
@@ -20,7 +20,7 @@ return [
     ],
     'connection' => [
         'sqlite' => [
-            'database' => '',
+            'database' => get_env('SQLITE_DB_PATH'),
         ],
         'mysql' => [
             'host' => get_env('DB_HOST'), 
