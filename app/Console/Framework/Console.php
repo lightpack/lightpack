@@ -23,10 +23,15 @@ class Console
         ];
     }
 
-    public function runCommand()
+    public function runCommand(string $command = null)
     {
-        $handler = Commands::getCommandHandler('create:controller');
-        echo get_class($handler), "\n";
+        if($command === null) {
+            fputs(STDOUT, "Need help?\n");
+            exit(0);
+        }
+
+        $handler = Commands::getCommandHandler($command);
+        $handler->run();
     }
 
     public function run()

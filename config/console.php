@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'create:controller' => \App\Console\CreateController::class,
+    'help' => \App\Console\HelpCommand::class,
+    'create:controller' => \App\Console\ControllerCommand::class,
 ];

@@ -14,7 +14,8 @@ class Commands
     public static function getCommandHandler(string $command)
     {
         if(!isset(self::$options[$command])) {
-            throw new \Exception('Console command not found: ' . $command); 
+            fputs(STDERR, "Invalid command: {$command}\n");
+            exit(0);
         }
 
         return self::$options[$command];
