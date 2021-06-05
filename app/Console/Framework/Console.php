@@ -23,7 +23,7 @@ class Console
         ];
     }
 
-    public function runCommand(string $command = null)
+    public function runCommand(string $command = null, array $arguments)
     {
         if($command === null) {
             fputs(STDOUT, "Need help?\n");
@@ -31,7 +31,7 @@ class Console
         }
 
         $handler = Commands::getCommandHandler($command);
-        $handler->run();
+        $handler->run($arguments);
     }
 
     public function run()
