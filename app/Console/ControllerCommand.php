@@ -2,9 +2,9 @@
 
 namespace App\Console;
 
-use App\Console\Framework\Command;
+use App\Console\ICommand;
 
-class ControllerCommand extends Command
+class ControllerCommand implements ICommand
 {
     public function run(array $arguments = [])
     {

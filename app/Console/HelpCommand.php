@@ -2,9 +2,7 @@
 
 namespace App\Console;
 
-use App\Console\Framework\Command;
-
-class HelpCommand extends Command
+class HelpCommand implements ICommand
 {
     public function run()
     {

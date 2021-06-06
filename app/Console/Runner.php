@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Framework;
+namespace App\Console;
 
 class Runner
 {
@@ -17,7 +17,6 @@ class Runner
             array_shift($arguments);
         }
 
-        $console = new Console;
-        $console->runCommand($command, $arguments);
+        Console::runCommand($command, $arguments);
     }
 }
