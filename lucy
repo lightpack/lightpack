@@ -7,4 +7,4 @@ if (strpos(PHP_SAPI, 'cgi') === 0) {
 
 require_once __DIR__ . '/bootstrap/console.php';
 
-App\Console\Runner::run();
+Lightpack\Console\Runner::run();
