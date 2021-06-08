@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.10-alpha",
+            "version": "v0.2.11-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "669fe698df7c6240e95c0f665758c66b6c63493c"
+                "reference": "78e69650dcd99d65c0e9291a9db5be38e44f356f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/669fe698df7c6240e95c0f665758c66b6c63493c",
-                "reference": "669fe698df7c6240e95c0f665758c66b6c63493c",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/78e69650dcd99d65c0e9291a9db5be38e44f356f",
+                "reference": "78e69650dcd99d65c0e9291a9db5be38e44f356f",
                 "shasum": ""
             },
             "require": {
@@ -62,9 +62,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.10-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.11-alpha"
             },
-            "time": "2021-05-25T05:51:45+00:00"
+            "time": "2021-06-07T02:00:42+00:00"
         },
         {
             "name": "psr/log",
@@ -890,12 +890,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2b65b7fbf24a6c1aa32ce5cab3b06211a0e8dd42"
+                "reference": "2358cf2e0705702ffaaa226fa31d043ebe87fb00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2b65b7fbf24a6c1aa32ce5cab3b06211a0e8dd42",
-                "reference": "2b65b7fbf24a6c1aa32ce5cab3b06211a0e8dd42",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2358cf2e0705702ffaaa226fa31d043ebe87fb00",
+                "reference": "2358cf2e0705702ffaaa226fa31d043ebe87fb00",
                 "shasum": ""
             },
             "require": {
@@ -979,7 +979,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-22T10:35:00+00:00"
+            "time": "2021-06-05T11:44:36+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1772,7 +1772,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/main"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.23.0"
             },
             "funding": [
                 {
@@ -1846,12 +1846,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "b9267e5bbbe35c18d87e88a187108eaa27400808"
+                "reference": "8403a941039e7a9534e877f0bb38b8d9faa48f01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/b9267e5bbbe35c18d87e88a187108eaa27400808",
-                "reference": "b9267e5bbbe35c18d87e88a187108eaa27400808",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/8403a941039e7a9534e877f0bb38b8d9faa48f01",
+                "reference": "8403a941039e7a9534e877f0bb38b8d9faa48f01",
                 "shasum": ""
             },
             "require": {
@@ -1897,7 +1897,7 @@
                 "issues": "https://github.com/webmozarts/assert/issues",
                 "source": "https://github.com/webmozarts/assert/tree/master"
             },
-            "time": "2021-05-20T19:29:08+00:00"
+            "time": "2021-05-28T09:10:12+00:00"
         }
     ],
     "aliases": [],
