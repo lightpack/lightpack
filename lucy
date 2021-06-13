@@ -1,10 +1,44 @@
 #!/usr/bin/env php
 <?php
 
+/**
+ * ------------------------------------------------------------
+ * Confirm that it runs in CLI environment.
+ * ------------------------------------------------------------
+ */
+
 if (strpos(PHP_SAPI, 'cgi') === 0) {
     die("Abort: CLI is not supported in php-cgi environment!\n");
 }
 
+/**
+ * ------------------------------------------------------------
+ * Use Composer Autoloader.
+ * ------------------------------------------------------------
+ */
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+/**
+ * ------------------------------------------------------------
+ * Bootstrap framework specific commands.
+ * ------------------------------------------------------------
+ */
+
+Lightpack\Console\Console::bootstrap();
+
+/**
+ * ------------------------------------------------------------
+ * Bootstrap application specific commands.
+ * ------------------------------------------------------------
+ */
+
 require_once __DIR__ . '/bootstrap/console.php';
+
+/**
+ * ------------------------------------------------------------
+ * Run the console command.
+ * ------------------------------------------------------------
+ */
 
 Lightpack\Console\Runner::run();
