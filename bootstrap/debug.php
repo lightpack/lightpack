@@ -3,12 +3,13 @@
 /**
  * Turn on/off display errors in browser.
  */
-ini_set('display_errors', 'off');
+
+ini_set('display_errors', 'on');
 
 /**
  * Turn on/off PHP startup errors.
  */
-ini_set('display_startup_errors', 'off'); 
+ini_set('display_startup_errors', 'off');
 
 /**
  * Let us report all possible PHP errors.
@@ -18,9 +19,12 @@ error_reporting(E_ALL);
 /**
  * Instantiate framework debug handler.
  */
+
 $handler = new Lightpack\Debug\Handler(
-    new Lightpack\Logger\Logger(DIR_STORAGE . '/logs.txt'),
-    new Lightpack\Debug\ExceptionRenderer(APP_ENV)
+    new Lightpack\Logger\Logger(app('logger')),
+    new Lightpack\Debug\ExceptionRenderer(
+        get_env('APP_ENV', 'development')
+    )
 );
 
 /**

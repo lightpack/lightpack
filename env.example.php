@@ -25,8 +25,20 @@ return [
     'SQLITE_DB_PATH' => '',
 
     /**
+     * Session settings.
+     */
+
+    'SESSION_NAME' => 'lightpack', 
+
+    /**
      * Cookie settings.
      */
 
     'COOKIE_SECRET' => '!@Secret4Cookie@!',
+
+    /**
+     * Log driver: file, null.
+     */
+
+    'LOG_DRIVER' => 'file',
 ];
