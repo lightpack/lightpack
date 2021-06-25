@@ -26,19 +26,19 @@ require_once DIR_BOOTSTRAP . '/environment.php';
 
 /**
  * ------------------------------------------------------------
- * Configure Error/Exception Reporting.
- * ------------------------------------------------------------
- */
-
-require_once DIR_BOOTSTRAP . '/debug.php';
-
-/**
- * ------------------------------------------------------------
  * Bind Services in IoC Container.
  * ------------------------------------------------------------
  */
 
 require_once DIR_BOOTSTRAP . '/services.php';
+
+/**
+ * ------------------------------------------------------------
+ * Configure Error/Exception Reporting.
+ * ------------------------------------------------------------
+ */
+
+require_once DIR_BOOTSTRAP . '/debug.php';
 
 /**
  * ------------------------------------------------------------
