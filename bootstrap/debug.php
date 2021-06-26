@@ -21,7 +21,7 @@ error_reporting(E_ALL);
  */
 
 $handler = new Lightpack\Debug\Handler(
-    new Lightpack\Logger\Logger(app('logger')),
+    $container->get('logger'),
     new Lightpack\Debug\ExceptionRenderer(
         get_env('APP_ENV', 'development')
     )

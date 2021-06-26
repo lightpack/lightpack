@@ -165,12 +165,13 @@ $container->register('cache', function ($container) {
  */
 
 $container->register('logger', function ($container) {
-    switch(get_env('LOG_DRIVER')) {
-        case 'file':
-            return new Lightpack\Logger\Drivers\FileLogger(
-                app('config')->default['logger']['filename']
-            );
-        default:
-            return new Lightpack\Logger\Drivers\NullLogger;
+    $logDriver = new Lightpack\Logger\Drivers\NullLogger;
+
+    if ('file' === get_env('LOG_DRIVER')) {
+        $logDriver = new Lightpack\Logger\Drivers\FileLogger(
+            $container->get('config')->default['logger']['filename']
+        );
     }
+
+    return new Lightpack\Logger\Logger($logDriver);
 });
