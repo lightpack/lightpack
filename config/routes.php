@@ -1,19 +1,18 @@
 <?php
 
+use App\Controllers\HomeController;
+use App\Controllers\Api\CorsController;
+
 /**
  * Register app routes here.
  */
 
-$route->group(['namespace' => 'App\Controllers'], function($route) {
-    $route->get('/', 'HomeController@index');
-});
+$route->get('/', HomeController::class);
 
 /**
  * Register API routes here.
  */
 
-$route->group(['namespace' => 'App\Controllers\Api'], function ($route) {
-    $route->group(['filters' => ['cors']], function ($route) {
-        $route->options('/api/:any', 'CorsController@index');
-    });
+$route->group(['filters' => ['cors']], function ($route) {
+    $route->options('/api/:any', CorsController::class);
 });
