@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title><?= $title ?></title>
-        <link rel="icon" type="image/png" href="<?= asset_url('img', 'logo.ico') ?>" sizes="32x32" />
-        <style>
-            body {font-family: Verdana, Arial, 'sans-serif'; color: #214e7b}
-            .container {display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;}
-            h1 {text-shadow: 2px 2px #e2e2e2; font-weight: 400; font-size: 38px;}
-            p {font-size: 14px;}
-            img {max-width: 100%; width: 150px;}
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <img class="logo" src="<?= asset_url('img', 'logo.svg') ?>">
-            <h1><?= $title ?></h1>
-            <p><?= $message ?></p>
-        </div>
-    </body>
+
+<head>
+    <title>Lightpack PHP Web Framework</title>
+    <link rel="stylesheet" href="<?= asset_url('css', 'styles.css') ?>" />
+    <link rel="icon" type="image/png" href="<?= asset_url('img', 'logo.ico') ?>" sizes="32x32" />
+</head>
+
+<body>
+    <div class="container">
+        <img class="logo" src="<?= asset_url('img', 'logo.svg') ?>">
+        <h1>Lightpack PHP</h1>
+        <p>A modern PHP web framework with extreme performance and small footprint.</p>
+    </div>
+</body>
+
 </html>
