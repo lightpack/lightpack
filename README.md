@@ -12,7 +12,7 @@
 
 # Lightpack
 
-[LightPack - PHP Web Framework](https://lightpack.github.io/docs)
+[LightPack - PHP Web Framework](https://lightpack.github.io)
 
 This is an alpha release not meant to be used in production yet.
 
