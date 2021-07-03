@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.18-alpha",
+            "version": "v0.2.19-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "b69ec0552ca9e743fca0b9a6c5151e0c066603a9"
+                "reference": "efe7b197738090f410fdd0e9f9a8ff9416da000f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/b69ec0552ca9e743fca0b9a6c5151e0c066603a9",
-                "reference": "b69ec0552ca9e743fca0b9a6c5151e0c066603a9",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/efe7b197738090f410fdd0e9f9a8ff9416da000f",
+                "reference": "efe7b197738090f410fdd0e9f9a8ff9416da000f",
                 "shasum": ""
             },
             "require": {
@@ -62,9 +62,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.18-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.19-alpha"
             },
-            "time": "2021-06-30T13:05:13+00:00"
+            "time": "2021-07-03T22:41:41+00:00"
         },
         {
             "name": "psr/log",
@@ -889,12 +889,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "bf56acb31b5e26c213832bfc61cf2d072705d061"
+                "reference": "d4a92f0dc9f105f89c494b73f81139b158d0642b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/bf56acb31b5e26c213832bfc61cf2d072705d061",
-                "reference": "bf56acb31b5e26c213832bfc61cf2d072705d061",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d4a92f0dc9f105f89c494b73f81139b158d0642b",
+                "reference": "d4a92f0dc9f105f89c494b73f81139b158d0642b",
                 "shasum": ""
             },
             "require": {
@@ -978,7 +978,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-26T04:53:54+00:00"
+            "time": "2021-07-03T05:01:11+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
