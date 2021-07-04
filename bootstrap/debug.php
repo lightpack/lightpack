@@ -1,5 +1,8 @@
 <?php
 
+use Lightpack\Debug\Handler;
+use Lightpack\Debug\ExceptionRenderer;
+
 /**
  * Turn on/off display errors in browser.
  */
@@ -20,9 +23,9 @@ error_reporting(E_ALL);
  * Instantiate framework debug handler.
  */
 
-$handler = new Lightpack\Debug\Handler(
+$handler = new Handler(
     $container->get('logger'),
-    new Lightpack\Debug\ExceptionRenderer(
+    new ExceptionRenderer(
         get_env('APP_ENV', 'development')
     )
 );
