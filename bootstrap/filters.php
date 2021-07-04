@@ -5,7 +5,7 @@
  */
 
 $routeFilters = $container->get('router')->filters();
-$filtersConfig = $container->get('config')->filters;
+$filtersConfig = $container->get('config')->get('filters');
 
 foreach($routeFilters as $filterAlias) {
     if(!isset($filtersConfig[$filterAlias])) {

@@ -15,7 +15,13 @@ $container = new Lightpack\Container\Container();
  */
 
 $container->register('config', function ($container) {
-    return new Lightpack\Config\Config(['default', 'filters', 'cors']);
+    return new Lightpack\Config\Config([
+        'app', 
+        'log',
+        'modules',
+        'filters', 
+        'cors'
+    ]);
 });
 
 /**
@@ -169,7 +175,7 @@ $container->register('logger', function ($container) {
 
     if ('file' === get_env('LOG_DRIVER')) {
         $logDriver = new Lightpack\Logger\Drivers\FileLogger(
-            $container->get('config')->default['logger']['filename']
+            $container->get('config')->get('log.filename')
         );
     }
 
