@@ -1,12 +1,31 @@
 <?php
 
+use Lightpack\Cache\Cache;
+use Lightpack\Event\Event;
+use Lightpack\Http\Cookie;
+use Lightpack\Http\Session;
+use Lightpack\Http\Request;
+use Lightpack\Http\Response;
+use Lightpack\Module\Module;
+use Lightpack\Routing\Route;
+use Lightpack\View\Template;
+use Lightpack\Config\Config;
+use Lightpack\Logger\Logger;
+use Lightpack\Filters\Filter;
+use Lightpack\Routing\Router;
+use Lightpack\Container\Container;
+use Lightpack\Database\Adapters\Mysql;
+use Lightpack\Logger\Drivers\FileLogger;
+use Lightpack\Logger\Drivers\NullLogger;
+use Lightpack\Cache\Drivers\File as FileDriver;
+
 /**
  * ------------------------------------------------------------
  * IoC Container: Simplified Service Locator.
  * ------------------------------------------------------------
  */
 
-$container = new Lightpack\Container\Container();
+$container = new Container();
 
 /**
  * ------------------------------------------------------------
@@ -15,11 +34,11 @@ $container = new Lightpack\Container\Container();
  */
 
 $container->register('config', function ($container) {
-    return new Lightpack\Config\Config([
-        'app', 
+    return new Config([
+        'app',
         'log',
         'modules',
-        'filters', 
+        'filters',
         'cors'
     ]);
 });
@@ -31,7 +50,7 @@ $container->register('config', function ($container) {
  */
 
 $container->register('event', function ($container) {
-    return new Lightpack\Event\Event();
+    return new Event();
 });
 
 /**
@@ -41,7 +60,7 @@ $container->register('event', function ($container) {
  */
 
 $container->register('filter', function ($container) {
-    return new Lightpack\Filters\Filter(
+    return new Filter(
         $container->get('request'),
         $container->get('response')
     );
@@ -54,7 +73,7 @@ $container->register('filter', function ($container) {
  */
 
 $container->register('request', function ($container) {
-    return new Lightpack\Http\Request();
+    return new Request();
 });
 
 /**
@@ -64,7 +83,7 @@ $container->register('request', function ($container) {
  */
 
 $container->register('response', function ($container) {
-    return new Lightpack\Http\Response();
+    return new Response();
 });
 
 /**
@@ -74,8 +93,8 @@ $container->register('response', function ($container) {
  */
 
 $container->register('cookie', function ($container) {
-    return new Lightpack\Http\Cookie(
-        $container->get('config')->cookie_secret
+    return new Cookie(
+        $container->get('config')->get('cookie.secret')
     );
 });
 
@@ -88,7 +107,7 @@ $container->register('cookie', function ($container) {
 $container->register('session', function ($container) {
     $sessionName = get_env('SESSION_NAME', 'lightpack');
 
-    return new Lightpack\Http\Session($sessionName);
+    return new Session($sessionName);
 });
 
 /**
@@ -98,7 +117,7 @@ $container->register('session', function ($container) {
  */
 
 $container->register('template', function ($container) {
-    return new Lightpack\View\Template();
+    return new Template();
 });
 
 /**
@@ -108,9 +127,9 @@ $container->register('template', function ($container) {
  */
 
 $container->register('module', function ($container) {
-    return new Lightpack\Module\Module(
+    return new Module(
         $container->get('request'),
-        $container->get('config')
+        $container->get('config')->get('modules')
     );
 });
 
@@ -121,7 +140,7 @@ $container->register('module', function ($container) {
  */
 
 $container->register('route', function ($container) {
-    return new Lightpack\Routing\Route(
+    return new Route(
         $container->get('request')
     );
 });
@@ -133,7 +152,7 @@ $container->register('route', function ($container) {
  */
 
 $container->register('router', function ($container) {
-    return new Lightpack\Routing\Router(
+    return new Router(
         $container->get('request'),
         $container->get('route')
     );
@@ -146,9 +165,16 @@ $container->register('router', function ($container) {
  */
 
 $container->register('db', function ($container) {
-    return new Lightpack\Database\Adapters\MySql(
-        $container->get('config')->default['connection']['mysql']
-    );
+    $config = $container->get('config');
+
+    return new Mysql([
+        'host'      => $config->get('db.mysql.host'),
+        'port'      => $config->get('db.mysql.port'),
+        'username'  => $config->get('db.mysql.username'),
+        'password'  => $config->get('db.mysql.password'),
+        'database'  => $config->get('db.mysql.database'),
+        'options'   => $config->get('db.mysql.options'),
+    ]);
 });
 
 /**
@@ -158,10 +184,10 @@ $container->register('db', function ($container) {
  */
 
 $container->register('cache', function ($container) {
-    $cacheDir = $container->get('config')->default['cache']['storage'];
-    $fileStorage = new Lightpack\Cache\Drivers\File($cacheDir);
+    $cacheDir = $container->get('config')->get('cache.storage');
+    $fileStorage = new FileDriver($cacheDir);
 
-    return new Lightpack\Cache\Cache($fileStorage);
+    return new Cache($fileStorage);
 });
 
 /**
@@ -171,13 +197,13 @@ $container->register('cache', function ($container) {
  */
 
 $container->register('logger', function ($container) {
-    $logDriver = new Lightpack\Logger\Drivers\NullLogger;
+    $logDriver = new NullLogger;
 
     if ('file' === get_env('LOG_DRIVER')) {
-        $logDriver = new Lightpack\Logger\Drivers\FileLogger(
+        $logDriver = new FileLogger(
             $container->get('config')->get('log.filename')
         );
     }
 
-    return new Lightpack\Logger\Logger($logDriver);
+    return new Logger($logDriver);
 });
