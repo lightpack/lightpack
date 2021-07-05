@@ -39,7 +39,10 @@ $container->register('config', function ($container) {
         'log',
         'modules',
         'filters',
-        'cors'
+        'cors',
+        'db',
+        'events',
+        'cookie',
     ]);
 });
 

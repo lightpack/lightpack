@@ -3,7 +3,7 @@
 /**
  * Register app events.
  */
-$events = require_once DIR_CONFIG . '/events.php';
+$events = $container->get('config')->get('events');
 
 foreach ($events as $event => $listeners) {
     foreach ($listeners as $listener) {
