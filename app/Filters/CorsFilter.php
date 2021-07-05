@@ -15,12 +15,12 @@ class CorsFilter implements IFilter
                 ->setCode(204)
                 ->setMessage('No Content')
                 ->setType('text/plain')
-                ->setHeaders(app('config')->cors['headers']);
+                ->setHeaders(config('cors.headers'));
         }
     }
 
     public function after(Request $request, Response $response): Response
     {
-        return $response->setHeaders(app('config')->cors['headers']);
+        return $response->setHeaders(config('cors.headers'));
     }
 }

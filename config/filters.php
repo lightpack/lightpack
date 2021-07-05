@@ -5,6 +5,8 @@
  */
 
 return [
-    'csrf' => \App\Filters\CsrfFilter::class,
-    'cors' => \App\Filters\CorsFilter::class,
+    'filters' => [
+        'csrf' => \App\Filters\CsrfFilter::class,
+        'cors' => \App\Filters\CorsFilter::class,
+    ],
 ];

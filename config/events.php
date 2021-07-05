@@ -4,6 +4,8 @@
  * Register app events.
  */
 
-return $events = [
-    
+return [
+    'events' => [
+        //
+    ],
 ];

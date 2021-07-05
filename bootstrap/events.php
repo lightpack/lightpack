@@ -3,9 +3,10 @@
 /**
  * Register app events.
  */
+$events = $container->get('config')->get('events');
 
-foreach(require_once DIR_CONFIG . '/events.php' as $event => $listeners) {
-    foreach($listeners as $listener) {
+foreach ($events as $event => $listeners) {
+    foreach ($listeners as $listener) {
         $container->get('event')->subscribe($event, $listener);
     }
 }

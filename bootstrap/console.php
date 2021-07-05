@@ -9,6 +9,6 @@ use Lightpack\Console\Console;
  */
 $consoleConfig = require_once DIR_CONFIG  . '/console.php';
 
-foreach($consoleConfig as $command => $handler) {
+foreach ($consoleConfig as $command => $handler) {
     Console::register($command, new $handler);
 }
