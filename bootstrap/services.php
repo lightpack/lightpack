@@ -129,7 +129,7 @@ $container->register('template', function ($container) {
 $container->register('module', function ($container) {
     return new Module(
         $container->get('request'),
-        $container->get('config')->get('modules')
+        $container->get('config')
     );
 });
 
