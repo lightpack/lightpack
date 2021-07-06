@@ -9,6 +9,12 @@ return [
     'APP_URL' => 'http://localhost',
 
     /**
+     * Database driver.
+     */
+
+    'DB_DRIVER' => 'mysql',
+    
+    /**
      * MySQL settings.
      */
 
@@ -20,9 +26,12 @@ return [
 
     /**
      * SQLite settings.
+     * 
+     * You should pass an absolute path to your SQLite database
+     * file else it will default to in-memory database.
      */
 
-    'SQLITE_DB_PATH' => '',
+    'SQLITE_DB_PATH' => ':memory',
 
     /**
      * Session settings.

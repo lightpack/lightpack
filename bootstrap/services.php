@@ -15,6 +15,7 @@ use Lightpack\Filters\Filter;
 use Lightpack\Routing\Router;
 use Lightpack\Container\Container;
 use Lightpack\Database\Adapters\Mysql;
+use Lightpack\Database\Adapters\Sqlite;
 use Lightpack\Logger\Drivers\FileLogger;
 use Lightpack\Logger\Drivers\NullLogger;
 use Lightpack\Cache\Drivers\File as FileDriver;
@@ -163,25 +164,6 @@ $container->register('router', function ($container) {
 
 /**
  * ------------------------------------------------------------
- * Register MySQL Database Service Manager.
- * ------------------------------------------------------------
- */
-
-$container->register('db', function ($container) {
-    $config = $container->get('config');
-
-    return new Mysql([
-        'host'      => $config->get('db.mysql.host'),
-        'port'      => $config->get('db.mysql.port'),
-        'username'  => $config->get('db.mysql.username'),
-        'password'  => $config->get('db.mysql.password'),
-        'database'  => $config->get('db.mysql.database'),
-        'options'   => $config->get('db.mysql.options'),
-    ]);
-});
-
-/**
- * ------------------------------------------------------------
  * Register Cache Service Provider.
  * ------------------------------------------------------------
  */
@@ -209,4 +191,39 @@ $container->register('logger', function ($container) {
     }
 
     return new Logger($logDriver);
+});
+
+/**
+ * ------------------------------------------------------------
+ * Register Database Service Manager.
+ * ------------------------------------------------------------
+ */
+
+$container->register('db', function ($container) {
+    $config = $container->get('config');
+
+    switch ($config->get('db.driver')) {
+        case 'sqlite':
+            return new Sqlite([
+                'database' => $config->get('db.sqlite.database')
+            ]);
+
+            break;
+        case 'mysql':
+            return new Mysql([
+                'host'      => $config->get('db.mysql.host'),
+                'port'      => $config->get('db.mysql.port'),
+                'username'  => $config->get('db.mysql.username'),
+                'password'  => $config->get('db.mysql.password'),
+                'database'  => $config->get('db.mysql.database'),
+                'options'   => $config->get('db.mysql.options'),
+            ]);
+
+            break;
+        default:
+            throw new Exception(
+                'Unsupported database driver type: ',
+                $config->get('db.driver')
+            );
+    }
 });
