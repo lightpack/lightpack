@@ -2,6 +2,11 @@
 
 return [
     /**
+     * Driver: mysql/sqlite.
+     */
+    'db.driver' => get_env('DB_DRIVER'),
+
+    /**
      * Sqlite.
      */
     'db.sqlite.database' => get_env('SQLITE_DB_PATH'),
