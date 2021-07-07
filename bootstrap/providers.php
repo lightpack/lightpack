@@ -10,12 +10,12 @@ $container = new Lightpack\Container\Container();
 
 /**
  * ------------------------------------------------------------
- * Bind services in container.
+ * Bind service providers in container.
  * ------------------------------------------------------------
  */
 
-$services = require_once DIR_CONFIG . '/services.php';
+$providers = require_once DIR_CONFIG . '/providers.php';
 
-foreach ($services as $service) {
-    (new $service)->register($container);
+foreach ($providers as $provider) {
+    (new $provider)->register($container);
 }

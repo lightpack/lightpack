@@ -1,15 +1,15 @@
 <?php
 
 return [
-    App\Providers\LogService::class,
-    App\Providers\RouteService::class,
-    App\Providers\EventService::class,
-    App\Providers\ConfigService::class,
-    App\Providers\ModuleService::class,
-    App\Providers\RouterService::class,
-    App\Providers\FilterService::class,
-    App\Providers\RequestService::class,
-    App\Providers\ResponseService::class,
-    App\Providers\DatabaseService::class,
-    App\Providers\TemplateService::class,
+    App\Providers\LogProvider::class,
+    App\Providers\RouteProvider::class,
+    App\Providers\EventProvider::class,
+    App\Providers\ConfigProvider::class,
+    App\Providers\ModuleProvider::class,
+    App\Providers\RouterProvider::class,
+    App\Providers\FilterProvider::class,
+    App\Providers\RequestProvider::class,
+    App\Providers\ResponseProvider::class,
+    App\Providers\DatabaseProvider::class,
+    App\Providers\TemplateProvider::class,
 ];
