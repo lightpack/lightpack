@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Services;
+namespace App\Providers;
 
 use Lightpack\Event\Event;
 use Lightpack\Container\Container;
 
-class EventService implements IService
+class EventProvider implements ProviderInterface
 {
     public function register(Container $container)
     {

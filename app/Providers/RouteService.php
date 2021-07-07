@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Services;
+namespace App\Providers;
 
 use Lightpack\Routing\Route;
 use Lightpack\Container\Container;
 
-class RouteService implements IService
+class RouteProvider implements ProviderInterface
 {
     public function register(Container $container)
     {

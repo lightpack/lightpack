@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Services;
+namespace App\Providers;
 
 use Lightpack\Http\Response;
 use Lightpack\Container\Container;
 use Lightpack\Filters\Filter;
 
-class FilterService implements IService
+class FilterProvider implements ProviderInterface
 {
     public function register(Container $container)
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Services;
+namespace App\Providers;
 
 use Lightpack\Container\Container;
 
-interface IService
+interface ProviderInterface
 {
     public function register(Container $container);
 }

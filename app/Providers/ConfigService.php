@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Services;
+namespace App\Providers;
 
 use Lightpack\Config\Config;
 use Lightpack\Container\Container;
 
-class ConfigService implements IService
+class ConfigProvider implements ProviderInterface
 {
     public function register(Container $container)
     {

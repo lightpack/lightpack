@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Services;
+namespace App\Providers;
 
 use Exception;
 use Lightpack\Container\Container;
 use Lightpack\Database\Adapters\Mysql;
 use Lightpack\Database\Adapters\Sqlite;
 
-class DatabaseService implements IService
+class DatabaseProvider implements ProviderInterface
 {
     public function register(Container $container)
     {

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Services;
+namespace App\Providers;
 
 use Lightpack\Logger\Logger;
 use Lightpack\Container\Container;
 use Lightpack\Logger\Drivers\FileLogger;
 use Lightpack\Logger\Drivers\NullLogger;
 
-class LogService implements IService
+class LogProvider implements ProviderInterface
 {
     public function register(Container $container)
     {

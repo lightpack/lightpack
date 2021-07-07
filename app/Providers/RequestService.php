@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Services;
+namespace App\Providers;
 
 use Lightpack\Http\Request;
 use Lightpack\Container\Container;
 
-class RequestService implements IService
+class RequestProvider implements ProviderInterface
 {
     public function register(Container $container)
     {

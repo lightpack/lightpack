@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Services;
+namespace App\Providers;
 
 use Lightpack\View\Template;
 use Lightpack\Container\Container;
 
-class TemplateService implements IService
+class TemplateProvider implements ProviderInterface
 {
     public function register(Container $container)
     {
