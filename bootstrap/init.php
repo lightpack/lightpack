@@ -30,7 +30,8 @@ require_once DIR_BOOTSTRAP . '/environment.php';
  * ------------------------------------------------------------
  */
 
-require_once DIR_BOOTSTRAP . '/services.php';
+// require_once DIR_BOOTSTRAP . '/services.php';
+require_once DIR_BOOTSTRAP . '/better-services.php';
 
 /**
  * ------------------------------------------------------------
