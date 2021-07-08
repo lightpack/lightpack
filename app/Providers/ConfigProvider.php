@@ -19,6 +19,7 @@ class ConfigProvider implements ProviderInterface
                 'db',
                 'events',
                 'cookie',
+                'cache',
             ]);
         });
     }
