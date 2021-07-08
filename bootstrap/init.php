@@ -26,11 +26,11 @@ require_once DIR_BOOTSTRAP . '/environment.php';
 
 /**
  * ------------------------------------------------------------
- * Bind Services in IoC Container.
+ * Bind Providers in IoC Container.
  * ------------------------------------------------------------
  */
 
-require_once DIR_BOOTSTRAP . '/services.php';
+require_once DIR_BOOTSTRAP . '/providers.php';
 
 /**
  * ------------------------------------------------------------
