@@ -7,7 +7,7 @@
  * ------------------------------------------------------------
  */
 
-if (strpos(PHP_SAPI, 'cgi') === 0) {
+if (php_sapi_name() !== 'cli') {
     die("Abort: CLI is not supported in php-cgi environment!\n");
 }
 
