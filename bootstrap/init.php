@@ -54,7 +54,7 @@ require_once DIR_BOOTSTRAP . '/events.php';
  * ------------------------------------------------------------
  */
 
-require_once DIR_CONFIG . '/routes.php';
+require_once DIR_BOOTSTRAP . '/routes.php';
 
 /**
  * ------------------------------------------------------------
