@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "8b0bbf2581fe530966b08f2f61e99e97ea63bbcd"
+                "reference": "e7de52708950474b42f44fbd216510749949970b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/8b0bbf2581fe530966b08f2f61e99e97ea63bbcd",
-                "reference": "8b0bbf2581fe530966b08f2f61e99e97ea63bbcd",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/e7de52708950474b42f44fbd216510749949970b",
+                "reference": "e7de52708950474b42f44fbd216510749949970b",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
                 "issues": "https://github.com/lightpack/framework/issues",
                 "source": "https://github.com/lightpack/framework/tree/v0.2.24-alpha"
             },
-            "time": "2021-07-18T03:24:06+00:00"
+            "time": "2021-07-18T03:43:17+00:00"
         },
         {
             "name": "psr/log",
