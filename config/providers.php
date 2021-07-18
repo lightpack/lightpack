@@ -6,7 +6,6 @@ return [
     App\Providers\EventProvider::class,
     App\Providers\CacheProvider::class,
     App\Providers\ConfigProvider::class,
-    App\Providers\ModuleProvider::class,
     App\Providers\RouterProvider::class,
     App\Providers\FilterProvider::class,
     App\Providers\CookieProvider::class,

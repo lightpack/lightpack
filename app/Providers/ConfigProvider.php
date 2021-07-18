@@ -13,7 +13,6 @@ class ConfigProvider implements ProviderInterface
             return new Config([
                 'app',
                 'log',
-                'modules',
                 'filters',
                 'cors',
                 'db',

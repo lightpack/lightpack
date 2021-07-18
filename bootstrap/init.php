@@ -50,11 +50,11 @@ require_once DIR_BOOTSTRAP . '/events.php';
 
 /**
  * ------------------------------------------------------------
- * Discover app routes and modules.
+ * Discover app routes.
  * ------------------------------------------------------------
  */
 
-require_once DIR_BOOTSTRAP . '/modules.php';
+require_once DIR_BOOTSTRAP . '/routes.php';
 
 /**
  * ------------------------------------------------------------
