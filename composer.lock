@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.24-alpha",
+            "version": "v0.2.25-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "e7de52708950474b42f44fbd216510749949970b"
+                "reference": "8e0ad65c602b9c6dfbd35b444e1880eeea973fdb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/e7de52708950474b42f44fbd216510749949970b",
-                "reference": "e7de52708950474b42f44fbd216510749949970b",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/8e0ad65c602b9c6dfbd35b444e1880eeea973fdb",
+                "reference": "8e0ad65c602b9c6dfbd35b444e1880eeea973fdb",
                 "shasum": ""
             },
             "require": {
@@ -62,9 +62,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.24-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.25-alpha"
             },
-            "time": "2021-07-18T03:43:17+00:00"
+            "time": "2021-07-19T07:32:58+00:00"
         },
         {
             "name": "psr/log",
@@ -664,12 +664,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "4b49fb70f067272b659ef0174ff9ca40fdaa6357"
+                "reference": "28af674ff175d0768a5a978e6de83f697d4a7f05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/4b49fb70f067272b659ef0174ff9ca40fdaa6357",
-                "reference": "4b49fb70f067272b659ef0174ff9ca40fdaa6357",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/28af674ff175d0768a5a978e6de83f697d4a7f05",
+                "reference": "28af674ff175d0768a5a978e6de83f697d4a7f05",
                 "shasum": ""
             },
             "require": {
@@ -716,7 +716,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-11-30T08:25:21+00:00"
+            "time": "2021-07-19T06:46:01+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -888,12 +888,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "d4a92f0dc9f105f89c494b73f81139b158d0642b"
+                "reference": "ea79d12a6eb3c55ef8cfdcc16adb44160e3efeb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d4a92f0dc9f105f89c494b73f81139b158d0642b",
-                "reference": "d4a92f0dc9f105f89c494b73f81139b158d0642b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ea79d12a6eb3c55ef8cfdcc16adb44160e3efeb6",
+                "reference": "ea79d12a6eb3c55ef8cfdcc16adb44160e3efeb6",
                 "shasum": ""
             },
             "require": {
@@ -910,7 +910,7 @@
                 "php": ">=7.2",
                 "phpspec/prophecy": "^1.10.3",
                 "phpunit/php-code-coverage": "^7.0.12",
-                "phpunit/php-file-iterator": "^2.0.2",
+                "phpunit/php-file-iterator": "^2.0.4",
                 "phpunit/php-text-template": "^1.2.1",
                 "phpunit/php-timer": "^2.1.2",
                 "sebastian/comparator": "^3.0.2",
@@ -977,7 +977,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-07-03T05:01:11+00:00"
+            "time": "2021-07-19T07:04:55+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
