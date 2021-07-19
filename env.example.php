@@ -8,6 +8,7 @@ return [
     'APP_ENV' => 'development',
     'APP_URL' => 'http://localhost',
     'ASSET_URL' => 'http://localhost/assets',
+    'APP_DEBUG' => true,
 
     /**
      * Database driver.
