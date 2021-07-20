@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.26-alpha",
+            "version": "v0.2.27-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "26f0723dd4062af9bc253c7988f4c12cc37fa738"
+                "reference": "9bea06a3e1bfeadc3ef4103afd3269950d7ec835"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/26f0723dd4062af9bc253c7988f4c12cc37fa738",
-                "reference": "26f0723dd4062af9bc253c7988f4c12cc37fa738",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/9bea06a3e1bfeadc3ef4103afd3269950d7ec835",
+                "reference": "9bea06a3e1bfeadc3ef4103afd3269950d7ec835",
                 "shasum": ""
             },
             "require": {
@@ -62,9 +62,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.26-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.27-alpha"
             },
-            "time": "2021-07-20T05:43:09+00:00"
+            "time": "2021-07-20T13:08:56+00:00"
         },
         {
             "name": "psr/log",
@@ -252,12 +252,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/manifest.git",
-                "reference": "85265efd3af7ba3ca4b2a2c34dbfc5788dd29133"
+                "reference": "97803eca37d319dfa7826cc2437fc020857acb53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/manifest/zipball/85265efd3af7ba3ca4b2a2c34dbfc5788dd29133",
-                "reference": "85265efd3af7ba3ca4b2a2c34dbfc5788dd29133",
+                "url": "https://api.github.com/repos/phar-io/manifest/zipball/97803eca37d319dfa7826cc2437fc020857acb53",
+                "reference": "97803eca37d319dfa7826cc2437fc020857acb53",
                 "shasum": ""
             },
             "require": {
@@ -303,9 +303,9 @@
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
             "support": {
                 "issues": "https://github.com/phar-io/manifest/issues",
-                "source": "https://github.com/phar-io/manifest/tree/2.0.1"
+                "source": "https://github.com/phar-io/manifest/tree/2.0.3"
             },
-            "time": "2020-06-27T14:33:11+00:00"
+            "time": "2021-07-20T11:28:43+00:00"
         },
         {
             "name": "phar-io/version",
@@ -888,12 +888,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ea79d12a6eb3c55ef8cfdcc16adb44160e3efeb6"
+                "reference": "506cde802c67453928797b1897262b1155b4498c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ea79d12a6eb3c55ef8cfdcc16adb44160e3efeb6",
-                "reference": "ea79d12a6eb3c55ef8cfdcc16adb44160e3efeb6",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/506cde802c67453928797b1897262b1155b4498c",
+                "reference": "506cde802c67453928797b1897262b1155b4498c",
                 "shasum": ""
             },
             "require": {
@@ -905,7 +905,7 @@
                 "ext-xml": "*",
                 "ext-xmlwriter": "*",
                 "myclabs/deep-copy": "^1.10.0",
-                "phar-io/manifest": "^2.0.1",
+                "phar-io/manifest": "^2.0.3",
                 "phar-io/version": "^3.0.2",
                 "php": ">=7.2",
                 "phpspec/prophecy": "^1.10.3",
@@ -977,7 +977,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-07-19T07:04:55+00:00"
+            "time": "2021-07-20T11:50:56+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
