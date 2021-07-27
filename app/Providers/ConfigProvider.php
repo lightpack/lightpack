@@ -12,13 +12,12 @@ class ConfigProvider implements ProviderInterface
         $container->register('config', function ($container) {
             return new Config([
                 'app',
-                'log',
                 'filters',
                 'cors',
                 'db',
                 'events',
                 'cookie',
-                'cache',
+                'storage',
             ]);
         });
     }

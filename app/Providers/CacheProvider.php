@@ -11,7 +11,7 @@ class CacheProvider implements ProviderInterface
     public function register(Container $container)
     {
         $container->register('cache', function ($container) {
-            $cacheDir = $container->get('config')->get('cache.storage');
+            $cacheDir = $container->get('config')->get('storage.cache');
             $fileStorage = new File($cacheDir);
         
             return new Cache($fileStorage);

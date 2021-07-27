@@ -16,7 +16,7 @@ class LogProvider implements ProviderInterface
 
             if ('file' === get_env('LOG_DRIVER')) {
                 $logDriver = new FileLogger(
-                    $container->get('config')->get('log.filename')
+                    $container->get('config')->get('storage.logs') . '/logs.txt'
                 );
             }
 
