@@ -1,6 +1,6 @@
 vendor/
-storage/*
 .DS_Store
 .vscode
 composer.phar
 env.php
+/public/uploads
