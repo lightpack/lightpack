@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.36-alpha",
+            "version": "v0.2.37-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "b0d109e7342c64af732892c484e5340e7499795a"
+                "reference": "c502255324d198c85cc3e13cddafbe321dfd31fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/b0d109e7342c64af732892c484e5340e7499795a",
-                "reference": "b0d109e7342c64af732892c484e5340e7499795a",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/c502255324d198c85cc3e13cddafbe321dfd31fb",
+                "reference": "c502255324d198c85cc3e13cddafbe321dfd31fb",
                 "shasum": ""
             },
             "require": {
@@ -62,9 +62,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.36-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.37-alpha"
             },
-            "time": "2021-07-28T16:52:46+00:00"
+            "time": "2021-08-07T15:33:11+00:00"
         },
         {
             "name": "psr/log",
@@ -417,12 +417,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "8719cc12e2a57ec3432a76989bb4ef773ac75b63"
+                "reference": "dc7d72e47eb6edff9739b18369a258ebddc7cf5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/8719cc12e2a57ec3432a76989bb4ef773ac75b63",
-                "reference": "8719cc12e2a57ec3432a76989bb4ef773ac75b63",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/dc7d72e47eb6edff9739b18369a258ebddc7cf5a",
+                "reference": "dc7d72e47eb6edff9739b18369a258ebddc7cf5a",
                 "shasum": ""
             },
             "require": {
@@ -466,7 +466,7 @@
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
                 "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/master"
             },
-            "time": "2021-04-23T09:50:58+00:00"
+            "time": "2021-08-06T09:57:03+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -474,12 +474,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "550e0fb7efa2f7a361d47ea1e30921989a43e41d"
+                "reference": "274f578e36b0d310d8101f252c6406a772377875"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/550e0fb7efa2f7a361d47ea1e30921989a43e41d",
-                "reference": "550e0fb7efa2f7a361d47ea1e30921989a43e41d",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/274f578e36b0d310d8101f252c6406a772377875",
+                "reference": "274f578e36b0d310d8101f252c6406a772377875",
                 "shasum": ""
             },
             "require": {
@@ -517,7 +517,7 @@
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.x"
             },
-            "time": "2021-07-24T09:21:39+00:00"
+            "time": "2021-08-06T16:49:20+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -665,12 +665,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "28af674ff175d0768a5a978e6de83f697d4a7f05"
+                "reference": "575fbe4836a85e3fc7f76bac9d4541a5b2872d49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/28af674ff175d0768a5a978e6de83f697d4a7f05",
-                "reference": "28af674ff175d0768a5a978e6de83f697d4a7f05",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/575fbe4836a85e3fc7f76bac9d4541a5b2872d49",
+                "reference": "575fbe4836a85e3fc7f76bac9d4541a5b2872d49",
                 "shasum": ""
             },
             "require": {
@@ -717,7 +717,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-07-19T06:46:01+00:00"
+            "time": "2021-07-30T13:17:43+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -889,12 +889,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "d1fe9845838c7b09f9e721290c10490e81cb9387"
+                "reference": "25ece6b6e1a3e8c250c168fd0435bcc7fc3de058"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d1fe9845838c7b09f9e721290c10490e81cb9387",
-                "reference": "d1fe9845838c7b09f9e721290c10490e81cb9387",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/25ece6b6e1a3e8c250c168fd0435bcc7fc3de058",
+                "reference": "25ece6b6e1a3e8c250c168fd0435bcc7fc3de058",
                 "shasum": ""
             },
             "require": {
@@ -978,7 +978,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-07-28T13:34:32+00:00"
+            "time": "2021-08-04T12:20:43+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1604,7 +1604,6 @@
                     "type": "github"
                 }
             ],
-            "abandoned": true,
             "time": "2020-11-30T07:30:19+00:00"
         },
         {
