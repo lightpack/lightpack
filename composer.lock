@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.37-alpha",
+            "version": "v0.2.38-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "c502255324d198c85cc3e13cddafbe321dfd31fb"
+                "reference": "23fd9e41aed9c6a25556b6334090324b03984980"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/c502255324d198c85cc3e13cddafbe321dfd31fb",
-                "reference": "c502255324d198c85cc3e13cddafbe321dfd31fb",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/23fd9e41aed9c6a25556b6334090324b03984980",
+                "reference": "23fd9e41aed9c6a25556b6334090324b03984980",
                 "shasum": ""
             },
             "require": {
@@ -62,9 +62,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.37-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.38-alpha"
             },
-            "time": "2021-08-07T15:33:11+00:00"
+            "time": "2021-08-10T06:41:15+00:00"
         },
         {
             "name": "psr/log",
@@ -417,12 +417,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "dc7d72e47eb6edff9739b18369a258ebddc7cf5a"
+                "reference": "79d27778136b1aa08533e9e1f3ee3b6910af354a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/dc7d72e47eb6edff9739b18369a258ebddc7cf5a",
-                "reference": "dc7d72e47eb6edff9739b18369a258ebddc7cf5a",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/79d27778136b1aa08533e9e1f3ee3b6910af354a",
+                "reference": "79d27778136b1aa08533e9e1f3ee3b6910af354a",
                 "shasum": ""
             },
             "require": {
@@ -433,7 +433,8 @@
                 "webmozart/assert": "^1.9.1"
             },
             "require-dev": {
-                "mockery/mockery": "~1.3.2"
+                "mockery/mockery": "~1.3.2",
+                "psalm/phar": "^4.8"
             },
             "default-branch": true,
             "type": "library",
@@ -466,7 +467,7 @@
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
                 "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/master"
             },
-            "time": "2021-08-06T09:57:03+00:00"
+            "time": "2021-08-09T17:52:09+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -474,12 +475,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "274f578e36b0d310d8101f252c6406a772377875"
+                "reference": "931b9e71a6274daa2a83371ee14d75d2be5a0e20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/274f578e36b0d310d8101f252c6406a772377875",
-                "reference": "274f578e36b0d310d8101f252c6406a772377875",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/931b9e71a6274daa2a83371ee14d75d2be5a0e20",
+                "reference": "931b9e71a6274daa2a83371ee14d75d2be5a0e20",
                 "shasum": ""
             },
             "require": {
@@ -517,7 +518,7 @@
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.x"
             },
-            "time": "2021-08-06T16:49:20+00:00"
+            "time": "2021-08-08T19:44:55+00:00"
         },
         {
             "name": "phpspec/prophecy",
