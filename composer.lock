@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.38-alpha",
+            "version": "v0.2.39-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "23fd9e41aed9c6a25556b6334090324b03984980"
+                "reference": "430dcc38164b604d60071565e434a500bbe89f45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/23fd9e41aed9c6a25556b6334090324b03984980",
-                "reference": "23fd9e41aed9c6a25556b6334090324b03984980",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/430dcc38164b604d60071565e434a500bbe89f45",
+                "reference": "430dcc38164b604d60071565e434a500bbe89f45",
                 "shasum": ""
             },
             "require": {
@@ -62,9 +62,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.38-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.39-alpha"
             },
-            "time": "2021-08-10T06:41:15+00:00"
+            "time": "2021-08-16T09:59:39+00:00"
         },
         {
             "name": "psr/log",
@@ -417,12 +417,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "79d27778136b1aa08533e9e1f3ee3b6910af354a"
+                "reference": "c5ac781da36459457837159b308fe88912e07a78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/79d27778136b1aa08533e9e1f3ee3b6910af354a",
-                "reference": "79d27778136b1aa08533e9e1f3ee3b6910af354a",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/c5ac781da36459457837159b308fe88912e07a78",
+                "reference": "c5ac781da36459457837159b308fe88912e07a78",
                 "shasum": ""
             },
             "require": {
@@ -467,7 +467,7 @@
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
                 "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/master"
             },
-            "time": "2021-08-09T17:52:09+00:00"
+            "time": "2021-08-13T09:13:23+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -475,12 +475,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "931b9e71a6274daa2a83371ee14d75d2be5a0e20"
+                "reference": "b456db85fc80ecb2fed8441c9c89dbcb945735a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/931b9e71a6274daa2a83371ee14d75d2be5a0e20",
-                "reference": "931b9e71a6274daa2a83371ee14d75d2be5a0e20",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/b456db85fc80ecb2fed8441c9c89dbcb945735a9",
+                "reference": "b456db85fc80ecb2fed8441c9c89dbcb945735a9",
                 "shasum": ""
             },
             "require": {
@@ -518,7 +518,7 @@
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.x"
             },
-            "time": "2021-08-08T19:44:55+00:00"
+            "time": "2021-08-13T09:11:31+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -890,12 +890,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "25ece6b6e1a3e8c250c168fd0435bcc7fc3de058"
+                "reference": "2ced53fa9e1986c74ee591567e6f07949c161032"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/25ece6b6e1a3e8c250c168fd0435bcc7fc3de058",
-                "reference": "25ece6b6e1a3e8c250c168fd0435bcc7fc3de058",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2ced53fa9e1986c74ee591567e6f07949c161032",
+                "reference": "2ced53fa9e1986c74ee591567e6f07949c161032",
                 "shasum": ""
             },
             "require": {
@@ -979,7 +979,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-04T12:20:43+00:00"
+            "time": "2021-08-16T06:00:25+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
