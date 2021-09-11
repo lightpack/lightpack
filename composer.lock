@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.42-alpha",
+            "version": "v0.2.43-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "4320e64887d5f8d9a8cb813d96b5cd0aaae21342"
+                "reference": "27996fb79154e139b9a95fff57b6ac5665daba85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/4320e64887d5f8d9a8cb813d96b5cd0aaae21342",
-                "reference": "4320e64887d5f8d9a8cb813d96b5cd0aaae21342",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/27996fb79154e139b9a95fff57b6ac5665daba85",
+                "reference": "27996fb79154e139b9a95fff57b6ac5665daba85",
                 "shasum": ""
             },
             "require": {
@@ -62,9 +62,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.42-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.43-alpha"
             },
-            "time": "2021-09-10T05:49:43+00:00"
+            "time": "2021-09-11T06:15:37+00:00"
         },
         {
             "name": "psr/log",
@@ -526,12 +526,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "8fb31505731979e30515bdb9d097bbb51ec4ce3d"
+                "reference": "d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/8fb31505731979e30515bdb9d097bbb51ec4ce3d",
-                "reference": "8fb31505731979e30515bdb9d097bbb51ec4ce3d",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e",
+                "reference": "d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e",
                 "shasum": ""
             },
             "require": {
@@ -584,9 +584,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phpspec/prophecy/issues",
-                "source": "https://github.com/phpspec/prophecy/tree/master"
+                "source": "https://github.com/phpspec/prophecy/tree/1.14.0"
             },
-            "time": "2021-09-09T18:32:01+00:00"
+            "time": "2021-09-10T09:02:12+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
