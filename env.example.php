@@ -52,4 +52,17 @@ return [
      */
 
     'LOG_DRIVER' => 'file',
+
+    /**
+     * Mail settings.
+     */
+    
+    'MAIL_DRIVER' => 'smtp',
+    'MAIL_HOST' => 'smtp.mailtrap.io',
+    'MAIL_PORT' => 587,
+    'MAIL_ENCRYPTION' => 'tls',
+    'MAIL_USERNAME' => null,
+    'MAIL_PASSWORD' => null,
+    'MAIL_FROM_ADDRESS' => 'lightpack@example.com',
+    'MAIL_FROM_NAME' => 'Lightpack',
 ];
