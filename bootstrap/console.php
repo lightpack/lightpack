@@ -2,8 +2,6 @@
 
 require_once __DIR__ . '/constants.php';
 
-use Lightpack\Console\Console;
-
 /**
  * ------------------------------------------------------------
  * Require Defined Constants
@@ -37,10 +35,9 @@ require_once DIR_BOOTSTRAP . '/providers.php';
 require_once DIR_BOOTSTRAP . '/events.php';
 
 /**
+ * ------------------------------------------------------------
  * Register application specific console commands.
+ * ------------------------------------------------------------
  */
-$consoleConfig = require_once DIR_CONFIG  . '/console.php';
 
-foreach ($consoleConfig as $command => $handler) {
-    Console::register($command, new $handler);
-}
+require_once DIR_BOOTSTRAP . '/commands.php';
