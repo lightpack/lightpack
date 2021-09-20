@@ -2,22 +2,23 @@
 
 /**
  * ------------------------------------------------------------
- * List app events and listeners.
+ * List console commands here.
  * ------------------------------------------------------------
  */
 
-$events = [
-    // ...
+$commands = [
+    // 'test:hello' => App\Commands\HelloCommand::class,
 ];
 
 /**
  * ------------------------------------------------------------
- * Subscribe to app events.
+ * Register app console commands.
  * ------------------------------------------------------------
  */
 
-foreach ($events as $event => $listeners) {
-    foreach ($listeners as $listener) {
-        $container->get('event')->subscribe($event, $listener);
-    }
+foreach ($commands as $command => $handler) {
+    Lightpack\Console\Console::register(
+        $command,
+        new $handler
+    );
 }
