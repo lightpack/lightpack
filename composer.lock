@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.44-alpha",
+            "version": "v0.2.45-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "ec947de6b5eb19e098fda90c7807955670e82ca2"
+                "reference": "b8a7e9a7e3636f4bbf6686a40a20b206ed7437c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/ec947de6b5eb19e098fda90c7807955670e82ca2",
-                "reference": "ec947de6b5eb19e098fda90c7807955670e82ca2",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/b8a7e9a7e3636f4bbf6686a40a20b206ed7437c7",
+                "reference": "b8a7e9a7e3636f4bbf6686a40a20b206ed7437c7",
                 "shasum": ""
             },
             "require": {
@@ -63,9 +63,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.44-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.45-alpha"
             },
-            "time": "2021-09-12T11:35:48+00:00"
+            "time": "2021-09-20T06:55:48+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -497,12 +497,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "44e31d19a6e81eb6ede34ef40c5687247d6eaaf3"
+                "reference": "c512fd308b8fdccf510967376e0cc5a3929705c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/44e31d19a6e81eb6ede34ef40c5687247d6eaaf3",
-                "reference": "44e31d19a6e81eb6ede34ef40c5687247d6eaaf3",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/c512fd308b8fdccf510967376e0cc5a3929705c6",
+                "reference": "c512fd308b8fdccf510967376e0cc5a3929705c6",
                 "shasum": ""
             },
             "require": {
@@ -547,7 +547,7 @@
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
                 "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/master"
             },
-            "time": "2021-09-05T10:40:50+00:00"
+            "time": "2021-09-17T13:49:47+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -555,12 +555,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "7b2df704cbe99a7b0522c7d5d7b7c5ea61b196bb"
+                "reference": "30f38bffc6f24293dadd1823936372dfa9e86e2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/7b2df704cbe99a7b0522c7d5d7b7c5ea61b196bb",
-                "reference": "7b2df704cbe99a7b0522c7d5d7b7c5ea61b196bb",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/30f38bffc6f24293dadd1823936372dfa9e86e2f",
+                "reference": "30f38bffc6f24293dadd1823936372dfa9e86e2f",
                 "shasum": ""
             },
             "require": {
@@ -596,9 +596,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.x"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.5.0"
             },
-            "time": "2021-08-20T10:47:25+00:00"
+            "time": "2021-09-17T15:28:14+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -971,12 +971,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "d4ba8f24465fe14d693c26ae21419681890af509"
+                "reference": "827d2111386ca92d340ccad2eeca2d4c7db64dcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d4ba8f24465fe14d693c26ae21419681890af509",
-                "reference": "d4ba8f24465fe14d693c26ae21419681890af509",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/827d2111386ca92d340ccad2eeca2d4c7db64dcb",
+                "reference": "827d2111386ca92d340ccad2eeca2d4c7db64dcb",
                 "shasum": ""
             },
             "require": {
@@ -1060,7 +1060,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-08T05:59:40+00:00"
+            "time": "2021-09-16T05:20:03+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1686,7 +1686,6 @@
                     "type": "github"
                 }
             ],
-            "abandoned": true,
             "time": "2020-11-30T07:30:19+00:00"
         },
         {
@@ -1798,12 +1797,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce"
+                "reference": "f24ae462b1d60c333df104f0b81ec7d0e12f6e9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/46cd95797e9df938fdd2b03693b5fca5e64b01ce",
-                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f24ae462b1d60c333df104f0b81ec7d0e12f6e9f",
+                "reference": "f24ae462b1d60c333df104f0b81ec7d0e12f6e9f",
                 "shasum": ""
             },
             "require": {
@@ -1854,7 +1853,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.23.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/main"
             },
             "funding": [
                 {
@@ -1870,7 +1869,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-19T12:13:01+00:00"
+            "time": "2021-09-14T14:02:44+00:00"
         },
         {
             "name": "theseer/tokenizer",
