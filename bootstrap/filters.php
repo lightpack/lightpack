@@ -5,17 +5,18 @@ use Lightpack\Exceptions\FilterNotFoundException;
 /**
  * Register app filters.
  */
+
+$filtersConfig = config('filters');
 $routeFilters = $container->get('router')->filters();
-$filtersConfig = $container->get('config')->get('filters');
 
 foreach ($routeFilters as $filterAlias) {
-    if (!isset($filtersConfig[$filterAlias])) {
+    if (!array_key_exists($filterAlias, $filtersConfig)) {
         throw new FilterNotFoundException(
             "No filter class registered for: {$filterAlias}"
         );
     }
 
-    $filter->register(
+    $container->get('filter')->register(
         $container->get('router')->route(),
         new $filtersConfig[$filterAlias]
     );

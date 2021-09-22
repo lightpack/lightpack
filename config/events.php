@@ -2,13 +2,12 @@
 
 /**
  * ------------------------------------------------------------
- * Register app filters.
+ * List app events and listeners.
  * ------------------------------------------------------------
  */
 
 return [
-    'filters' => [
-        'csrf' => \App\Filters\CsrfFilter::class,
-        'cors' => \App\Filters\CorsFilter::class,
+    'events' => [
+        // ...
     ],
 ];
