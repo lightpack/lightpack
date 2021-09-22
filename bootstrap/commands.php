@@ -6,10 +6,7 @@
  * ------------------------------------------------------------
  */
 
-$commands = require DIR_CONFIG . '/commands.php';
-$commands = $commands['commands'];
-
-foreach ($commands as $command => $handler) {
+foreach (config('commands') as $command => $handler) {
     Lightpack\Console\Console::register(
         $command,
         new $handler
