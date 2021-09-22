@@ -2,13 +2,16 @@
 
 /**
  * ------------------------------------------------------------
- * Register app filters.
+ * List console commands here.
  * ------------------------------------------------------------
+ * 
+ * Example:
+ * 
+ * 'test:hello' => App\Commands\HelloCommand::class,
  */
 
 return [
-    'filters' => [
-        'csrf' => \App\Filters\CsrfFilter::class,
-        'cors' => \App\Filters\CorsFilter::class,
+    'commands' => [
+        // ...
     ],
 ];

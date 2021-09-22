@@ -2,19 +2,12 @@
 
 /**
  * ------------------------------------------------------------
- * List console commands here.
- * ------------------------------------------------------------
- */
-
-$commands = [
-    // 'test:hello' => App\Commands\HelloCommand::class,
-];
-
-/**
- * ------------------------------------------------------------
  * Register app console commands.
  * ------------------------------------------------------------
  */
+
+$commands = require DIR_CONFIG . '/commands.php';
+$commands = $commands['commands'];
 
 foreach ($commands as $command => $handler) {
     Lightpack\Console\Console::register(
