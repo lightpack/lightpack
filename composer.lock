@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.46-alpha",
+            "version": "v0.2.47-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "c21cdbf55fd3742b56c44b193b912ba51fe8cd32"
+                "reference": "1d02935fcecbccc1d0ff6445ee06cf53874b3513"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/c21cdbf55fd3742b56c44b193b912ba51fe8cd32",
-                "reference": "c21cdbf55fd3742b56c44b193b912ba51fe8cd32",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/1d02935fcecbccc1d0ff6445ee06cf53874b3513",
+                "reference": "1d02935fcecbccc1d0ff6445ee06cf53874b3513",
                 "shasum": ""
             },
             "require": {
@@ -63,9 +63,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.46-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.47-alpha"
             },
-            "time": "2021-09-20T14:03:20+00:00"
+            "time": "2021-09-28T07:57:49+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -73,12 +73,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "40a12618ea2ba877b38352f8c53b4e3862b7fb5c"
+                "reference": "be98d62e365a657a175c9fcf49f3914c6d8ec0ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/40a12618ea2ba877b38352f8c53b4e3862b7fb5c",
-                "reference": "40a12618ea2ba877b38352f8c53b4e3862b7fb5c",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/be98d62e365a657a175c9fcf49f3914c6d8ec0ad",
+                "reference": "be98d62e365a657a175c9fcf49f3914c6d8ec0ad",
                 "shasum": ""
             },
             "require": {
@@ -144,7 +144,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-29T17:41:57+00:00"
+            "time": "2021-09-26T20:35:36+00:00"
         },
         {
             "name": "psr/log",
@@ -497,12 +497,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "c512fd308b8fdccf510967376e0cc5a3929705c6"
+                "reference": "0f36fa483bc30d0032f700a38b40141cfa383910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/c512fd308b8fdccf510967376e0cc5a3929705c6",
-                "reference": "c512fd308b8fdccf510967376e0cc5a3929705c6",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/0f36fa483bc30d0032f700a38b40141cfa383910",
+                "reference": "0f36fa483bc30d0032f700a38b40141cfa383910",
                 "shasum": ""
             },
             "require": {
@@ -547,7 +547,7 @@
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
                 "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/master"
             },
-            "time": "2021-09-17T13:49:47+00:00"
+            "time": "2021-09-27T19:30:08+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -555,12 +555,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "30f38bffc6f24293dadd1823936372dfa9e86e2f"
+                "reference": "4b3579fc931524f60874ecee67600d5c80c7b505"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/30f38bffc6f24293dadd1823936372dfa9e86e2f",
-                "reference": "30f38bffc6f24293dadd1823936372dfa9e86e2f",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/4b3579fc931524f60874ecee67600d5c80c7b505",
+                "reference": "4b3579fc931524f60874ecee67600d5c80c7b505",
                 "shasum": ""
             },
             "require": {
@@ -596,9 +596,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.5.0"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.x"
             },
-            "time": "2021-09-17T15:28:14+00:00"
+            "time": "2021-09-26T07:37:33+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -971,12 +971,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "827d2111386ca92d340ccad2eeca2d4c7db64dcb"
+                "reference": "50a58a60b85947b0bee4c8ecfe0f4bbdcf20e984"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/827d2111386ca92d340ccad2eeca2d4c7db64dcb",
-                "reference": "827d2111386ca92d340ccad2eeca2d4c7db64dcb",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/50a58a60b85947b0bee4c8ecfe0f4bbdcf20e984",
+                "reference": "50a58a60b85947b0bee4c8ecfe0f4bbdcf20e984",
                 "shasum": ""
             },
             "require": {
@@ -1048,7 +1048,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/8.5"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/8.5.21"
             },
             "funding": [
                 {
@@ -1060,7 +1060,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-16T05:20:03+00:00"
+            "time": "2021-09-25T07:37:20+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
