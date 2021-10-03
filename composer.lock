@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.48-alpha",
+            "version": "v0.2.49-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "736a99e4686c0e8c310cbe971dd0e2671404fb12"
+                "reference": "3eb64ac45f79fd305e6d67834109738512a37b2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/736a99e4686c0e8c310cbe971dd0e2671404fb12",
-                "reference": "736a99e4686c0e8c310cbe971dd0e2671404fb12",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/3eb64ac45f79fd305e6d67834109738512a37b2c",
+                "reference": "3eb64ac45f79fd305e6d67834109738512a37b2c",
                 "shasum": ""
             },
             "require": {
@@ -63,9 +63,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.48-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.49-alpha"
             },
-            "time": "2021-10-01T16:21:54+00:00"
+            "time": "2021-10-03T14:11:32+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -555,12 +555,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "4b3579fc931524f60874ecee67600d5c80c7b505"
+                "reference": "a12f7e301eb7258bb68acd89d4aefa05c2906cae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/4b3579fc931524f60874ecee67600d5c80c7b505",
-                "reference": "4b3579fc931524f60874ecee67600d5c80c7b505",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/a12f7e301eb7258bb68acd89d4aefa05c2906cae",
+                "reference": "a12f7e301eb7258bb68acd89d4aefa05c2906cae",
                 "shasum": ""
             },
             "require": {
@@ -596,9 +596,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.x"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.5.1"
             },
-            "time": "2021-09-26T07:37:33+00:00"
+            "time": "2021-10-02T14:08:47+00:00"
         },
         {
             "name": "phpspec/prophecy",
