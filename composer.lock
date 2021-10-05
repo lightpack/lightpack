@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.49-alpha",
+            "version": "v0.2.51-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "3eb64ac45f79fd305e6d67834109738512a37b2c"
+                "reference": "197ff0c10ed1d3bcad2df08fe80dea1d0367b14d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/3eb64ac45f79fd305e6d67834109738512a37b2c",
-                "reference": "3eb64ac45f79fd305e6d67834109738512a37b2c",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/197ff0c10ed1d3bcad2df08fe80dea1d0367b14d",
+                "reference": "197ff0c10ed1d3bcad2df08fe80dea1d0367b14d",
                 "shasum": ""
             },
             "require": {
@@ -63,9 +63,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.49-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.51-alpha"
             },
-            "time": "2021-10-03T14:11:32+00:00"
+            "time": "2021-10-05T10:19:06+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -73,12 +73,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "be98d62e365a657a175c9fcf49f3914c6d8ec0ad"
+                "reference": "cbfe93b75a5d2ca217b32fdefee6dfeb7a971a0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/be98d62e365a657a175c9fcf49f3914c6d8ec0ad",
-                "reference": "be98d62e365a657a175c9fcf49f3914c6d8ec0ad",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/cbfe93b75a5d2ca217b32fdefee6dfeb7a971a0a",
+                "reference": "cbfe93b75a5d2ca217b32fdefee6dfeb7a971a0a",
                 "shasum": ""
             },
             "require": {
@@ -144,7 +144,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-26T20:35:36+00:00"
+            "time": "2021-10-04T15:20:23+00:00"
         },
         {
             "name": "psr/log",
