@@ -22,7 +22,8 @@
     "autoload": {
         "psr-4": {
             "Modules\\": "modules/",
-            "App\\": "app/"
+            "App\\": "app/",
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "minimum-stability": "dev",
