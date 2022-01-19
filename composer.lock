@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.52-alpha",
+            "version": "v0.2.53-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "d271e8eda0b146a7c8b53d9ab24da067146baae0"
+                "reference": "6e8f91a67cb91d878eb2d00fc7b2a07aeae9e07b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/d271e8eda0b146a7c8b53d9ab24da067146baae0",
-                "reference": "d271e8eda0b146a7c8b53d9ab24da067146baae0",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/6e8f91a67cb91d878eb2d00fc7b2a07aeae9e07b",
+                "reference": "6e8f91a67cb91d878eb2d00fc7b2a07aeae9e07b",
                 "shasum": ""
             },
             "require": {
@@ -63,9 +63,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.52-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.2.53-alpha"
             },
-            "time": "2022-01-10T15:04:31+00:00"
+            "time": "2022-01-19T05:20:10+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -971,12 +971,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "133d782605f756e63dc2983cc7ac228c7f4ae752"
+                "reference": "9b5a2e5cc9d615ab9b1418753c42a2f8c0d5285e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/133d782605f756e63dc2983cc7ac228c7f4ae752",
-                "reference": "133d782605f756e63dc2983cc7ac228c7f4ae752",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9b5a2e5cc9d615ab9b1418753c42a2f8c0d5285e",
+                "reference": "9b5a2e5cc9d615ab9b1418753c42a2f8c0d5285e",
                 "shasum": ""
             },
             "require": {
@@ -1060,7 +1060,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-09T07:33:44+00:00"
+            "time": "2022-01-15T09:00:27+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
