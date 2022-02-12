@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.2.53-alpha",
+            "version": "v0.3.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "6e8f91a67cb91d878eb2d00fc7b2a07aeae9e07b"
+                "reference": "cbf3478b5642e264882670f8eb439984712c548e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/6e8f91a67cb91d878eb2d00fc7b2a07aeae9e07b",
-                "reference": "6e8f91a67cb91d878eb2d00fc7b2a07aeae9e07b",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/cbf3478b5642e264882670f8eb439984712c548e",
+                "reference": "cbf3478b5642e264882670f8eb439984712c548e",
                 "shasum": ""
             },
             "require": {
@@ -30,12 +30,12 @@
             },
             "type": "project",
             "autoload": {
-                "psr-4": {
-                    "Lightpack\\": "src/Framework"
-                },
                 "files": [
                     "src/Framework/utilities.php"
                 ],
+                "psr-4": {
+                    "Lightpack\\": "src/Framework"
+                },
                 "exclude-from-classmap": [
                     "src/Tests/"
                 ]
@@ -63,9 +63,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.2.53-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.3.0-alpha"
             },
-            "time": "2022-01-19T05:20:10+00:00"
+            "time": "2022-02-12T10:33:43+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -73,12 +73,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "d4bf3504b93c38c7bfebc9c686471f48e6f84c06"
+                "reference": "7e1da4fae3abfa612fa9a4a3019ea8f8252c1988"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/d4bf3504b93c38c7bfebc9c686471f48e6f84c06",
-                "reference": "d4bf3504b93c38c7bfebc9c686471f48e6f84c06",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/7e1da4fae3abfa612fa9a4a3019ea8f8252c1988",
+                "reference": "7e1da4fae3abfa612fa9a4a3019ea8f8252c1988",
                 "shasum": ""
             },
             "require": {
@@ -144,7 +144,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-26T18:26:31+00:00"
+            "time": "2022-02-05T00:15:49+00:00"
         },
         {
             "name": "psr/log",
@@ -295,12 +295,12 @@
             "default-branch": true,
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "DeepCopy\\": "src/DeepCopy/"
-                },
                 "files": [
                     "src/DeepCopy/deep_copy.php"
-                ]
+                ],
+                "psr-4": {
+                    "DeepCopy\\": "src/DeepCopy/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -332,12 +332,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/manifest.git",
-                "reference": "97803eca37d319dfa7826cc2437fc020857acb53"
+                "reference": "f2de92260682e2db0f5895cda0b97b2dbb732d67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/manifest/zipball/97803eca37d319dfa7826cc2437fc020857acb53",
-                "reference": "97803eca37d319dfa7826cc2437fc020857acb53",
+                "url": "https://api.github.com/repos/phar-io/manifest/zipball/f2de92260682e2db0f5895cda0b97b2dbb732d67",
+                "reference": "f2de92260682e2db0f5895cda0b97b2dbb732d67",
                 "shasum": ""
             },
             "require": {
@@ -383,22 +383,22 @@
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
             "support": {
                 "issues": "https://github.com/phar-io/manifest/issues",
-                "source": "https://github.com/phar-io/manifest/tree/2.0.3"
+                "source": "https://github.com/phar-io/manifest/tree/master"
             },
-            "time": "2021-07-20T11:28:43+00:00"
+            "time": "2022-02-10T19:52:33+00:00"
         },
         {
             "name": "phar-io/version",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/version.git",
-                "reference": "bae7c545bef187884426f042434e561ab1ddb182"
+                "reference": "15a90844ad40f127afd244c0cad228de2a80052a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/version/zipball/bae7c545bef187884426f042434e561ab1ddb182",
-                "reference": "bae7c545bef187884426f042434e561ab1ddb182",
+                "url": "https://api.github.com/repos/phar-io/version/zipball/15a90844ad40f127afd244c0cad228de2a80052a",
+                "reference": "15a90844ad40f127afd244c0cad228de2a80052a",
                 "shasum": ""
             },
             "require": {
@@ -434,9 +434,9 @@
             "description": "Library for handling version information and constraints",
             "support": {
                 "issues": "https://github.com/phar-io/version/issues",
-                "source": "https://github.com/phar-io/version/tree/3.1.0"
+                "source": "https://github.com/phar-io/version/tree/3.1.1"
             },
-            "time": "2021-02-23T14:00:09+00:00"
+            "time": "2022-02-07T21:56:48+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -971,12 +971,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "9b5a2e5cc9d615ab9b1418753c42a2f8c0d5285e"
+                "reference": "97d92d2372544fc028e491e327fecc19a252247a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9b5a2e5cc9d615ab9b1418753c42a2f8c0d5285e",
-                "reference": "9b5a2e5cc9d615ab9b1418753c42a2f8c0d5285e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/97d92d2372544fc028e491e327fecc19a252247a",
+                "reference": "97d92d2372544fc028e491e327fecc19a252247a",
                 "shasum": ""
             },
             "require": {
@@ -1060,7 +1060,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-15T09:00:27+00:00"
+            "time": "2022-02-10T14:55:19+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1403,12 +1403,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "474fb9edb7ab891665d3bfc6317f42a0a150454b"
+                "reference": "de036ec91d55d2a9e0db2ba975b512cdb1c23921"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/474fb9edb7ab891665d3bfc6317f42a0a150454b",
-                "reference": "474fb9edb7ab891665d3bfc6317f42a0a150454b",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/de036ec91d55d2a9e0db2ba975b512cdb1c23921",
+                "reference": "de036ec91d55d2a9e0db2ba975b512cdb1c23921",
                 "shasum": ""
             },
             "require": {
@@ -1459,7 +1459,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-11-30T07:43:24+00:00"
+            "time": "2022-02-10T06:55:38+00:00"
         },
         {
             "name": "sebastian/object-enumerator",
