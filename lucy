@@ -3,42 +3,8 @@
 
 /**
  * ------------------------------------------------------------
- * Confirm that it runs in CLI environment.
+ * Lucy CLI: Lightpack PHP CLI Assistant.
  * ------------------------------------------------------------
  */
 
-if (php_sapi_name() !== 'cli') {
-    die("Abort: CLI is not supported in php-cgi environment!\n");
-}
-
-/**
- * ------------------------------------------------------------
- * Use Composer Autoloader.
- * ------------------------------------------------------------
- */
-
-require_once __DIR__ . '/vendor/autoload.php';
-
-/**
- * ------------------------------------------------------------
- * Bootstrap framework specific commands.
- * ------------------------------------------------------------
- */
-
-Lightpack\Console\Console::bootstrap();
-
-/**
- * ------------------------------------------------------------
- * Bootstrap application specific commands.
- * ------------------------------------------------------------
- */
-
-require_once __DIR__ . '/bootstrap/console.php';
-
-/**
- * ------------------------------------------------------------
- * Run the console command.
- * ------------------------------------------------------------
- */
-
-Lightpack\Console\Runner::run();
+require __DIR__ . '/bootstrap/lucy.php';
