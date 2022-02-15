@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.3.2-alpha",
+            "version": "v0.3.3-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "839f75c62c5122d6bf929769053a05f74a4262cf"
+                "reference": "7ed7913bc144ccdcb555b1a1b58b83bcd347af36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/839f75c62c5122d6bf929769053a05f74a4262cf",
-                "reference": "839f75c62c5122d6bf929769053a05f74a4262cf",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/7ed7913bc144ccdcb555b1a1b58b83bcd347af36",
+                "reference": "7ed7913bc144ccdcb555b1a1b58b83bcd347af36",
                 "shasum": ""
             },
             "require": {
@@ -63,9 +63,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.3.2-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.3.3-alpha"
             },
-            "time": "2022-02-13T07:48:36+00:00"
+            "time": "2022-02-15T15:20:19+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -332,12 +332,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/manifest.git",
-                "reference": "f2de92260682e2db0f5895cda0b97b2dbb732d67"
+                "reference": "a47782325a3407ac1428aedf27c31c35f352dafa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/manifest/zipball/f2de92260682e2db0f5895cda0b97b2dbb732d67",
-                "reference": "f2de92260682e2db0f5895cda0b97b2dbb732d67",
+                "url": "https://api.github.com/repos/phar-io/manifest/zipball/a47782325a3407ac1428aedf27c31c35f352dafa",
+                "reference": "a47782325a3407ac1428aedf27c31c35f352dafa",
                 "shasum": ""
             },
             "require": {
@@ -385,7 +385,13 @@
                 "issues": "https://github.com/phar-io/manifest/issues",
                 "source": "https://github.com/phar-io/manifest/tree/master"
             },
-            "time": "2022-02-10T19:52:33+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/theseer",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-15T13:03:04+00:00"
         },
         {
             "name": "phar-io/version",
