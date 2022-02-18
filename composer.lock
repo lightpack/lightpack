@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.3.3-alpha",
+            "version": "v0.3.4-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "7ed7913bc144ccdcb555b1a1b58b83bcd347af36"
+                "reference": "95c88bd9ae5cf3ff68bf961567d5ac595f1a2086"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/7ed7913bc144ccdcb555b1a1b58b83bcd347af36",
-                "reference": "7ed7913bc144ccdcb555b1a1b58b83bcd347af36",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/95c88bd9ae5cf3ff68bf961567d5ac595f1a2086",
+                "reference": "95c88bd9ae5cf3ff68bf961567d5ac595f1a2086",
                 "shasum": ""
             },
             "require": {
@@ -63,9 +63,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.3.3-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.3.4-alpha"
             },
-            "time": "2022-02-15T15:20:19+00:00"
+            "time": "2022-02-17T13:23:59+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -73,12 +73,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "7e1da4fae3abfa612fa9a4a3019ea8f8252c1988"
+                "reference": "c0d9f7dd3c2aa247ca44791e9209233829d82285"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/7e1da4fae3abfa612fa9a4a3019ea8f8252c1988",
-                "reference": "7e1da4fae3abfa612fa9a4a3019ea8f8252c1988",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/c0d9f7dd3c2aa247ca44791e9209233829d82285",
+                "reference": "c0d9f7dd3c2aa247ca44791e9209233829d82285",
                 "shasum": ""
             },
             "require": {
@@ -136,7 +136,7 @@
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
             "support": {
                 "issues": "https://github.com/PHPMailer/PHPMailer/issues",
-                "source": "https://github.com/PHPMailer/PHPMailer/tree/master"
+                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.5.4"
             },
             "funding": [
                 {
@@ -144,7 +144,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-05T00:15:49+00:00"
+            "time": "2022-02-17T08:19:04+00:00"
         },
         {
             "name": "psr/log",
@@ -273,24 +273,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "776f831124e9c62e1a2c601ecc52e776d8bb7220"
+                "reference": "8263fc30b63ea463b22e7f264ed77f2ceb022cdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/776f831124e9c62e1a2c601ecc52e776d8bb7220",
-                "reference": "776f831124e9c62e1a2c601ecc52e776d8bb7220",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/8263fc30b63ea463b22e7f264ed77f2ceb022cdc",
+                "reference": "8263fc30b63ea463b22e7f264ed77f2ceb022cdc",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0"
             },
-            "replace": {
-                "myclabs/deep-copy": "self.version"
-            },
             "require-dev": {
-                "doctrine/collections": "^1.0",
-                "doctrine/common": "^2.6",
-                "phpunit/phpunit": "^7.1"
+                "doctrine/collections": "^1.6",
+                "doctrine/common": "^2.13",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5"
             },
             "default-branch": true,
             "type": "library",
@@ -316,7 +313,7 @@
             ],
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.10.2"
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.x"
             },
             "funding": [
                 {
@@ -324,7 +321,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-13T09:40:50+00:00"
+            "time": "2022-02-17T17:54:39+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -332,16 +329,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/manifest.git",
-                "reference": "a47782325a3407ac1428aedf27c31c35f352dafa"
+                "reference": "999b38a78b08b07dbb7f43cb392f71cbd1c9ccf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/manifest/zipball/a47782325a3407ac1428aedf27c31c35f352dafa",
-                "reference": "a47782325a3407ac1428aedf27c31c35f352dafa",
+                "url": "https://api.github.com/repos/phar-io/manifest/zipball/999b38a78b08b07dbb7f43cb392f71cbd1c9ccf5",
+                "reference": "999b38a78b08b07dbb7f43cb392f71cbd1c9ccf5",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
+                "ext-libxml": "*",
                 "ext-phar": "*",
                 "ext-xmlwriter": "*",
                 "phar-io/version": "^3.0.1",
@@ -391,7 +389,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-15T13:03:04+00:00"
+            "time": "2022-02-17T20:16:45+00:00"
         },
         {
             "name": "phar-io/version",
