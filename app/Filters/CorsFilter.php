@@ -10,8 +10,8 @@ class CorsFilter implements IFilter
 {
     public function before(Request $request)
     {
-        if (app('request')->method() === 'OPTIONS') {
-            return app('response')
+        if (request()->method() === 'OPTIONS') {
+            return response()
                 ->setCode(204)
                 ->setMessage('No Content')
                 ->setType('text/plain')

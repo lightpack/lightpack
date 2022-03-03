@@ -10,7 +10,7 @@ class WebFilter implements IFilter
 {
     public function before(Request $request)
     {
-        if(!auth()->isLoggedIn()) {
+        if(auth()->isGuest()) {
             auth()->redirectLoginUrl();
         }
     }
