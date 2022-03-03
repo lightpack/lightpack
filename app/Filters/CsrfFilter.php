@@ -11,8 +11,8 @@ class CsrfFilter implements IFilter
 {
     public function before(Request $request)
     {
-        if(app('request')->isPost()) {
-            if(app('session')->verifyToken() === false) {
+        if(request()->isPost()) {
+            if(session()->verifyToken() === false) {
                 throw new InvalidCsrfTokenException('CSRF security token is invalid');
             }
         }

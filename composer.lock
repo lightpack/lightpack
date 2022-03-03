@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.3.4-alpha",
+            "version": "v0.3.5-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "95c88bd9ae5cf3ff68bf961567d5ac595f1a2086"
+                "reference": "31b343c478afa2a2af3461b771142c12dec1b24a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/95c88bd9ae5cf3ff68bf961567d5ac595f1a2086",
-                "reference": "95c88bd9ae5cf3ff68bf961567d5ac595f1a2086",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/31b343c478afa2a2af3461b771142c12dec1b24a",
+                "reference": "31b343c478afa2a2af3461b771142c12dec1b24a",
                 "shasum": ""
             },
             "require": {
@@ -63,9 +63,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.3.4-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.3.5-alpha"
             },
-            "time": "2022-02-17T13:23:59+00:00"
+            "time": "2022-03-03T04:22:11+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -73,12 +73,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "c0d9f7dd3c2aa247ca44791e9209233829d82285"
+                "reference": "e43bac82edc26ca04b36143a48bde1c051cfd5b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/c0d9f7dd3c2aa247ca44791e9209233829d82285",
-                "reference": "c0d9f7dd3c2aa247ca44791e9209233829d82285",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/e43bac82edc26ca04b36143a48bde1c051cfd5b1",
+                "reference": "e43bac82edc26ca04b36143a48bde1c051cfd5b1",
                 "shasum": ""
             },
             "require": {
@@ -136,7 +136,7 @@
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
             "support": {
                 "issues": "https://github.com/PHPMailer/PHPMailer/issues",
-                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.5.4"
+                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.6.0"
             },
             "funding": [
                 {
@@ -144,7 +144,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-17T08:19:04+00:00"
+            "time": "2022-02-28T15:31:21+00:00"
         },
         {
             "name": "psr/log",
@@ -273,21 +273,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "8263fc30b63ea463b22e7f264ed77f2ceb022cdc"
+                "reference": "c6a951b75d684fd43fbbd69617488e1e2e8924ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/8263fc30b63ea463b22e7f264ed77f2ceb022cdc",
-                "reference": "8263fc30b63ea463b22e7f264ed77f2ceb022cdc",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/c6a951b75d684fd43fbbd69617488e1e2e8924ba",
+                "reference": "c6a951b75d684fd43fbbd69617488e1e2e8924ba",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0"
             },
+            "conflict": {
+                "doctrine/collections": "<1.6.8",
+                "doctrine/common": "<2.13.3 || >=3,<3.2.2"
+            },
             "require-dev": {
-                "doctrine/collections": "^1.6",
-                "doctrine/common": "^2.13",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5"
+                "doctrine/collections": "^1.6.8",
+                "doctrine/common": "^2.13.3 || ^3.2.2",
+                "phpunit/phpunit": "^7.5.20 || ^8.5.23 || ^9.5.13"
             },
             "default-branch": true,
             "type": "library",
@@ -313,7 +317,7 @@
             ],
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.x"
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.10.3"
             },
             "funding": [
                 {
@@ -321,7 +325,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-17T17:54:39+00:00"
+            "time": "2022-03-02T14:16:47+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -329,12 +333,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/manifest.git",
-                "reference": "999b38a78b08b07dbb7f43cb392f71cbd1c9ccf5"
+                "reference": "36d8a21e851a9512db2b086dc5ac2c61308f0138"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/manifest/zipball/999b38a78b08b07dbb7f43cb392f71cbd1c9ccf5",
-                "reference": "999b38a78b08b07dbb7f43cb392f71cbd1c9ccf5",
+                "url": "https://api.github.com/repos/phar-io/manifest/zipball/36d8a21e851a9512db2b086dc5ac2c61308f0138",
+                "reference": "36d8a21e851a9512db2b086dc5ac2c61308f0138",
                 "shasum": ""
             },
             "require": {
@@ -389,20 +393,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-17T20:16:45+00:00"
+            "time": "2022-02-21T19:55:33+00:00"
         },
         {
             "name": "phar-io/version",
-            "version": "3.1.1",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/version.git",
-                "reference": "15a90844ad40f127afd244c0cad228de2a80052a"
+                "reference": "4f7fd7836c6f332bb2933569e566a0d6c4cbed74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/version/zipball/15a90844ad40f127afd244c0cad228de2a80052a",
-                "reference": "15a90844ad40f127afd244c0cad228de2a80052a",
+                "url": "https://api.github.com/repos/phar-io/version/zipball/4f7fd7836c6f332bb2933569e566a0d6c4cbed74",
+                "reference": "4f7fd7836c6f332bb2933569e566a0d6c4cbed74",
                 "shasum": ""
             },
             "require": {
@@ -438,9 +442,9 @@
             "description": "Library for handling version information and constraints",
             "support": {
                 "issues": "https://github.com/phar-io/version/issues",
-                "source": "https://github.com/phar-io/version/tree/3.1.1"
+                "source": "https://github.com/phar-io/version/tree/3.2.1"
             },
-            "time": "2022-02-07T21:56:48+00:00"
+            "time": "2022-02-21T01:04:05+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -975,12 +979,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "97d92d2372544fc028e491e327fecc19a252247a"
+                "reference": "e93feeab376fef7dc81cbaa48273f61df991849f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/97d92d2372544fc028e491e327fecc19a252247a",
-                "reference": "97d92d2372544fc028e491e327fecc19a252247a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e93feeab376fef7dc81cbaa48273f61df991849f",
+                "reference": "e93feeab376fef7dc81cbaa48273f61df991849f",
                 "shasum": ""
             },
             "require": {
@@ -1064,7 +1068,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-10T14:55:19+00:00"
+            "time": "2022-02-23T15:51:03+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1829,12 +1833,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
