@@ -21,5 +21,6 @@ return [
         Lightpack\Providers\ResponseProvider::class,
         Lightpack\Providers\DatabaseProvider::class,
         Lightpack\Providers\TemplateProvider::class,
+        Lightpack\Providers\AuthProvider::class,
     ],
 ];
