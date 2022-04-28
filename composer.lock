@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lightpack/framework",
-            "version": "v0.4.0-alpha",
+            "version": "v0.4.1-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lightpack/framework.git",
-                "reference": "0aa79860b40c59545d8cf6354a222c1da9d26b47"
+                "reference": "a10f042469fc4a1ccaf433600d0bb6635a5a2219"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightpack/framework/zipball/0aa79860b40c59545d8cf6354a222c1da9d26b47",
-                "reference": "0aa79860b40c59545d8cf6354a222c1da9d26b47",
+                "url": "https://api.github.com/repos/lightpack/framework/zipball/a10f042469fc4a1ccaf433600d0bb6635a5a2219",
+                "reference": "a10f042469fc4a1ccaf433600d0bb6635a5a2219",
                 "shasum": ""
             },
             "require": {
@@ -63,9 +63,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lightpack/framework/issues",
-                "source": "https://github.com/lightpack/framework/tree/v0.4.0-alpha"
+                "source": "https://github.com/lightpack/framework/tree/v0.4.1-alpha"
             },
-            "time": "2022-04-09T06:04:23+00:00"
+            "time": "2022-04-28T03:44:21+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
