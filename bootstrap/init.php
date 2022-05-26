@@ -30,7 +30,7 @@ require_once DIR_BOOTSTRAP . '/environment.php';
  * ------------------------------------------------------------
  */
 
-require_once DIR_BOOTSTRAP . '/providers.php';
+require DIR_BOOTSTRAP . '/providers.php';
 
 /**
  * ------------------------------------------------------------
