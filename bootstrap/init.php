@@ -55,11 +55,3 @@ require_once DIR_BOOTSTRAP . '/events.php';
  */
 
 require_once DIR_BOOTSTRAP . '/routes.php';
-
-/**
- * ------------------------------------------------------------
- * Run our application.
- * ------------------------------------------------------------
- */
-
-Lightpack\App::run($container);
