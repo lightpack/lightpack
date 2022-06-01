@@ -2,9 +2,9 @@
 
 namespace Tests;
 
-use Lightpack\Testing\HttpTestCase as BaseHttpTestCase;
+use Lightpack\Testing\Http\TestCase;
 
-class HttpTestCase extends BaseHttpTestCase
+class HttpTestCase extends TestCase
 {
     public function setUp(): void
     {
