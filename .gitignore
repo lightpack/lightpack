@@ -4,3 +4,4 @@ vendor/
 composer.phar
 env.php
 /public/uploads
+.phpunit.result.cache

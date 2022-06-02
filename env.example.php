@@ -39,7 +39,8 @@ return [
      * Session settings.
      */
 
-    'SESSION_NAME' => 'lightpack', 
+    'SESSION_NAME' => 'sess_lightpack',
+    'SESSION_DRIVER' => 'default',
 
     /**
      * Cookie settings.

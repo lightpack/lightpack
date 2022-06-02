@@ -22,7 +22,7 @@ require_once __DIR__ . '/constants.php';
  * ------------------------------------------------------------
  */
 
-require_once DIR_BOOTSTRAP . '/environment.php';
+require DIR_BOOTSTRAP . '/environment.php';
 
 /**
  * ------------------------------------------------------------
@@ -30,7 +30,7 @@ require_once DIR_BOOTSTRAP . '/environment.php';
  * ------------------------------------------------------------
  */
 
-require_once DIR_BOOTSTRAP . '/providers.php';
+require DIR_BOOTSTRAP . '/providers.php';
 
 /**
  * ------------------------------------------------------------
@@ -38,7 +38,7 @@ require_once DIR_BOOTSTRAP . '/providers.php';
  * ------------------------------------------------------------
  */
 
-require_once DIR_BOOTSTRAP . '/debug.php';
+require DIR_BOOTSTRAP . '/debug.php';
 
 /**
  * ------------------------------------------------------------
@@ -46,7 +46,7 @@ require_once DIR_BOOTSTRAP . '/debug.php';
  * ------------------------------------------------------------
  */
 
-require_once DIR_BOOTSTRAP . '/events.php';
+require DIR_BOOTSTRAP . '/events.php';
 
 /**
  * ------------------------------------------------------------
@@ -54,12 +54,4 @@ require_once DIR_BOOTSTRAP . '/events.php';
  * ------------------------------------------------------------
  */
 
-require_once DIR_BOOTSTRAP . '/routes.php';
-
-/**
- * ------------------------------------------------------------
- * Run our application.
- * ------------------------------------------------------------
- */
-
-Lightpack\App::run($container);
+require DIR_BOOTSTRAP . '/routes.php';

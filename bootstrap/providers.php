@@ -6,8 +6,7 @@
  * ------------------------------------------------------------
  */
 
-$container = new Lightpack\Container\Container();
-
+$GLOBALS['container'] = $container = new Lightpack\Container\Container();
 
 /**
  * ------------------------------------------------------------

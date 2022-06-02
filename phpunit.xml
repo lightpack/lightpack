@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phpunit bootstrap="vendor/autoload.php" colors="true" testdox="true">
+    <testsuite name="Lightpack Project">
+        <directory>tests</directory>
+    </testsuite>
+    <php>
+        <env name="APP_ENV" value="testing" />
+        <env name="SESSION_DRIVER" value="array" />
+    </php>
+</phpunit>
