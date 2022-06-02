@@ -8,5 +8,4 @@ return [
     'app.default.locale' => 'en',
     'app.api.route.prefix' => 'api',
     'app.admin.route.prefix' => 'admin',
-    'app.domain.live.url' => 'https://testmocks.com',
 ];

@@ -39,7 +39,7 @@ return [
      * Session settings.
      */
 
-    'SESSION_NAME' => 'sess_testmocks_admin',
+    'SESSION_NAME' => 'sess_lightpack',
     'SESSION_DRIVER' => 'default',
 
     /**
