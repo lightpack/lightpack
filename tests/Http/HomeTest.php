@@ -8,14 +8,13 @@ class HomeTest extends HttpTestCase
 {
     public function testItRendersHomePage()
     {
-        $response = $this->request('GET', '/');
+        $this->request('GET', '/');
 
-        $this->assertEquals(200, $response->getCode());
+        $this->assertResponseStatus(200);
     }
 
     public function testItRenders404Page()
     {
-        $this->expectException(\Lightpack\Exceptions\RouteNotFoundException::class);
-        $this->request('GET', '/does-not-exist');
+        $this->assertRouteNotFound('/does-not-exist');
     }
 }
