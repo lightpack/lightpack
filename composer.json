@@ -33,7 +33,7 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.1",
+        "php": ">=8.1",
         "lightpack/framework": "v0.*"
     },
     "require-dev": {
