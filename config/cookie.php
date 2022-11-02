@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'cookie.secret' => get_env('COOKIE_SECRET'),
+    'cookie.secret' => get_env('APP_KEY', 'secret'),
 ];
