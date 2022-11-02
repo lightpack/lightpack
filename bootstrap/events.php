@@ -2,12 +2,8 @@
 
 /**
  * ------------------------------------------------------------
- * Subscribe to app events.
+ * Boot app events.
  * ------------------------------------------------------------
  */
 
-foreach (config('events') as $event => $listeners) {
-    foreach ($listeners as $listener) {
-        $container->get('event')->subscribe($event, $listener);
-    }
-}
+Lightpack\App::bootEvents();
