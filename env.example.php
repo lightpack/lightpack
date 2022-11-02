@@ -9,13 +9,14 @@ return [
     'APP_URL' => 'http://localhost',
     'ASSET_URL' => 'http://localhost/assets',
     'APP_DEBUG' => true,
+    'APP_KEY' => '',
 
     /**
      * Database driver.
      */
 
     'DB_DRIVER' => 'mysql',
-    
+
     /**
      * MySQL settings.
      */
@@ -36,17 +37,16 @@ return [
     'SQLITE_DB_PATH' => ':memory',
 
     /**
+     * Cache settings: file, array, null.
+     */
+    'CACHE_DRIVER' => 'file',
+
+    /**
      * Session settings.
      */
 
     'SESSION_NAME' => 'sess_lightpack',
     'SESSION_DRIVER' => 'default',
-
-    /**
-     * Cookie settings.
-     */
-
-    'COOKIE_SECRET' => '!@Secret4Cookie@!',
 
     /**
      * Log driver: file, null.
@@ -55,9 +55,14 @@ return [
     'LOG_DRIVER' => 'file',
 
     /**
+     * Job engine: database, sync, null.
+     */
+    'JOB_ENGINE' => 'sync',
+
+    /**
      * Mail settings.
      */
-    
+
     'MAIL_DRIVER' => 'smtp',
     'MAIL_HOST' => 'smtp.mailtrap.io',
     'MAIL_PORT' => 587,
