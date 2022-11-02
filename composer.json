@@ -21,7 +21,6 @@
     ],
     "autoload": {
         "psr-4": {
-            "Modules\\": "modules/",
             "App\\": "app/",
             "Database\\Seeders\\": "database/seeders/"
         }
@@ -37,7 +36,7 @@
         "lightpack/framework": "v0.*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.5"
+        "phpunit/phpunit": "^9.5.10"
     },
     "scripts": {
 		"post-update-cmd": [
