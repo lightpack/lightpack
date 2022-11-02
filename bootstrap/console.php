@@ -60,11 +60,11 @@ Lightpack\Console\Console::bootstrap();
 
 /**
  * ------------------------------------------------------------
- * Discover app events.
+ * Boot app events.
  * ------------------------------------------------------------
  */
 
-require_once DIR_BOOTSTRAP . '/events.php';
+Lightpack\App::bootEvents();
 
 /**
  * ------------------------------------------------------------
@@ -74,6 +74,13 @@ require_once DIR_BOOTSTRAP . '/events.php';
 
 require_once DIR_BOOTSTRAP . '/commands.php';
 
+/**
+ * ------------------------------------------------------------
+ * Register scheduled tasks.
+ * ------------------------------------------------------------
+ */
+
+require_once DIR_ROOT . '/schedules/schedules.php';
 
 /**
  * ------------------------------------------------------------

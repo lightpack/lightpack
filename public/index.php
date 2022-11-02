@@ -16,7 +16,7 @@ require __DIR__ . '/../bootstrap/init.php';
  * ------------------------------------------------------------
  */
 
-$response = Lightpack\App::run($container);
+$response = Lightpack\App::run();
 
 /**
  * ------------------------------------------------------------

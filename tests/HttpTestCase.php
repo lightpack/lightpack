@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use Lightpack\Container\Container;
 use Lightpack\Testing\Http\TestCase;
 
 class HttpTestCase extends TestCase
@@ -12,6 +13,6 @@ class HttpTestCase extends TestCase
 
         require __DIR__ . '/../bootstrap/init.php';
 
-        $this->container = $GLOBALS['container'];
+        $this->container = Container::getInstance();
     }
 }

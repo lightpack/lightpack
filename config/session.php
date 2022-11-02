@@ -2,12 +2,11 @@
 
 /**
  * ------------------------------------------------------------
- * List service providers here.
+ * Session settings.
  * ------------------------------------------------------------
  */
 
 return [
-    'providers' => [
-        // ...
-    ],
+    'session.driver' => get_env('SESSION_DRIVER', 'default'),
+    'session.name' => get_env('SESSION_NAME', 'lightpack_session'),
 ];

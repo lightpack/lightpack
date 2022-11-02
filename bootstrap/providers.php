@@ -2,21 +2,10 @@
 
 /**
  * ------------------------------------------------------------
- * IoC Container: Simplified Service Locator.
+ * Boot app providers.
  * ------------------------------------------------------------
  */
 
-$GLOBALS['container'] = $container = new Lightpack\Container\Container();
+ $providers = require DIR_CONFIG . '/providers.php';
 
-/**
- * ------------------------------------------------------------
- * Bind service providers in container.
- * ------------------------------------------------------------
- */
-
-$providers = require DIR_CONFIG . '/providers.php';
-$providers = $providers['providers'];
-
-foreach ($providers as $provider) {
-    (new $provider)->register($container);
-}
+ Lightpack\App::bootProviders($providers['providers']);

@@ -8,4 +8,4 @@ use App\Controllers\HomeController;
  * --------------------------------------------------
  */
 
-route()->get('/', HomeController::class, 'index');
+route()->get('/', HomeController::class);

@@ -6,6 +6,6 @@ class HomeController
 {
     public function index()
     {
-        response()->render('home');
+        return response()->view('home');
     }
 }

@@ -8,9 +8,8 @@
 
 return [
     'filters' => [
-        'csrf' => \App\Filters\CsrfFilter::class,
-        'cors' => \App\Filters\CorsFilter::class,
-        'auth:web' => \App\Filters\Auth\WebFilter::class,
-        'auth:api' => \App\Filters\Auth\ApiFilter::class,
+        'csrf' => Lightpack\Filters\CsrfFilter::class,
+        'cors' => Lightpack\Filters\CorsFilter::class,
+        'auth' => Lightpack\Filters\AuthFilter::class,
     ],
 ];

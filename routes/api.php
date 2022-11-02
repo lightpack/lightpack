@@ -12,6 +12,6 @@ use App\Controllers\Api\CorsController;
  * method will be served accordingly.
  */
 
-route()->group(['filters' => ['cors']], function () {
-    route()->options('/api/:any', CorsController::class);
+route()->group(['filter' => ['cors']], function () {
+    route()->options('/api/:path', CorsController::class)->pattern(['path' => ':any']);
 });

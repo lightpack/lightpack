@@ -26,7 +26,7 @@ require DIR_BOOTSTRAP . '/environment.php';
 
 /**
  * ------------------------------------------------------------
- * Bind Providers in IoC Container.
+ * Configure app providers.
  * ------------------------------------------------------------
  */
 
@@ -42,11 +42,11 @@ require DIR_BOOTSTRAP . '/debug.php';
 
 /**
  * ------------------------------------------------------------
- * Discover app events.
+ * Boot app events.
  * ------------------------------------------------------------
  */
 
-require DIR_BOOTSTRAP . '/events.php';
+Lightpack\App::bootEvents();
 
 /**
  * ------------------------------------------------------------
