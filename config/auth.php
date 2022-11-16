@@ -3,8 +3,9 @@
 use Lightpack\Auth\Identifiers\DefaultIdentifier;
 
 return [
-    'auth' => [
+    'auth.drivers' => [
         'default' => [
+            'model' => App\Models\User::class,
             'identifier' => DefaultIdentifier::class,
             'login.url' => 'dashboard/login',
             'logout.url' => 'dashboard/logout',
