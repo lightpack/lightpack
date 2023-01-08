@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
-class DatabaseSeeder
+use Lightpack\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
 {
     /**
      * Run the database seeders.
