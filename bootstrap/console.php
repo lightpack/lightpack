@@ -32,7 +32,7 @@ require_once __DIR__ . '/constants.php';
  * ------------------------------------------------------------
  */
 
-require_once DIR_BOOTSTRAP . '/environment.php';
+ Lightpack\Config\Env::load(DIR_ROOT . '/' . '.env');
 
 /**
  * ------------------------------------------------------------

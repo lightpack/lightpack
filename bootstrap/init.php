@@ -22,7 +22,7 @@ require_once __DIR__ . '/constants.php';
  * ------------------------------------------------------------
  */
 
-require DIR_BOOTSTRAP . '/environment.php';
+Lightpack\Config\Env::load(DIR_ROOT . '/' . '.env');
 
 /**
  * ------------------------------------------------------------
