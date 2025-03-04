@@ -7,7 +7,7 @@ use Lightpack\Testing\Http\TestCase;
 
 class HttpTestCase extends TestCase
 {
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
