@@ -11,14 +11,11 @@ body {
     height: 100vh;
 }
 
-h1 {
-    text-shadow: 2px 2px #e2e2e2;
-    font-weight: 400;
-    font-size: 38px;
-}
-
 p {
-    font-size: 14px;
+    font-size: 13px;
+    background: #f7f7f7;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 img {

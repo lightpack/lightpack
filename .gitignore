@@ -3,7 +3,6 @@ vendor/
 .vscode
 composer.phar
 composer.lock
-env.php
 /public/uploads
 .phpunit.result.cache
 .env
