@@ -55,3 +55,11 @@ Lightpack\App::bootEvents();
  */
 
 require DIR_BOOTSTRAP . '/routes.php';
+
+/**
+ * ------------------------------------------------------------
+ * Boot app route names.
+ * ------------------------------------------------------------
+ */
+
+Lightpack\App::bootRouteNames();
