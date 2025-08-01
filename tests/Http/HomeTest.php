@@ -2,9 +2,9 @@
 
 namespace Tests\Http;
 
-use Tests\HttpTestCase;
+use Lightpack\Testing\TestCase;
 
-class HomeTest extends HttpTestCase
+class HomeTest extends TestCase
 {
     public function testItRendersHomePage()
     {
