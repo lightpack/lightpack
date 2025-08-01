@@ -9,7 +9,7 @@
 
 <body>
     <div class="container">
-        <img class="logo" src="<?= asset()->url('img/logo.svg') ?>">
+        <img src="<?= asset()->url('img/logo.svg') ?>">
         <p>Welcome, you are up and running.</p>
     </div>
 </body>
