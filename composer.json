@@ -1,18 +1,9 @@
 {
     "name": "lightpack/lightpack",
-    "description": "LightPack - PHP MVC Framework",
+    "description": "Lightpack PHP framework application kit.",
     "type": "project",
     "license": "MIT",
-    "keywords": [
-        "PHP",
-        "full stack",
-        "mvc",
-        "database",
-        "orm",
-        "framework",
-        "lightweight",
-        "small"
-      ],
+    "keywords": ["Lightpack PHP", "full stack framework"],
     "authors": [
         {
             "name": "Pradeep Tiwari",
@@ -32,15 +23,18 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "php": ">=8.2",
-        "lightpack/framework": "v0.*"
+        "php": "^8.2",
+        "lightpack/framework": "dev-main"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.10"
     },
     "scripts": {
-		"post-update-cmd": [
-			"@composer dump-autoload"
-		]
-	}
+        "post-install-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-update-cmd": [
+            "@composer dump-autoload"
+        ]
+    }
 }

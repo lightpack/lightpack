@@ -1,7 +1,4 @@
 <p>
-    <a href="https://travis-ci.com/lightpack/framework">
-        <img src="https://travis-ci.com/lightpack/framework.svg?branch=main" alt="Build Status">
-    </a>
     <a href="https://packagist.org/packages/lightpack/framework">
         <img src="https://img.shields.io/packagist/l/lightpack/framework" alt="License">
     </a>

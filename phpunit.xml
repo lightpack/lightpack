@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phpunit bootstrap="vendor/autoload.php" colors="true" testdox="true">
-    <testsuite name="Lightpack Project">
+    <testsuite name="Lightpack PHP Project">
         <directory>tests</directory>
     </testsuite>
     <php>
         <env name="APP_ENV" value="testing" />
         <env name="SESSION_DRIVER" value="array" />
+        <env name="DB_HOST" value="db" />
+        <env name="DB_PORT" value="3306" />
+        <env name="DB_USER" value="root" />
+        <env name="DB_PASSWORD" value="secret" />
+        <env name="DB_NAME" value="test_lightpack" />
     </php>
 </phpunit>
