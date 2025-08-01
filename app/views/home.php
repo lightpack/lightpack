@@ -4,14 +4,13 @@
 <head>
     <title>Lightpack PHP Web Framework</title>
     <link rel="stylesheet" href="<?= asset()->url('css/styles.css') ?>" />
-    <link rel="icon" type="image/png" href="<?= asset()->url('img/logo.ico') ?>" sizes="32x32" />
+    <link rel="icon" type="image/png" href="<?= asset()->url('img/logo.ico') ?>" />
 </head>
 
 <body>
     <div class="container">
         <img class="logo" src="<?= asset()->url('img/logo.svg') ?>">
-        <h1>Lightpack PHP</h1>
-        <p>A modern PHP web framework with extreme performance and small footprint.</p>
+        <p>Welcome, you are up and running.</p>
     </div>
 </body>
 
