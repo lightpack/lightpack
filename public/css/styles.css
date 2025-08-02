@@ -1,6 +1,8 @@
 body {
     font-family: Verdana, Arial, 'sans-serif';
-    color: #214e7b
+    color: #214e7b;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
