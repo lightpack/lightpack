@@ -3,7 +3,7 @@
 return [
     'captcha' => [
         // native, recaptcha, turnstile, null
-        'driver' => 'native',
+        'driver' => get_env('CAPTCHA_DRIVER', 'native'),
     
         'native' => [
             'font' => DIR_PUBLIC . '/fonts/arial.ttf',
@@ -11,12 +11,12 @@ return [
             'height' => 50,
         ],
         'recaptcha' => [
-            'site_key' => '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
-            'secret_key' => '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe',
+            'site_key' => get_env('RECAPTCHA_SITE_KEY'),
+            'secret_key' => get_env('RECAPTCHA_SECRET_KEY'),
         ],
         'turnstile' => [
-            'site_key' => '1x00000000000000000000AA',
-            'secret_key' => '1x0000000000000000000000000000000AA',
+            'site_key' => get_env('TURNSTILE_SITE_KEY'),
+            'secret_key' => get_env('TURNSTILE_SECRET_KEY'),
         ]
     ],
 ];
