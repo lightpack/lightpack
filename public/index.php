@@ -1,27 +1,26 @@
 <?php
 
 /**
- * ------------------------------------------------------------
- * Lightpack PHP
- * 
- * Performant PHP web framework with small footprint.
- * ------------------------------------------------------------
+ * Use Composer Autoloader.
  */
 
-require __DIR__ . '/../bootstrap/init.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 /**
- * ------------------------------------------------------------
- * Run our application and gather the response object.
- * ------------------------------------------------------------
+ * Boot directory constants.
  */
 
-$response = Lightpack\App::run();
+require __DIR__ . '/../boot/constants.php';
+
 
 /**
- * ------------------------------------------------------------
- * Finally send the response.
- * ------------------------------------------------------------
+ * Boot the web framework.
  */
 
-$response->send();
+Lightpack\App::boot();
+
+/**
+ * Run the app and send the response.
+ */
+
+Lightpack\App::run()->send();
