@@ -1,10 +1,8 @@
 <?php
 
 /**
- * Require routes files defined inside 'routes' folder.
+ * Require routes files.
  */
 
-return [
-    'api.php',
-    'web.php',
-];
+require DIR_ROOT . '/routes/api.php';
+require DIR_ROOT . '/routes/web.php';
