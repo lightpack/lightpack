@@ -1,5 +1,5 @@
 <?php
 
 /**
- * Configure cron schedules in this file.
+ * Configure all your scheduled jobs and commands in this file.
  */

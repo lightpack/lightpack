@@ -5,5 +5,5 @@
  */
 
 return [
-    // 'test:hello' => App\Commands\HelloCommand::class,
+    // ...
 ];
