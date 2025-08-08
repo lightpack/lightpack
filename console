@@ -2,9 +2,25 @@
 <?php
 
 /**
- * ------------------------------------------------------------
- * Lightpack PHP CLI Assistant.
- * ------------------------------------------------------------
+ * Use Composer Autoloader.
  */
 
-require __DIR__ . '/bootstrap/console.php';
+require __DIR__ . '/vendor/autoload.php';
+
+/**
+ * Boot directory constants.
+ */
+
+require __DIR__ . '/boot/constants.php';
+
+/**
+ * Boot the cli framework.
+ */
+
+Lightpack\App::bootCli();
+
+/**
+ * Run the console command.
+ */
+
+Lightpack\Console\Runner::run();
