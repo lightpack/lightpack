@@ -1,7 +1,5 @@
 <?php
 
-use App\Controllers\Api\CorsController;
-
 /**
  * --------------------------------------------------
  * Register API routes here.
@@ -12,6 +10,6 @@ use App\Controllers\Api\CorsController;
  * method will be served accordingly.
  */
 
-route()->group(['filter' => ['cors']], function () {
-    route()->options('/api/:path', CorsController::class)->pattern(['path' => ':any']);
+route()->group(['prefix' => 'api', 'filter' => ['cors']], function () {
+    route()->options('/:path', Lightpack\Controllers\CorsController::class)->pattern(['path' => ':any']);
 });
