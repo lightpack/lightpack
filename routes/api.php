@@ -10,6 +10,6 @@
  * method will be served accordingly.
  */
 
-route()->group(['prefix' => 'api', 'filter' => ['cors']], function () {
-    route()->options('/:path', Lightpack\Controllers\CorsController::class)->pattern(['path' => ':any']);
+route()->group(['prefix' => '/api', 'filter' => ['cors']], function () {
+    route()->options('/:any', Lightpack\Controllers\CorsController::class);
 });
