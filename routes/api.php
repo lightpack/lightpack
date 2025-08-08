@@ -1,9 +1,7 @@
 <?php
 
 /**
- * --------------------------------------------------
  * Register API routes here.
- * --------------------------------------------------
  * 
  * It has been pre-configured with CORS filter so
  * any cross-origin API request with HTTP OPTIONS
