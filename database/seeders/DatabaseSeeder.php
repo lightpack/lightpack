@@ -11,6 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function seed()
     {
-        // ...
+        $this->run([
+            // ...
+        ]);
     }
 }
