@@ -5,7 +5,10 @@
     </testsuite>
     <php>
         <env name="APP_ENV" value="testing" />
-        <env name="SESSION_DRIVER" value="array" />
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="MAIL_DRIVER" value="array"/>
+        <env name="JOB_ENGINE" value="sync"/>
         <env name="DB_HOST" value="127.0.0.1" />
         <env name="DB_PORT" value="3306" />
         <env name="DB_USER" value="root" />
