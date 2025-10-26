@@ -2,7 +2,7 @@
 
 return [
     'session' => [
-        'driver' => get_env('SESSION_DRIVER', 'default'),
+        'driver' => get_env('SESSION_DRIVER', 'file'),
         'name' => get_env('SESSION_NAME', 'lightpack_session'),
         'lifetime' => get_env('SESSION_LIFETIME', 7200), // 2 hrs
         'same_site' => get_env('SESSION_SAME_SITE', 'lax'),
