@@ -32,7 +32,8 @@
     },
     "scripts": {
         "post-create-project-cmd": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php console app:key"
         ],
         "post-update-cmd": [
             "@composer dump-autoload"
