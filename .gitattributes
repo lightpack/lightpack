@@ -2,6 +2,7 @@
 * text=auto eol=lf
 
 /.github export-ignore
+CHANGELOG.md export-ignore
 
 # Ignore built or third-party JS/CSS for language stats
 /public/js/* linguist-vendored
