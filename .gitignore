@@ -1,8 +1,30 @@
+# Dependencies
 vendor/
-.DS_Store
-.vscode
-composer.phar
-composer.lock
-/public/uploads
-.phpunit.result.cache
+
+# Environment / Secrets
 .env
+.env.*
+!.env.example
+*.key
+*.pem
+*.crt
+
+# Editor / IDE
+.vscode/
+.idea/
+.cursor/
+.cursorrules
+.devin/
+.codex/
+.DS_Store
+Thumbs.db
+
+# Build / Cache
+.phpunit.result.cache
+composer.phar
+
+# Logs
+*.log
+
+# Uploads
+/public/uploads
