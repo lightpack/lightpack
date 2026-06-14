@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.9.3] - 2026-06-14
+
+- **chore:** Update `.gitignore` to ignore env variants, editor configs, secrets, and logs.
+
 ## [0.9.2] - 2026-05-24
 
 - **feat:** Add `app/helpers.php` with typed `user()` helper for IDE/static-analysis support.
