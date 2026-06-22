@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.9.4] - 2026-06-22
+
+- **chore:** Relax framework constraint from `^0.9` to `~0.9` so new projects automatically get framework v0.10.0 and future 0.x releases without updating the template.
+
 ## [0.9.3] - 2026-06-14
 
 - **chore:** Update `.gitignore` to ignore env variants, editor configs, secrets, and logs.
