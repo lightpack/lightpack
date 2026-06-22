@@ -28,7 +28,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^8.2",
-        "lightpack/framework": "^0.9"
+        "lightpack/framework": "~0.9"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.10"
