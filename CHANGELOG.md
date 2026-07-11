@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.9.6] - 2026-07-11
+
+- **feat:** Add CORS configuration file with default headers.
+
 ## [0.9.5] - 2026-07-02
 
 - **chore:** Update `config/app.php` to support language configuration.
