@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.9.7] - 2026-07-26
+
+- **chore:** Add `APP_URL` and `APP_KEY` to `phpunit.xml` test environment.
+
 ## [0.9.6] - 2026-07-11
 
 - **feat:** Add CORS configuration file with default headers.
